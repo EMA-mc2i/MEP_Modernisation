@@ -242,16 +242,22 @@ def build_html_qualitatif():
             continue
         par_partenaire.setdefault(e.get("partenaire", "Autre"), []).append((clef, e))
 
+    PRIORITE = {"rouge": 3, "orange": 2, "vert": 1, "gris": 0}
     sections = []
     ecarts = []  # (clef, partenaire) en orange/rouge, remontés tout en haut
     for partenaire in sorted(par_partenaire, key=lambda p: -len(par_partenaire[p])):
         rendus = []
+        cls_partenaire = "gris"
         for clef, e in sorted(par_partenaire[partenaire], key=lambda kv: kv[0]):
             html_tuile, cls = tuile(clef, e, apres_existe)
             rendus.append(html_tuile)
+            if PRIORITE[cls] > PRIORITE[cls_partenaire]:
+                cls_partenaire = cls
             if cls in ("orange", "rouge"):
                 ecarts.append((clef, partenaire, cls))
-        sections.append(f'<div class="qual-partenaire"><h3>{esc(partenaire)} '
+        # Pastille sur l'en-tête du partenaire : pire statut de ses lignes (demandé le 26/11/2026,
+        # pour voir d'un coup d'œil quel partenaire a un souci sans ouvrir chaque tuile).
+        sections.append(f'<div class="qual-partenaire"><h3><span class="dot {cls_partenaire}"></span>{esc(partenaire)} '
                          f'<span style="font-weight:400;color:var(--text-muted);">'
                          f'({len(par_partenaire[partenaire])})</span></h3>'
                          f'<div class="qual-grille">{"".join(rendus)}</div></div>')

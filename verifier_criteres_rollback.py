@@ -42,6 +42,7 @@ import collections
 import html
 import json
 import pathlib
+import re
 import sys
 import time
 import urllib.error
@@ -146,7 +147,7 @@ def analyse(j, referentiel):
         R = reseaux.setdefault(clef, {"lignes": {}, "courses": 0})
         R["courses"] += 1
         L = R["lignes"].setdefault(c, {"num": ref.get("num", c), "mode": mode or ref.get("mode", "").upper(),
-                                        "operateur": operateur, "courses": 0})
+                                        "reseau": ref.get("network", ""), "operateur": operateur, "courses": 0})
         L["courses"] += 1
 
     return {"timestamp": sd.get("ResponseTimestamp"), "total_courses": len(vjs), "reseaux": reseaux}
@@ -167,7 +168,8 @@ def ligne_ferree_disparue(avant, maintenant, producteur, label):
         return None
     lignes_avant = avant["reseaux"].get(producteur, {}).get("lignes", {})
     lignes_maintenant = maintenant["reseaux"].get(producteur, {}).get("lignes", {})
-    disparues = sorted(c for c, l in lignes_avant.items() if l["courses"] > 0 and lignes_maintenant.get(c, {}).get("courses", 0) == 0)
+    disparues = sorted((f'{nom_ligne(l)} ({c})' for c, l in lignes_avant.items()
+                        if l["courses"] > 0 and lignes_maintenant.get(c, {}).get("courses", 0) == 0))
     if not disparues:
         return None
     return {
@@ -296,6 +298,20 @@ def actives(lignes):
     return sum(1 for l in lignes.values() if l["courses"] > 0)
 
 
+MODE_LABEL = {"METRO": "Métro", "TRAM": "Tram", "BUS": "Bus"}
+
+
+def nom_ligne(l):
+    """Nom lisible d'une ligne (ex. "RER D", "Métro 14", "Tram T8"), pas juste son numéro commercial
+    nu : demandé par Erwan le 26/11/2026 pour une supervision plus fine du ferré (RATP/SNCF),
+    où plusieurs lignes peuvent partager un numéro proche d'un mode à l'autre."""
+    if l["mode"] == "RAIL":
+        prefixe = "RER" if l.get("reseau") == "RER" else "Train"
+    else:
+        prefixe = MODE_LABEL.get(l["mode"], l["mode"])
+    return f'{prefixe} {l["num"]}'.strip()
+
+
 def entete():
     """Une seule en-tête pour toute la section Partenaire > Réseau > Ligne : les niveaux imbriqués
     réutilisent la même grille (GRID) sans la redessiner, pour ne pas dupliquer les colonnes
@@ -326,7 +342,7 @@ def html_lignes(lignes, lignes_legacy, mode_mep):
     for c, l in sorted(lignes.items(), key=lambda kv: -kv[1]["courses"]):
         legacy_n = lignes_legacy.get(c, {}).get("courses", 0)
         cls, txt = etat(l["courses"], legacy_n, mode_mep)
-        id_html = f'<span class="nom">{esc(l["num"])} <small>{esc(c)} · {esc(l["mode"])}</small></span>'
+        id_html = f'<span class="nom">{esc(nom_ligne(l))} <small>{esc(c)}</small></span>'
         rows.append(data_row(id_html, [legacy_n, None], [l["courses"], None], mode_mep, cls, txt, "div"))
     return f'<div class="niv-liste">{"".join(rows)}</div>'
 
@@ -403,7 +419,7 @@ def build_html(maintenant, legacy, alertes, mode_mep, out):
 <div class="sheet wide">
   <header class="sheet-header">
     <div class="header-tags"><span class="doc-status pending">Relevé automatique</span><span class="pi-tag">PRIM {esc(maintenant["timestamp"][:16])}</span></div>
-    <div class="logo-chip"><img class="logo" src="data:image/png;base64,{LOGO_B64}" alt="Île-de-France Mobilités"></div>
+    <!--LOGO--><div class="logo-chip"><img class="logo" src="data:image/png;base64,{LOGO_B64}" alt="Île-de-France Mobilités"></div><!--/LOGO-->
     <div class="htext"><p class="eyebrow">Relais IVTR · Supervision post-MEP</p>
     <h1>Vérification des critères fonctionnels de rollback</h1></div>
   </header>
@@ -428,7 +444,10 @@ function ongletAfficher(nom, btn) {{
 </body></html>
 """
     out.write_text(page, encoding="utf-8")
-    (HERE / "index.html").write_text(page, encoding="utf-8")  # copie identique, pour GitHub Pages
+    # index.html = copie publiée sur GitHub Pages, sans le logo IDFM (demande d'Erwan le 26/11 :
+    # un site perso ne doit pas passer pour un site officiel IDFM, même règle que les dashboards IA).
+    page_publique = re.sub(r"<!--LOGO-->.*?<!--/LOGO-->", "", page, flags=re.S)
+    (HERE / "index.html").write_text(page_publique, encoding="utf-8")
 
 
 def html_qualitatif():

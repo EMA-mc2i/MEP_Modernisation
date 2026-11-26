@@ -275,6 +275,10 @@ details.niv-detail .corps .niv-ligne { background:transparent; }
 .onglet-corps.actif { display:block; }
 .a-faire { background:var(--bg-light); border:1px dashed var(--border); border-radius:8px; padding:18px; color:var(--text-muted); font-size:13.5px; }
 .a-faire b { color:var(--anthracite); }
+.qualite-bloc { margin:6px 0 14px 0; font-size:13px; }
+.qualite-bloc h4 { margin:0 0 6px 0; font-size:12.5px; color:var(--anthracite); }
+.qualite-bloc code { font-size:11.5px; }
+.vide-req { color:var(--text-muted); font-size:12.5px; }
 """
 
 # Une seule grille pour les 3 niveaux (partenaire, réseau, ligne) : l'en-tête n'est dessinée
@@ -451,16 +455,13 @@ function ongletAfficher(nom, btn) {{
 
 
 def html_qualitatif():
-    """Onglet « Qualitatif » : comparaison de structure et de valeurs des balises (OD / ALL / SM
-    arrêt) avant/après MEP, par réseau. En construction (26/11/2026) : la sélection des arrêts
-    s'appuiera sur l'offre théorique (Navitia route_schedules, data_freshness=base_schedule,
-    cf. 13_Dashboards_IA/Theorique/poc_offre_vs_circulation.py) pour choisir, par réseau, une
-    ligne/un arrêt desservi vers 22h le jour de la MEP — capture avant tout de suite possible,
-    capture après dès la MEP passée."""
-    return ('<div class="a-faire"><b>En construction.</b> Comparaison de structure et de valeurs des '
-            'balises (requêtes OD, ALL et SM arrêt) avant/après MEP, par réseau — sur le même principe '
-            'que <code>Difference_sortie_Legacy_vs_NG.md</code> (16_HET_OD_Balises), mais avec de vraies '
-            'références avant/après plutôt que des exports d\'environnements différents.</div>')
+    """Onglet « Qualitatif » : comparaison de structure et de valeurs des balises (OD / SM arrêt)
+    avant/après MEP, par réseau. Échantillons choisis via le GTFS (qualitatif_echantillons.py,
+    pas l'API Navitia : voir le commentaire dans ce script sur le 429 rencontré le 26/11/2026),
+    capturés par qualitatif_capture.py, comparés par qualitatif.py."""
+    sys.path.insert(0, str(HERE))
+    import qualitatif
+    return qualitatif.build_html_qualitatif()
 
 
 def main():

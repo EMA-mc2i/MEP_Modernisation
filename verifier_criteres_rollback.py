@@ -284,6 +284,8 @@ details.niv-detail .corps .niv-ligne { background:transparent; }
 .table-scroll { max-width:100%; overflow-x:auto; }
 .table-scroll table.niv td code, .table-scroll table.niv td { word-break:break-word; }
 .table-scroll table.niv td:first-child { max-width:340px; }
+.table-scroll table.niv tr.diff { background:var(--orange-bg); }
+.table-scroll table.niv tr.diff td { color:#8A5A10; font-weight:600; }
 
 .qual-partenaire { margin:20px 0; }
 .qual-partenaire > h3 { font-size:12.5px; color:var(--anthracite); margin:0 0 8px 0; text-transform:uppercase; letter-spacing:.04em; }

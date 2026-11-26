@@ -60,14 +60,6 @@ def nom_fichier(clef):
     return "".join(c if c.isalnum() or c in "-_." else "_" for c in clef)
 
 
-def type_court(v):
-    if isinstance(v, bool):
-        return "bool"
-    if isinstance(v, (int, float)):
-        return "nombre"
-    return "texte"
-
-
 def prefixe_commun(chemins):
     """Plus long préfixe commun à une liste de chemins (coupé au dernier point entier) : les
     chemins SIRI partagent tous un long préambule (Siri.ServiceDelivery....) qui dépassait
@@ -87,13 +79,21 @@ def raccourcir(d, prefixe):
     return {(k[n:] or k): v for k, v in d.items()}
 
 
+def a_un_ecart(avant, apres):
+    """Structure différente (balise apparue/disparue) OU valeur différente sur une balise
+    commune (ex. "rail" vs "RAIL" : même type, format différent, à repérer aussi)."""
+    if set(avant) ^ set(apres):
+        return True
+    return any(str(avant[k]) != str(apres[k]) for k in avant if k in apres)
+
+
 def etat_echantillon(od_avant, sm_avant, od_apres, sm_apres, apres_existe):
     if not apres_existe:
         return "gris", "pré-MEP"
     if od_avant is None or sm_avant is None or od_apres is None or sm_apres is None:
         return "rouge", "capture en erreur"
-    diff = bool(set(od_avant) ^ set(od_apres)) or bool(set(sm_avant) ^ set(sm_apres))
-    return ("orange", "structure modifiée") if diff else ("vert", "structure stable")
+    diff = a_un_ecart(od_avant, od_apres) or a_un_ecart(sm_avant, sm_apres)
+    return ("orange", "écart détecté") if diff else ("vert", "stable avant/après")
 
 
 def bloc_requete(label, avant, apres):
@@ -111,21 +111,32 @@ def bloc_requete(label, avant, apres):
                 f'<div class="table-scroll"><table class="niv" style="font-size:11.5px;"><tbody>{lignes}</tbody></table></div>{suite}</details>')
     seulement_avant = sorted(set(avant_c) - set(apres_c))
     seulement_apres = sorted(set(apres_c) - set(avant_c))
-    communs = sorted(set(avant_c) & set(apres_c))
-    changements = [(k, avant_c[k], apres_c[k]) for k in communs if type_court(avant_c[k]) != type_court(apres_c[k])]
+    communs = set(avant_c) & set(apres_c)
+    # Toutes les balises communes, avant ET après, valeur contre valeur : pas seulement celles
+    # dont le TYPE a changé (ex. "rail" vs "RAIL" ont le même type mais pas le même format —
+    # demande d'Erwan le 26/11/2026, pour pouvoir juger les écarts de format à l'œil).
+    diff_val = sorted((k for k in communs if str(avant_c[k]) != str(apres_c[k])))
+    pareil_val = sorted(communs - set(diff_val))
     parties = [note_prefixe] if note_prefixe else []
     if seulement_avant:
         parties.append('<p><b>Disparues en NG :</b> ' + ", ".join(f"<code>{esc(k)}</code>" for k in seulement_avant) + "</p>")
     if seulement_apres:
         parties.append('<p><b>Apparues en NG :</b> ' + ", ".join(f"<code>{esc(k)}</code>" for k in seulement_apres) + "</p>")
-    if changements:
-        lignes = "".join(f'<tr><td><code>{esc(k)}</code></td><td>{esc(a)} <small>({type_court(a)})</small></td>'
-                          f'<td>{esc(b)} <small>({type_court(b)})</small></td></tr>' for k, a, b in changements)
-        parties.append(f'<div class="table-scroll"><table class="niv" style="font-size:11.5px;"><thead><tr><th>Balise</th><th>Avant</th><th>Après</th></tr></thead>'
-                        f'<tbody>{lignes}</tbody></table></div>')
-    if not parties:
-        parties.append('<p class="vide-req">Même structure, mêmes types de valeur sur les balises communes.</p>')
-    return f'<div class="qualite-bloc"><h4>{esc(label)} ({len(communs)} balises communes)</h4>{"".join(parties)}</div>'
+
+    def ligne(k, cls=""):
+        a, b = avant_c[k], apres_c[k]
+        return f'<tr class="{cls}"><td><code>{esc(k)}</code></td><td>{esc(a)}</td><td>{esc(b)}</td></tr>'
+
+    if diff_val or pareil_val:
+        corps = "".join(ligne(k, "diff") for k in diff_val) + "".join(ligne(k) for k in pareil_val)
+        parties.append(f'<p style="font-size:11.5px;color:var(--text-muted);">{len(diff_val)} valeur(s) différente(s) '
+                        f'sur {len(communs)} balises communes (en orange ci-dessous, triées en premier).</p>'
+                        f'<div class="table-scroll"><table class="niv" style="font-size:11.5px;">'
+                        f'<thead><tr><th>Balise</th><th>Avant (Legacy)</th><th>Après (NG)</th></tr></thead>'
+                        f'<tbody>{corps}</tbody></table></div>')
+    else:
+        parties.append('<p class="vide-req">Aucune balise commune entre avant et après.</p>')
+    return f'<div class="qualite-bloc"><h4>{esc(label)}</h4>{"".join(parties)}</div>'
 
 
 def tuile(clef, e, apres_existe):
@@ -136,8 +147,8 @@ def tuile(clef, e, apres_existe):
     sm_apres = charger("apres", base, "SM") if apres_existe else None
     cls, statut = etat_echantillon(od_avant, sm_avant, od_apres, sm_apres, apres_existe)
     ligne_nom = sup.nom_ligne({"mode": e["mode"], "num": e["num"], "reseau": e.get("reseau_mode", "")})
-    return (
-        f'<details class="tuile {cls}"><summary>'
+    html_tuile = (
+        f'<details class="tuile {cls}" id="qual-{esc(nom_fichier(clef))}"><summary>'
         f'<span class="reseau-nom">{esc(clef)}</span>'
         f'<span class="ligne-nom">{esc(ligne_nom)}</span>'
         f'<span class="arret-nom">{esc(e["stop_nom"])}</span>'
@@ -147,6 +158,7 @@ def tuile(clef, e, apres_existe):
         f'{bloc_requete("Requête SM (arrêt)", sm_avant, sm_apres)}'
         f'</div></details>'
     )
+    return html_tuile, cls
 
 
 def build_html_qualitatif():
@@ -176,15 +188,33 @@ def build_html_qualitatif():
         par_partenaire.setdefault(e.get("partenaire", "Autre"), []).append((clef, e))
 
     sections = []
+    ecarts = []  # (clef, partenaire) en orange/rouge, remontés tout en haut
     for partenaire in sorted(par_partenaire, key=lambda p: -len(par_partenaire[p])):
-        tuiles = "".join(tuile(clef, e, apres_existe)
-                          for clef, e in sorted(par_partenaire[partenaire], key=lambda kv: kv[0]))
+        rendus = []
+        for clef, e in sorted(par_partenaire[partenaire], key=lambda kv: kv[0]):
+            html_tuile, cls = tuile(clef, e, apres_existe)
+            rendus.append(html_tuile)
+            if cls in ("orange", "rouge"):
+                ecarts.append((clef, partenaire, cls))
         sections.append(f'<div class="qual-partenaire"><h3>{esc(partenaire)} '
                          f'<span style="font-weight:400;color:var(--text-muted);">'
                          f'({len(par_partenaire[partenaire])})</span></h3>'
-                         f'<div class="qual-grille">{tuiles}</div></div>')
+                         f'<div class="qual-grille">{"".join(rendus)}</div></div>')
+
+    bandeau_ecarts = ""
+    if apres_existe:
+        if ecarts:
+            items = "".join(
+                f'<li><a href="#qual-{esc(nom_fichier(clef))}">{esc(clef)}</a> ({esc(partenaire)})'
+                f'{" — erreur de capture" if cls == "rouge" else ""}</li>'
+                for clef, partenaire, cls in sorted(ecarts, key=lambda t: (t[2] != "rouge", t[0]))
+            )
+            bandeau_ecarts = (f'<div class="carte alerte"><h3>⚠ {len(ecarts)} réseau(x) avec un écart</h3>'
+                               f'<ul style="margin:6px 0 0 18px;padding:0;">{items}</ul></div>')
+        else:
+            bandeau_ecarts = '<div class="carte ok"><h3>Aucun écart</h3><p>Structure et valeurs stables sur tous les réseaux échantillonnés.</p></div>'
 
     manques = (f'<p style="font-size:12.5px;color:var(--text-muted);">Sans échantillon (pas de passage théorique '
                f'trouvé près de l\'heure cible) : {", ".join(esc(k) for k in sorted(non_trouves))}</p>') if non_trouves else ""
 
-    return intro + "".join(sections) + manques
+    return intro + bandeau_ecarts + "".join(sections) + manques

@@ -364,18 +364,28 @@ def data_row(id_html, legacy_vals, ng_vals, mode_mep, cls, statut_txt, tag):
 
 
 def html_lignes(lignes, lignes_legacy, mode_mep):
+    # Fusionne les codes de ligne de maintenant ET de legacy : une ligne qui avait des courses en
+    # Legacy et n'en a plus du tout maintenant n'a plus d'entrée dans "lignes" (elle a juste
+    # disparu de la réponse PRIM) — sans la reprendre depuis lignes_legacy, elle n'apparaîtrait
+    # nulle part dans le détail, seulement dans le bandeau d'alerte (constaté le 26/11/2026).
+    tous = dict(lignes_legacy)
+    tous.update(lignes)
     rows = []
-    for c, l in sorted(lignes.items(), key=lambda kv: -kv[1]["courses"]):
+    for c, l in sorted(tous.items(), key=lambda kv: -kv[1]["courses"]):
         legacy_n = lignes_legacy.get(c, {}).get("courses", 0)
-        cls, txt = etat(l["courses"], legacy_n, mode_mep)
+        courses_n = lignes.get(c, {}).get("courses", 0)
+        cls, txt = etat(courses_n, legacy_n, mode_mep)
         id_html = f'<span class="nom">{esc(nom_ligne(l))} <small>{esc(c)}</small></span>'
-        rows.append(data_row(id_html, [legacy_n, None], [l["courses"], None], mode_mep, cls, txt, "div"))
+        rows.append(data_row(id_html, [legacy_n, None], [courses_n, None], mode_mep, cls, txt, "div"))
     return f'<div class="niv-liste">{"".join(rows)}</div>'
 
 
 def html_reseaux(reseaux, reseaux_legacy, mode_mep):
+    tous = dict(reseaux_legacy)
+    tous.update(reseaux)
     blocs = []
-    for clef, R in sorted(reseaux.items(), key=lambda kv: -kv[1]["courses"]):
+    for clef in sorted(tous, key=lambda c: -tous[c]["courses"]):
+        R = reseaux.get(clef, {"courses": 0, "lignes": {}})
         Rl = reseaux_legacy.get(clef, {"courses": 0, "lignes": {}})
         cls, txt = etat(R["courses"], Rl["courses"], mode_mep)
         id_html = f'<span class="nom"><span class="dot {cls}"></span>{esc(clef)}</span>'
@@ -387,8 +397,11 @@ def html_reseaux(reseaux, reseaux_legacy, mode_mep):
 
 
 def html_partenaires(partenaires_maintenant, partenaires_legacy, mode_mep):
+    tous = dict(partenaires_legacy)
+    tous.update(partenaires_maintenant)
     blocs = []
-    for p, P in partenaires_maintenant.items():
+    for p in sorted(tous, key=lambda c: -tous[c]["courses"]):
+        P = partenaires_maintenant.get(p, {"courses": 0, "reseaux": {}})
         Pl = partenaires_legacy.get(p, {"courses": 0, "reseaux": {}})
         cls, txt = etat(P["courses"], Pl["courses"], mode_mep)
         lignes_legacy_p = sum(actives(R["lignes"]) for R in Pl["reseaux"].values())

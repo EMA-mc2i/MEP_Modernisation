@@ -279,6 +279,11 @@ details.niv-detail .corps .niv-ligne { background:transparent; }
 .qualite-bloc h4 { margin:0 0 6px 0; font-size:12.5px; color:var(--anthracite); }
 .qualite-bloc code { font-size:11.5px; }
 .vide-req { color:var(--text-muted); font-size:12.5px; }
+.prefixe-chemin { font-size:11px; color:var(--text-muted); margin:2px 0 6px 0; }
+.prefixe-chemin code { word-break:break-all; }
+.table-scroll { max-width:100%; overflow-x:auto; }
+.table-scroll table.niv td code, .table-scroll table.niv td { word-break:break-word; }
+.table-scroll table.niv td:first-child { max-width:340px; }
 
 .qual-partenaire { margin:20px 0; }
 .qual-partenaire > h3 { font-size:12.5px; color:var(--anthracite); margin:0 0 8px 0; text-transform:uppercase; letter-spacing:.04em; }

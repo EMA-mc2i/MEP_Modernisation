@@ -68,6 +68,25 @@ def type_court(v):
     return "texte"
 
 
+def prefixe_commun(chemins):
+    """Plus long préfixe commun à une liste de chemins (coupé au dernier point entier) : les
+    chemins SIRI partagent tous un long préambule (Siri.ServiceDelivery....) qui dépassait
+    de la page une fois affiché sur chaque ligne (signalé par Erwan le 26/11/2026)."""
+    if not chemins:
+        return ""
+    court = min(chemins, key=len)
+    i = 0
+    while i < len(court) and all(c.startswith(court[: i + 1]) for c in chemins):
+        i += 1
+    prefixe = court[:i]
+    return prefixe[: prefixe.rfind(".") + 1] if "." in prefixe else ""
+
+
+def raccourcir(d, prefixe):
+    n = len(prefixe)
+    return {(k[n:] or k): v for k, v in d.items()}
+
+
 def etat_echantillon(od_avant, sm_avant, od_apres, sm_apres, apres_existe):
     if not apres_existe:
         return "gris", "pré-MEP"
@@ -80,18 +99,21 @@ def etat_echantillon(od_avant, sm_avant, od_apres, sm_apres, apres_existe):
 def bloc_requete(label, avant, apres):
     if avant is None:
         return f'<p class="vide-req">{esc(label)} : pas de capture avant.</p>'
-    if apres is None:
+    prefixe = prefixe_commun(list(avant) + list(apres or []))
+    note_prefixe = f'<p class="prefixe-chemin">Préfixe commun omis ci-dessous : <code>{esc(prefixe)}</code></p>' if prefixe else ""
+    avant_c, apres_c = raccourcir(avant, prefixe), (raccourcir(apres, prefixe) if apres is not None else None)
+    if apres_c is None:
         lignes = "".join(f'<tr><td><code>{esc(k)}</code></td><td>{esc(v)}</td></tr>'
-                          for k, v in sorted(avant.items())[:40])
-        suite = f'<p style="font-size:11.5px;color:var(--text-muted);">… {len(avant)-40} de plus</p>' if len(avant) > 40 else ""
-        return (f'<details class="detail-toggle"><summary>{esc(label)} — {len(avant)} balises (avant seulement, '
-                f'{len(avant)-40 if len(avant)>40 else 0} non affichées)</summary>'
-                f'<table class="niv" style="font-size:11.5px;"><tbody>{lignes}</tbody></table>{suite}</details>')
-    seulement_avant = sorted(set(avant) - set(apres))
-    seulement_apres = sorted(set(apres) - set(avant))
-    communs = sorted(set(avant) & set(apres))
-    changements = [(k, avant[k], apres[k]) for k in communs if type_court(avant[k]) != type_court(apres[k])]
-    parties = []
+                          for k, v in sorted(avant_c.items())[:40])
+        suite = f'<p style="font-size:11.5px;color:var(--text-muted);">… {len(avant_c)-40} de plus</p>' if len(avant_c) > 40 else ""
+        return (f'<details class="detail-toggle"><summary>{esc(label)} — {len(avant_c)} balises (avant seulement, '
+                f'{len(avant_c)-40 if len(avant_c)>40 else 0} non affichées)</summary>{note_prefixe}'
+                f'<div class="table-scroll"><table class="niv" style="font-size:11.5px;"><tbody>{lignes}</tbody></table></div>{suite}</details>')
+    seulement_avant = sorted(set(avant_c) - set(apres_c))
+    seulement_apres = sorted(set(apres_c) - set(avant_c))
+    communs = sorted(set(avant_c) & set(apres_c))
+    changements = [(k, avant_c[k], apres_c[k]) for k in communs if type_court(avant_c[k]) != type_court(apres_c[k])]
+    parties = [note_prefixe] if note_prefixe else []
     if seulement_avant:
         parties.append('<p><b>Disparues en NG :</b> ' + ", ".join(f"<code>{esc(k)}</code>" for k in seulement_avant) + "</p>")
     if seulement_apres:
@@ -99,8 +121,8 @@ def bloc_requete(label, avant, apres):
     if changements:
         lignes = "".join(f'<tr><td><code>{esc(k)}</code></td><td>{esc(a)} <small>({type_court(a)})</small></td>'
                           f'<td>{esc(b)} <small>({type_court(b)})</small></td></tr>' for k, a, b in changements)
-        parties.append(f'<table class="niv" style="font-size:11.5px;"><thead><tr><th>Balise</th><th>Avant</th><th>Après</th></tr></thead>'
-                        f'<tbody>{lignes}</tbody></table>')
+        parties.append(f'<div class="table-scroll"><table class="niv" style="font-size:11.5px;"><thead><tr><th>Balise</th><th>Avant</th><th>Après</th></tr></thead>'
+                        f'<tbody>{lignes}</tbody></table></div>')
     if not parties:
         parties.append('<p class="vide-req">Même structure, mêmes types de valeur sur les balises communes.</p>')
     return f'<div class="qualite-bloc"><h4>{esc(label)} ({len(communs)} balises communes)</h4>{"".join(parties)}</div>'

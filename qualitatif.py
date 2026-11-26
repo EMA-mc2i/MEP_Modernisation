@@ -23,15 +23,24 @@ def esc(s):
     return html.escape(str(s), quote=False)
 
 
+CAP_EXEMPLES = 6  # échantillons de valeurs gardés par balise (voir plus bas pourquoi plus d'un seul)
+
+
 def aplatir(obj, chemin, out):
-    """{chemin de balise relatif à une course/un passage : un exemple de valeur non vide}.
-    Les listes ne sont PAS indexées : une requête OD/SM contient plusieurs courses/passages,
-    on veut la liste des balises qui existent QUELQUE PART, pas une par occurrence."""
+    """{chemin de balise relatif à une course/un passage : jusqu'à CAP_EXEMPLES valeurs non
+    vides distinctes VUES QUELQUE PART dans la réponse (pas indexé par occurrence : une requête
+    OD/SM porte plusieurs courses/passages). Plusieurs exemples, pas un seul : une requête OD/SM
+    capturée à deux instants différents ne porte pas les mêmes courses (directions, destinations,
+    identifiants changent d'une capture à l'autre sans rapport avec Legacy/NG) — comparer des
+    ENSEMBLES d'exemples et chercher un recouvrement est bien plus fiable qu'un exemple unique
+    (découvert en simulant une comparaison le 26/11/2026 : tout ressortait "écart" sinon)."""
     if isinstance(obj, dict):
         if set(obj) <= {"value"}:
             v = obj.get("value")
-            if v not in (None, "") and chemin not in out:
-                out[chemin] = v
+            if v not in (None, ""):
+                s = out.setdefault(chemin, set())
+                if len(s) < CAP_EXEMPLES:
+                    s.add(v)
             return
         for k, v in obj.items():
             aplatir(v, f"{chemin}.{k}" if chemin else k, out)
@@ -39,8 +48,10 @@ def aplatir(obj, chemin, out):
         for item in obj:
             aplatir(item, chemin, out)
     else:
-        if obj not in (None, "") and chemin not in out:
-            out[chemin] = obj
+        if obj not in (None, ""):
+            s = out.setdefault(chemin, set())
+            if len(s) < CAP_EXEMPLES:
+                s.add(obj)
 
 
 def charger(phase, base, suffixe):
@@ -54,6 +65,10 @@ def charger(phase, base, suffixe):
     aplatir(j, "", out)
     out.pop("", None)
     return out
+
+
+def fmt_exemples(valeurs):
+    return ", ".join(str(v) for v in sorted(valeurs, key=str)[:3]) + (" …" if len(valeurs) > 3 else "")
 
 
 def nom_fichier(clef):
@@ -79,12 +94,37 @@ def raccourcir(d, prefixe):
     return {(k[n:] or k): v for k, v in d.items()}
 
 
+# Balises dont la VALEUR varie à chaque appel, Legacy ou NG, sans rapport avec la bascule
+# (horodatage de réponse, identifiants uniques de message/course, heures qui dépendent de la
+# course en circulation au moment précis de l'appel) : à exclure du diff de valeur, trouvé en
+# simulant une comparaison le 26/11/2026 (tout ressortait "écart" sinon, à tort). On les garde
+# quand même affichées (transparence), juste pas comptées comme un écart.
+BALISES_VARIABLES = {
+    "ResponseTimestamp", "ResponseMessageIdentifier", "RequestMessageRef",
+    "RecordedAtTime", "AimedArrivalTime", "AimedDepartureTime",
+    "ExpectedArrivalTime", "ExpectedDepartureTime", "ActualArrivalTime", "ActualDepartureTime",
+    "DatedVehicleJourneyRef", "ItemIdentifier", "ValidUntilTime",
+    # Ajoutés après simulation le 26/11/2026 : identifiants par course (jamais les mêmes courses
+    # d'une capture à l'autre) ou balise à trop forte cardinalité (des centaines d'arrêts
+    # possibles par ligne, 6 exemples ne se recoupent presque jamais par hasard).
+    "JourneyNote", "TrainNumberRef", "VehicleJourneyName", "StopPointRef",
+}
+
+
+def balise_stable(chemin):
+    return chemin.rsplit(".", 1)[-1] not in BALISES_VARIABLES
+
+
 def a_un_ecart(avant, apres):
-    """Structure différente (balise apparue/disparue) OU valeur différente sur une balise
-    commune (ex. "rail" vs "RAIL" : même type, format différent, à repérer aussi)."""
+    """Structure différente (balise apparue/disparue) OU, sur une balise commune STABLE, AUCUN
+    recouvrement entre les exemples de valeurs vus avant et après (ex. "rail" vs "RAIL" : même
+    type, format différent, à repérer ; mais pas un horodatage qui change à chaque appel, voir
+    BALISES_VARIABLES, ni une direction/destination qui varie juste parce que la course
+    échantillonnée n'est pas la même d'une capture à l'autre — d'où la comparaison par ENSEMBLE
+    d'exemples plutôt qu'une valeur unique)."""
     if set(avant) ^ set(apres):
         return True
-    return any(str(avant[k]) != str(apres[k]) for k in avant if k in apres)
+    return any(not (avant[k] & apres[k]) for k in avant if k in apres and balise_stable(k))
 
 
 def etat_echantillon(od_avant, sm_avant, od_apres, sm_apres, apres_existe):
@@ -103,7 +143,7 @@ def bloc_requete(label, avant, apres):
     note_prefixe = f'<p class="prefixe-chemin">Préfixe commun omis ci-dessous : <code>{esc(prefixe)}</code></p>' if prefixe else ""
     avant_c, apres_c = raccourcir(avant, prefixe), (raccourcir(apres, prefixe) if apres is not None else None)
     if apres_c is None:
-        lignes = "".join(f'<tr><td><code>{esc(k)}</code></td><td>{esc(v)}</td></tr>'
+        lignes = "".join(f'<tr><td><code>{esc(k)}</code></td><td>{esc(fmt_exemples(v))}</td></tr>'
                           for k, v in sorted(avant_c.items())[:40])
         suite = f'<p style="font-size:11.5px;color:var(--text-muted);">… {len(avant_c)-40} de plus</p>' if len(avant_c) > 40 else ""
         return (f'<details class="detail-toggle"><summary>{esc(label)} — {len(avant_c)} balises (avant seulement, '
@@ -112,10 +152,10 @@ def bloc_requete(label, avant, apres):
     seulement_avant = sorted(set(avant_c) - set(apres_c))
     seulement_apres = sorted(set(apres_c) - set(avant_c))
     communs = set(avant_c) & set(apres_c)
-    # Toutes les balises communes, avant ET après, valeur contre valeur : pas seulement celles
-    # dont le TYPE a changé (ex. "rail" vs "RAIL" ont le même type mais pas le même format —
-    # demande d'Erwan le 26/11/2026, pour pouvoir juger les écarts de format à l'œil).
-    diff_val = sorted((k for k in communs if str(avant_c[k]) != str(apres_c[k])))
+    # Toutes les balises communes, avant ET après, ENSEMBLE d'exemples contre ensemble d'exemples
+    # (pas une valeur unique : voir aplatir()). "Différent" = aucun recouvrement entre les deux
+    # ensembles d'exemples, pour une balise stable (pas un horodatage/identifiant de course).
+    diff_val = sorted(k for k in communs if balise_stable(k) and not (avant_c[k] & apres_c[k]))
     pareil_val = sorted(communs - set(diff_val))
     parties = [note_prefixe] if note_prefixe else []
     if seulement_avant:
@@ -124,7 +164,7 @@ def bloc_requete(label, avant, apres):
         parties.append('<p><b>Apparues en NG :</b> ' + ", ".join(f"<code>{esc(k)}</code>" for k in seulement_apres) + "</p>")
 
     def ligne(k, cls=""):
-        a, b = avant_c[k], apres_c[k]
+        a, b = fmt_exemples(avant_c[k]), fmt_exemples(apres_c[k])
         return f'<tr class="{cls}"><td><code>{esc(k)}</code></td><td>{esc(a)}</td><td>{esc(b)}</td></tr>'
 
     if diff_val or pareil_val:

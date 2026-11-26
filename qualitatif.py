@@ -137,8 +137,11 @@ def etat_echantillon(od_avant, sm_avant, od_apres, sm_apres, apres_existe):
 
 
 def bloc_requete(label, avant, apres):
+    """Renvoie (html, [noms courts des balises en écart]) : la 2e valeur sert à l'en-tête de la
+    tuile, pour voir ce qui cloche SANS déplier (demande d'Erwan le 26/11/2026 : « dur
+    d'identifier ce qui ne va pas quand c'est orange »)."""
     if avant is None:
-        return f'<p class="vide-req">{esc(label)} : pas de capture avant.</p>'
+        return f'<p class="vide-req">{esc(label)} : pas de capture avant.</p>', []
     prefixe = prefixe_commun(list(avant) + list(apres or []))
     note_prefixe = f'<p class="prefixe-chemin">Préfixe commun omis ci-dessous : <code>{esc(prefixe)}</code></p>' if prefixe else ""
     avant_c, apres_c = raccourcir(avant, prefixe), (raccourcir(apres, prefixe) if apres is not None else None)
@@ -146,9 +149,10 @@ def bloc_requete(label, avant, apres):
         lignes = "".join(f'<tr><td><code>{esc(k)}</code></td><td>{esc(fmt_exemples(v))}</td></tr>'
                           for k, v in sorted(avant_c.items())[:40])
         suite = f'<p style="font-size:11.5px;color:var(--text-muted);">… {len(avant_c)-40} de plus</p>' if len(avant_c) > 40 else ""
-        return (f'<details class="detail-toggle"><summary>{esc(label)} — {len(avant_c)} balises (avant seulement, '
-                f'{len(avant_c)-40 if len(avant_c)>40 else 0} non affichées)</summary>{note_prefixe}'
-                f'<div class="table-scroll"><table class="niv" style="font-size:11.5px;"><tbody>{lignes}</tbody></table></div>{suite}</details>')
+        html_out = (f'<details class="detail-toggle"><summary>{esc(label)} — {len(avant_c)} balises (avant seulement, '
+                    f'{len(avant_c)-40 if len(avant_c)>40 else 0} non affichées)</summary>{note_prefixe}'
+                    f'<div class="table-scroll"><table class="niv" style="font-size:11.5px;"><tbody>{lignes}</tbody></table></div>{suite}</details>')
+        return html_out, []
     seulement_avant = sorted(set(avant_c) - set(apres_c))
     seulement_apres = sorted(set(apres_c) - set(avant_c))
     communs = set(avant_c) & set(apres_c)
@@ -157,26 +161,32 @@ def bloc_requete(label, avant, apres):
     # ensembles d'exemples, pour une balise stable (pas un horodatage/identifiant de course).
     diff_val = sorted(k for k in communs if balise_stable(k) and not (avant_c[k] & apres_c[k]))
     pareil_val = sorted(communs - set(diff_val))
+    noms_ecart = [k.rsplit(".", 1)[-1] for k in (seulement_avant + seulement_apres + diff_val)]
     parties = [note_prefixe] if note_prefixe else []
     if seulement_avant:
         parties.append('<p><b>Disparues en NG :</b> ' + ", ".join(f"<code>{esc(k)}</code>" for k in seulement_avant) + "</p>")
     if seulement_apres:
         parties.append('<p><b>Apparues en NG :</b> ' + ", ".join(f"<code>{esc(k)}</code>" for k in seulement_apres) + "</p>")
 
-    def ligne(k, cls=""):
+    def ligne(k):
         a, b = fmt_exemples(avant_c[k]), fmt_exemples(apres_c[k])
-        return f'<tr class="{cls}"><td><code>{esc(k)}</code></td><td>{esc(a)}</td><td>{esc(b)}</td></tr>'
+        return f'<tr><td><code>{esc(k)}</code></td><td>{esc(a)}</td><td>{esc(b)}</td></tr>'
 
-    if diff_val or pareil_val:
-        corps = "".join(ligne(k, "diff") for k in diff_val) + "".join(ligne(k) for k in pareil_val)
-        parties.append(f'<p style="font-size:11.5px;color:var(--text-muted);">{len(diff_val)} valeur(s) différente(s) '
-                        f'sur {len(communs)} balises communes (en orange ci-dessous, triées en premier).</p>'
-                        f'<div class="table-scroll"><table class="niv" style="font-size:11.5px;">'
+    if diff_val:
+        corps = "".join(ligne(k) for k in diff_val)
+        parties.append(f'<p class="diff-titre">⚠ {len(diff_val)} balise(s) différente(s) :</p>'
+                        f'<div class="table-scroll"><table class="niv diff-table" style="font-size:11.5px;">'
                         f'<thead><tr><th>Balise</th><th>Avant (Legacy)</th><th>Après (NG)</th></tr></thead>'
                         f'<tbody>{corps}</tbody></table></div>')
-    else:
+    if pareil_val:
+        corps = "".join(ligne(k) for k in pareil_val)
+        parties.append(f'<details class="detail-toggle"><summary>{len(pareil_val)} balise(s) identique(s)</summary>'
+                        f'<div class="table-scroll"><table class="niv" style="font-size:11.5px;">'
+                        f'<thead><tr><th>Balise</th><th>Avant (Legacy)</th><th>Après (NG)</th></tr></thead>'
+                        f'<tbody>{corps}</tbody></table></div></details>')
+    if not (diff_val or pareil_val):
         parties.append('<p class="vide-req">Aucune balise commune entre avant et après.</p>')
-    return f'<div class="qualite-bloc"><h4>{esc(label)}</h4>{"".join(parties)}</div>'
+    return f'<div class="qualite-bloc"><h4>{esc(label)}</h4>{"".join(parties)}</div>', noms_ecart
 
 
 def tuile(clef, e, apres_existe):
@@ -187,16 +197,21 @@ def tuile(clef, e, apres_existe):
     sm_apres = charger("apres", base, "SM") if apres_existe else None
     cls, statut = etat_echantillon(od_avant, sm_avant, od_apres, sm_apres, apres_existe)
     ligne_nom = sup.nom_ligne({"mode": e["mode"], "num": e["num"], "reseau": e.get("reseau_mode", "")})
+    html_od, noms_od = bloc_requete("Requête OD (LineRef)", od_avant, od_apres)
+    html_sm, noms_sm = bloc_requete("Requête SM (arrêt)", sm_avant, sm_apres)
+    # Noms courts des balises en écart, remontés dans l'en-tête de la tuile : on voit ce qui
+    # cloche SANS déplier (demande d'Erwan le 26/11/2026).
+    noms_ecart = sorted(set(noms_od) | set(noms_sm))
+    ligne_statut = (f'<span class="ecarts">{esc(", ".join(noms_ecart[:5]))}'
+                    f'{" …" if len(noms_ecart) > 5 else ""}</span>' if noms_ecart else "")
     html_tuile = (
         f'<details class="tuile {cls}" id="qual-{esc(nom_fichier(clef))}"><summary>'
         f'<span class="reseau-nom">{esc(clef)}</span>'
         f'<span class="ligne-nom">{esc(ligne_nom)}</span>'
         f'<span class="arret-nom">{esc(e["stop_nom"])}</span>'
         f'<span class="heure">Théorique {esc(e["heure_theorique"])} · {esc(statut)}</span>'
-        f'</summary><div class="corps">'
-        f'{bloc_requete("Requête OD (LineRef)", od_avant, od_apres)}'
-        f'{bloc_requete("Requête SM (arrêt)", sm_avant, sm_apres)}'
-        f'</div></details>'
+        f'{ligne_statut}'
+        f'</summary><div class="corps">{html_od}{html_sm}</div></details>'
     )
     return html_tuile, cls
 

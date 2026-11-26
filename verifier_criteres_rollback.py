@@ -286,6 +286,10 @@ details.niv-detail .corps .niv-ligne { background:transparent; }
 .table-scroll table.niv td:first-child { max-width:340px; }
 .table-scroll table.niv tr.diff { background:var(--orange-bg); }
 .table-scroll table.niv tr.diff td { color:#8A5A10; font-weight:600; }
+.diff-titre { color:#8A5A10; font-weight:700; font-size:12px; margin:8px 0 4px 0; }
+table.niv.diff-table { border:1px solid var(--orange); border-radius:6px; overflow:hidden; }
+table.niv.diff-table td { background:var(--orange-bg); color:#8A5A10; font-weight:600; }
+table.niv.diff-table thead th { background:#8A5A10; }
 
 .qual-partenaire { margin:20px 0; }
 .qual-partenaire > h3 { font-size:12.5px; color:var(--anthracite); margin:0 0 8px 0; text-transform:uppercase; letter-spacing:.04em; }
@@ -300,6 +304,7 @@ details.tuile .reseau-nom { font-size:9.5px; color:var(--text-muted); text-trans
 details.tuile .ligne-nom { font-size:14px; font-weight:700; color:var(--anthracite); margin:2px 0 1px 0; }
 details.tuile .arret-nom { font-size:11.5px; color:var(--text-muted); overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
 details.tuile .heure { font-size:10.5px; color:var(--text-muted); margin-top:5px; }
+details.tuile .ecarts { font-size:10.5px; color:#8A5A10; font-weight:700; margin-top:3px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
 details.tuile .corps { padding:6px 14px 14px 14px; border-top:1px solid var(--border); background:var(--bg-light); }
 """
 

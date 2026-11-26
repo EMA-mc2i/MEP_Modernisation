@@ -1,0 +1,5127 @@
+{
+ "timestamp": "2026-11-26T21:12:01.026Z",
+ "total_courses": 11750,
+ "reseaux": {
+  "VERSA": {
+   "lignes": {
+    "C00695": {
+     "num": "6204",
+     "mode": "BUS",
+     "reseau": "Grand Versailles",
+     "operateur": "Transdev Versailles",
+     "courses": 5
+    },
+    "C00697": {
+     "num": "6206",
+     "mode": "BUS",
+     "reseau": "Grand Versailles",
+     "operateur": "Transdev Versailles",
+     "courses": 6
+    },
+    "C00692": {
+     "num": "6201",
+     "mode": "BUS",
+     "reseau": "Grand Versailles",
+     "operateur": "Transdev Versailles",
+     "courses": 9
+    },
+    "C00696": {
+     "num": "6205",
+     "mode": "BUS",
+     "reseau": "Grand Versailles",
+     "operateur": "Transdev Versailles",
+     "courses": 8
+    },
+    "C01484": {
+     "num": "6231",
+     "mode": "BUS",
+     "reseau": "Grand Versailles",
+     "operateur": "Transdev Versailles",
+     "courses": 7
+    },
+    "C00693": {
+     "num": "6202",
+     "mode": "BUS",
+     "reseau": "Grand Versailles",
+     "operateur": "Transdev Versailles",
+     "courses": 9
+    },
+    "C00113": {
+     "num": "6217",
+     "mode": "BUS",
+     "reseau": "Grand Versailles",
+     "operateur": "Transdev Versailles",
+     "courses": 1
+    },
+    "C01868": {
+     "num": "6240",
+     "mode": "BUS",
+     "reseau": "Grand Versailles",
+     "operateur": "Transdev Versailles",
+     "courses": 5
+    },
+    "C00694": {
+     "num": "6203",
+     "mode": "BUS",
+     "reseau": "Grand Versailles",
+     "operateur": "Transdev Versailles",
+     "courses": 8
+    },
+    "C02184": {
+     "num": "6254",
+     "mode": "BUS",
+     "reseau": "Grand Versailles",
+     "operateur": "Transdev Versailles",
+     "courses": 2
+    },
+    "C01873": {
+     "num": "6251",
+     "mode": "BUS",
+     "reseau": "Grand Versailles",
+     "operateur": "Transdev Versailles",
+     "courses": 9
+    },
+    "C02183": {
+     "num": "6253",
+     "mode": "BUS",
+     "reseau": "Grand Versailles",
+     "operateur": "Transdev Versailles",
+     "courses": 1
+    },
+    "C02219": {
+     "num": "6252",
+     "mode": "BUS",
+     "reseau": "Grand Versailles",
+     "operateur": "Transdev Versailles",
+     "courses": 4
+    },
+    "C01482": {
+     "num": "6227",
+     "mode": "BUS",
+     "reseau": "Grand Versailles",
+     "operateur": "Transdev Versailles",
+     "courses": 3
+    }
+   },
+   "courses": 77
+  },
+  "MeC_Bus_PC · RATP Cap Plaine Saint-Denis": {
+   "lignes": {
+    "C01245": {
+     "num": "253",
+     "mode": "BUS",
+     "reseau": "Plaine Saint-Denis",
+     "operateur": "RATP Cap Plaine Saint-Denis",
+     "courses": 27
+    },
+    "C01165": {
+     "num": "139",
+     "mode": "BUS",
+     "reseau": "Plaine Saint-Denis",
+     "operateur": "RATP Cap Plaine Saint-Denis",
+     "courses": 27
+    },
+    "C01247": {
+     "num": "256",
+     "mode": "BUS",
+     "reseau": "Plaine Saint-Denis",
+     "operateur": "RATP Cap Plaine Saint-Denis",
+     "courses": 34
+    },
+    "C01194": {
+     "num": "173",
+     "mode": "BUS",
+     "reseau": "Plaine Saint-Denis",
+     "operateur": "RATP Cap Plaine Saint-Denis",
+     "courses": 64
+    },
+    "C01092": {
+     "num": "54",
+     "mode": "BUS",
+     "reseau": "Plaine Saint-Denis",
+     "operateur": "RATP Cap Plaine Saint-Denis",
+     "courses": 47
+    },
+    "C01253": {
+     "num": "270",
+     "mode": "BUS",
+     "reseau": "Plaine Saint-Denis",
+     "operateur": "RATP Cap Plaine Saint-Denis",
+     "courses": 30
+    },
+    "C01081": {
+     "num": "31",
+     "mode": "BUS",
+     "reseau": "Plaine Saint-Denis",
+     "operateur": "RATP Cap Plaine Saint-Denis",
+     "courses": 41
+    },
+    "C01251": {
+     "num": "268",
+     "mode": "BUS",
+     "reseau": "Plaine Saint-Denis",
+     "operateur": "RATP Cap Plaine Saint-Denis",
+     "courses": 62
+    },
+    "C01191": {
+     "num": "170",
+     "mode": "BUS",
+     "reseau": "Plaine Saint-Denis",
+     "operateur": "RATP Cap Plaine Saint-Denis",
+     "courses": 45
+    },
+    "C02244": {
+     "num": "45",
+     "mode": "BUS",
+     "reseau": "Plaine Saint-Denis",
+     "operateur": "RATP Cap Plaine Saint-Denis",
+     "courses": 29
+    },
+    "C01680": {
+     "num": "35",
+     "mode": "BUS",
+     "reseau": "Plaine Saint-Denis",
+     "operateur": "RATP Cap Plaine Saint-Denis",
+     "courses": 23
+    },
+    "C01246": {
+     "num": "255",
+     "mode": "BUS",
+     "reseau": "Plaine Saint-Denis",
+     "operateur": "RATP Cap Plaine Saint-Denis",
+     "courses": 50
+    },
+    "C01238": {
+     "num": "239",
+     "mode": "BUS",
+     "reseau": "Plaine Saint-Denis",
+     "operateur": "RATP Cap Plaine Saint-Denis",
+     "courses": 29
+    },
+    "C01305": {
+     "num": "361",
+     "mode": "BUS",
+     "reseau": "Plaine Saint-Denis",
+     "operateur": "RATP Cap Plaine Saint-Denis",
+     "courses": 28
+    },
+    "C01177": {
+     "num": "153",
+     "mode": "BUS",
+     "reseau": "Plaine Saint-Denis",
+     "operateur": "RATP Cap Plaine Saint-Denis",
+     "courses": 35
+    },
+    "C01174": {
+     "num": "150",
+     "mode": "BUS",
+     "reseau": "Plaine Saint-Denis",
+     "operateur": "RATP Cap Plaine Saint-Denis",
+     "courses": 42
+    },
+    "C01808": {
+     "num": "254",
+     "mode": "BUS",
+     "reseau": "Plaine Saint-Denis",
+     "operateur": "RATP Cap Plaine Saint-Denis",
+     "courses": 27
+    },
+    "C01242": {
+     "num": "250",
+     "mode": "BUS",
+     "reseau": "Plaine Saint-Denis",
+     "operateur": "RATP Cap Plaine Saint-Denis",
+     "courses": 16
+    },
+    "C01273": {
+     "num": "302",
+     "mode": "BUS",
+     "reseau": "Plaine Saint-Denis",
+     "operateur": "RATP Cap Plaine Saint-Denis",
+     "courses": 20
+    },
+    "C01126": {
+     "num": "95",
+     "mode": "BUS",
+     "reseau": "Plaine Saint-Denis",
+     "operateur": "RATP Cap Plaine Saint-Denis",
+     "courses": 39
+    },
+    "C01303": {
+     "num": "356",
+     "mode": "BUS",
+     "reseau": "Plaine Saint-Denis",
+     "operateur": "RATP Cap Plaine Saint-Denis",
+     "courses": 28
+    },
+    "C01249": {
+     "num": "261",
+     "mode": "BUS",
+     "reseau": "Plaine Saint-Denis",
+     "operateur": "RATP Cap Plaine Saint-Denis",
+     "courses": 22
+    },
+    "C01756": {
+     "num": "337",
+     "mode": "BUS",
+     "reseau": "Plaine Saint-Denis",
+     "operateur": "RATP Cap Plaine Saint-Denis",
+     "courses": 11
+    },
+    "C01252": {
+     "num": "269",
+     "mode": "BUS",
+     "reseau": "Plaine Saint-Denis",
+     "operateur": "RATP Cap Plaine Saint-Denis",
+     "courses": 3
+    },
+    "C02007": {
+     "num": "168",
+     "mode": "BUS",
+     "reseau": "Plaine Saint-Denis",
+     "operateur": "RATP Cap Plaine Saint-Denis",
+     "courses": 1
+    }
+   },
+   "courses": 780
+  },
+  "NSSD": {
+   "lignes": {
+    "C02267": {
+     "num": "T'bus 3",
+     "mode": "BUS",
+     "reseau": "Terres d'Envol",
+     "operateur": "Transdev Nord Seine-Saint-Denis",
+     "courses": 3
+    },
+    "C01585": {
+     "num": "617",
+     "mode": "BUS",
+     "reseau": "Terres d'Envol",
+     "operateur": "Transdev Nord Seine-Saint-Denis",
+     "courses": 8
+    },
+    "C00213": {
+     "num": "39",
+     "mode": "BUS",
+     "reseau": "Terres d'Envol",
+     "operateur": "Transdev Nord Seine-Saint-Denis",
+     "courses": 8
+    },
+    "C01587": {
+     "num": "619",
+     "mode": "BUS",
+     "reseau": "Terres d'Envol",
+     "operateur": "Transdev Nord Seine-Saint-Denis",
+     "courses": 7
+    },
+    "C01578": {
+     "num": "607",
+     "mode": "BUS",
+     "reseau": "Terres d'Envol",
+     "operateur": "Transdev Nord Seine-Saint-Denis",
+     "courses": 9
+    },
+    "C02265": {
+     "num": "T'bus 1",
+     "mode": "BUS",
+     "reseau": "Terres d'Envol",
+     "operateur": "Transdev Nord Seine-Saint-Denis",
+     "courses": 10
+    },
+    "C00197": {
+     "num": "15",
+     "mode": "BUS",
+     "reseau": "Terres d'Envol",
+     "operateur": "Transdev Nord Seine-Saint-Denis",
+     "courses": 15
+    },
+    "C01583": {
+     "num": "615",
+     "mode": "BUS",
+     "reseau": "Terres d'Envol",
+     "operateur": "Transdev Nord Seine-Saint-Denis",
+     "courses": 18
+    },
+    "C01579": {
+     "num": "609",
+     "mode": "BUS",
+     "reseau": "Terres d'Envol",
+     "operateur": "Transdev Nord Seine-Saint-Denis",
+     "courses": 17
+    },
+    "C01594": {
+     "num": "642",
+     "mode": "BUS",
+     "reseau": "Terres d'Envol",
+     "operateur": "Transdev Nord Seine-Saint-Denis",
+     "courses": 7
+    },
+    "C00214": {
+     "num": "43",
+     "mode": "BUS",
+     "reseau": "Terres d'Envol",
+     "operateur": "Transdev Nord Seine-Saint-Denis",
+     "courses": 9
+    },
+    "C01588": {
+     "num": "620",
+     "mode": "BUS",
+     "reseau": "Terres d'Envol",
+     "operateur": "Transdev Nord Seine-Saint-Denis",
+     "courses": 9
+    },
+    "C00216": {
+     "num": "45",
+     "mode": "BUS",
+     "reseau": "Terres d'Envol",
+     "operateur": "Transdev Nord Seine-Saint-Denis",
+     "courses": 8
+    },
+    "C01584": {
+     "num": "616",
+     "mode": "BUS",
+     "reseau": "Terres d'Envol",
+     "operateur": "Transdev Nord Seine-Saint-Denis",
+     "courses": 15
+    },
+    "C00189": {
+     "num": "1",
+     "mode": "BUS",
+     "reseau": "Terres d'Envol",
+     "operateur": "Transdev Nord Seine-Saint-Denis",
+     "courses": 8
+    },
+    "C02630": {
+     "num": "612",
+     "mode": "BUS",
+     "reseau": "Terres d'Envol",
+     "operateur": "Transdev Nord Seine-Saint-Denis",
+     "courses": 4
+    },
+    "C02266": {
+     "num": "T'bus 2",
+     "mode": "BUS",
+     "reseau": "Terres d'Envol",
+     "operateur": "Transdev Nord Seine-Saint-Denis",
+     "courses": 5
+    },
+    "C01580": {
+     "num": "610",
+     "mode": "BUS",
+     "reseau": "Terres d'Envol",
+     "operateur": "Transdev Nord Seine-Saint-Denis",
+     "courses": 8
+    },
+    "C01586": {
+     "num": "618",
+     "mode": "BUS",
+     "reseau": "Terres d'Envol",
+     "operateur": "Transdev Nord Seine-Saint-Denis",
+     "courses": 11
+    }
+   },
+   "courses": 179
+  },
+  "030CARSLACROIX": {
+   "lignes": {
+    "C02842": {
+     "num": "1410",
+     "mode": "BUS",
+     "reseau": "Val Parisis",
+     "operateur": "Francilité Val Parisis",
+     "courses": 7
+    },
+    "C00437": {
+     "num": "1401",
+     "mode": "BUS",
+     "reseau": "Val Parisis",
+     "operateur": "Francilité Val Parisis",
+     "courses": 8
+    },
+    "C02847": {
+     "num": "1430",
+     "mode": "BUS",
+     "reseau": "Val Parisis",
+     "operateur": "Francilité Val Parisis",
+     "courses": 5
+    },
+    "C02257": {
+     "num": "1421",
+     "mode": "BUS",
+     "reseau": "Val Parisis",
+     "operateur": "Francilité Val Parisis",
+     "courses": 8
+    },
+    "C00473": {
+     "num": "1420",
+     "mode": "BUS",
+     "reseau": "Val Parisis",
+     "operateur": "Francilité Val Parisis",
+     "courses": 15
+    },
+    "C02850": {
+     "num": "1424",
+     "mode": "BUS",
+     "reseau": "Val Parisis",
+     "operateur": "Francilité Val Parisis",
+     "courses": 4
+    },
+    "C02844": {
+     "num": "1411",
+     "mode": "BUS",
+     "reseau": "Val Parisis",
+     "operateur": "Francilité Val Parisis",
+     "courses": 6
+    },
+    "C02709": {
+     "num": "N148",
+     "mode": "BUS",
+     "reseau": "Val Parisis",
+     "operateur": "Francilité Val Parisis",
+     "courses": 4
+    },
+    "C02851": {
+     "num": "1425",
+     "mode": "BUS",
+     "reseau": "Val Parisis",
+     "operateur": "Francilité Val Parisis",
+     "courses": 3
+    },
+    "C02005": {
+     "num": "1427",
+     "mode": "BUS",
+     "reseau": "Val Parisis",
+     "operateur": "Francilité Val Parisis",
+     "courses": 2
+    },
+    "C02795": {
+     "num": "1433",
+     "mode": "BUS",
+     "reseau": "Val Parisis",
+     "operateur": "Francilité Val Parisis",
+     "courses": 2
+    }
+   },
+   "courses": 64
+  },
+  "MeC_Bus_PC · RATP Cap Rive Gauche": {
+   "lignes": {
+    "C01095": {
+     "num": "58",
+     "mode": "BUS",
+     "reseau": "Rive Gauche",
+     "operateur": "RATP Cap Rive Gauche",
+     "courses": 37
+    },
+    "C01100": {
+     "num": "64",
+     "mode": "BUS",
+     "reseau": "Rive Gauche",
+     "operateur": "RATP Cap Rive Gauche",
+     "courses": 44
+    },
+    "C01103": {
+     "num": "67",
+     "mode": "BUS",
+     "reseau": "Rive Gauche",
+     "operateur": "RATP Cap Rive Gauche",
+     "courses": 33
+    },
+    "C01114": {
+     "num": "82",
+     "mode": "BUS",
+     "reseau": "Rive Gauche",
+     "operateur": "RATP Cap Rive Gauche",
+     "courses": 52
+    },
+    "C02245": {
+     "num": "59",
+     "mode": "BUS",
+     "reseau": "Rive Gauche",
+     "operateur": "RATP Cap Rive Gauche",
+     "courses": 30
+    },
+    "C01073": {
+     "num": "21",
+     "mode": "BUS",
+     "reseau": "Rive Gauche",
+     "operateur": "RATP Cap Rive Gauche",
+     "courses": 72
+    },
+    "C01192": {
+     "num": "171",
+     "mode": "BUS",
+     "reseau": "Rive Gauche",
+     "operateur": "RATP Cap Rive Gauche",
+     "courses": 45
+    },
+    "C01190": {
+     "num": "169",
+     "mode": "BUS",
+     "reseau": "Rive Gauche",
+     "operateur": "RATP Cap Rive Gauche",
+     "courses": 22
+    },
+    "C01075": {
+     "num": "24",
+     "mode": "BUS",
+     "reseau": "Rive Gauche",
+     "operateur": "RATP Cap Rive Gauche",
+     "courses": 48
+    },
+    "C01123": {
+     "num": "92",
+     "mode": "BUS",
+     "reseau": "Rive Gauche",
+     "operateur": "RATP Cap Rive Gauche",
+     "courses": 60
+    },
+    "C01078": {
+     "num": "28",
+     "mode": "BUS",
+     "reseau": "Rive Gauche",
+     "operateur": "RATP Cap Rive Gauche",
+     "courses": 24
+    },
+    "C01106": {
+     "num": "70",
+     "mode": "BUS",
+     "reseau": "Rive Gauche",
+     "operateur": "RATP Cap Rive Gauche",
+     "courses": 50
+    },
+    "C01104": {
+     "num": "68",
+     "mode": "BUS",
+     "reseau": "Rive Gauche",
+     "operateur": "RATP Cap Rive Gauche",
+     "courses": 53
+    },
+    "C01120": {
+     "num": "88",
+     "mode": "BUS",
+     "reseau": "Rive Gauche",
+     "operateur": "RATP Cap Rive Gauche",
+     "courses": 28
+    },
+    "C01099": {
+     "num": "63",
+     "mode": "BUS",
+     "reseau": "Rive Gauche",
+     "operateur": "RATP Cap Rive Gauche",
+     "courses": 41
+    },
+    "C01314": {
+     "num": "388",
+     "mode": "BUS",
+     "reseau": "Rive Gauche",
+     "operateur": "RATP Cap Rive Gauche",
+     "courses": 25
+    },
+    "C01152": {
+     "num": "123",
+     "mode": "BUS",
+     "reseau": "Rive Gauche",
+     "operateur": "RATP Cap Rive Gauche",
+     "courses": 51
+    },
+    "C02027": {
+     "num": "260",
+     "mode": "BUS",
+     "reseau": "Rive Gauche",
+     "operateur": "RATP Cap Rive Gauche",
+     "courses": 12
+    },
+    "C01080": {
+     "num": "30",
+     "mode": "BUS",
+     "reseau": "Rive Gauche",
+     "operateur": "RATP Cap Rive Gauche",
+     "courses": 50
+    },
+    "C01116": {
+     "num": "84",
+     "mode": "BUS",
+     "reseau": "Rive Gauche",
+     "operateur": "RATP Cap Rive Gauche",
+     "courses": 39
+    },
+    "C02205": {
+     "num": "PC",
+     "mode": "BUS",
+     "reseau": "Rive Gauche",
+     "operateur": "RATP Cap Rive Gauche",
+     "courses": 28
+    },
+    "C01155": {
+     "num": "126",
+     "mode": "BUS",
+     "reseau": "Rive Gauche",
+     "operateur": "RATP Cap Rive Gauche",
+     "courses": 48
+    },
+    "C01157": {
+     "num": "128",
+     "mode": "BUS",
+     "reseau": "Rive Gauche",
+     "operateur": "RATP Cap Rive Gauche",
+     "courses": 34
+    },
+    "C01209": {
+     "num": "188",
+     "mode": "BUS",
+     "reseau": "Rive Gauche",
+     "operateur": "RATP Cap Rive Gauche",
+     "courses": 17
+    },
+    "C01125": {
+     "num": "94",
+     "mode": "BUS",
+     "reseau": "Rive Gauche",
+     "operateur": "RATP Cap Rive Gauche",
+     "courses": 29
+    }
+   },
+   "courses": 972
+  },
+  "MeC_Bus_PC · RATP Cap Pompadour": {
+   "lignes": {
+    "C01277": {
+     "num": "308",
+     "mode": "BUS",
+     "reseau": "Pompadour",
+     "operateur": "RATP Cap Pompadour",
+     "courses": 51
+    },
+    "C01208": {
+     "num": "187",
+     "mode": "BUS",
+     "reseau": "Pompadour",
+     "operateur": "RATP Cap Pompadour",
+     "courses": 38
+    },
+    "C01071": {
+     "num": "TVM",
+     "mode": "BUS",
+     "reseau": "Pompadour",
+     "operateur": "RATP Cap Pompadour",
+     "courses": 86
+    },
+    "C01132": {
+     "num": "103",
+     "mode": "BUS",
+     "reseau": "Pompadour",
+     "operateur": "RATP Cap Pompadour",
+     "courses": 64
+    },
+    "C01159": {
+     "num": "131",
+     "mode": "BUS",
+     "reseau": "Pompadour",
+     "operateur": "RATP Cap Pompadour",
+     "courses": 51
+    },
+    "C01280": {
+     "num": "317",
+     "mode": "BUS",
+     "reseau": "Pompadour",
+     "operateur": "RATP Cap Pompadour",
+     "courses": 19
+    },
+    "C01207": {
+     "num": "186",
+     "mode": "BUS",
+     "reseau": "Pompadour",
+     "operateur": "RATP Cap Pompadour",
+     "courses": 15
+    },
+    "C01260": {
+     "num": "281",
+     "mode": "BUS",
+     "reseau": "Pompadour",
+     "operateur": "RATP Cap Pompadour",
+     "courses": 21
+    },
+    "C02459": {
+     "num": "382",
+     "mode": "BUS",
+     "reseau": "Pompadour",
+     "operateur": "RATP Cap Pompadour",
+     "courses": 17
+    },
+    "C01321": {
+     "num": "396",
+     "mode": "BUS",
+     "reseau": "Pompadour",
+     "operateur": "RATP Cap Pompadour",
+     "courses": 17
+    },
+    "C01263": {
+     "num": "286",
+     "mode": "BUS",
+     "reseau": "Pompadour",
+     "operateur": "RATP Cap Pompadour",
+     "courses": 35
+    },
+    "C01223": {
+     "num": "208",
+     "mode": "BUS",
+     "reseau": "Pompadour",
+     "operateur": "RATP Cap Pompadour",
+     "courses": 40
+    },
+    "C01146": {
+     "num": "117",
+     "mode": "BUS",
+     "reseau": "Pompadour",
+     "operateur": "RATP Cap Pompadour",
+     "courses": 28
+    },
+    "C01133": {
+     "num": "104",
+     "mode": "BUS",
+     "reseau": "Pompadour",
+     "operateur": "RATP Cap Pompadour",
+     "courses": 21
+    },
+    "C01204": {
+     "num": "183",
+     "mode": "BUS",
+     "reseau": "Pompadour",
+     "operateur": "RATP Cap Pompadour",
+     "courses": 24
+    },
+    "C01231": {
+     "num": "217",
+     "mode": "BUS",
+     "reseau": "Pompadour",
+     "operateur": "RATP Cap Pompadour",
+     "courses": 33
+    },
+    "C01206": {
+     "num": "185",
+     "mode": "BUS",
+     "reseau": "Pompadour",
+     "operateur": "RATP Cap Pompadour",
+     "courses": 27
+    },
+    "C01318": {
+     "num": "393",
+     "mode": "BUS",
+     "reseau": "Pompadour",
+     "operateur": "RATP Cap Pompadour",
+     "courses": 31
+    },
+    "C01202": {
+     "num": "181",
+     "mode": "BUS",
+     "reseau": "Pompadour",
+     "operateur": "RATP Cap Pompadour",
+     "courses": 17
+    },
+    "C01213": {
+     "num": "192",
+     "mode": "BUS",
+     "reseau": "Pompadour",
+     "operateur": "RATP Cap Pompadour",
+     "courses": 26
+    },
+    "C01205": {
+     "num": "184",
+     "mode": "BUS",
+     "reseau": "Pompadour",
+     "operateur": "RATP Cap Pompadour",
+     "courses": 2
+    }
+   },
+   "courses": 663
+  },
+  "MeC_Bus_PC · Keolis Grand Paris Seine Orly": {
+   "lignes": {
+    "C01122": {
+     "num": "91",
+     "mode": "BUS",
+     "reseau": "Seine Orly",
+     "operateur": "Keolis Grand Paris Seine Orly",
+     "courses": 68
+    },
+    "C01287": {
+     "num": "323",
+     "mode": "BUS",
+     "reseau": "Seine Orly",
+     "operateur": "Keolis Grand Paris Seine Orly",
+     "courses": 49
+    },
+    "C01121": {
+     "num": "89",
+     "mode": "BUS",
+     "reseau": "Seine Orly",
+     "operateur": "Keolis Grand Paris Seine Orly",
+     "courses": 54
+    },
+    "C01154": {
+     "num": "125",
+     "mode": "BUS",
+     "reseau": "Seine Orly",
+     "operateur": "Keolis Grand Paris Seine Orly",
+     "courses": 38
+    },
+    "C01098": {
+     "num": "62",
+     "mode": "BUS",
+     "reseau": "Seine Orly",
+     "operateur": "Keolis Grand Paris Seine Orly",
+     "courses": 66
+    },
+    "C01077": {
+     "num": "27",
+     "mode": "BUS",
+     "reseau": "Seine Orly",
+     "operateur": "Keolis Grand Paris Seine Orly",
+     "courses": 52
+    },
+    "C01201": {
+     "num": "180",
+     "mode": "BUS",
+     "reseau": "Seine Orly",
+     "operateur": "Keolis Grand Paris Seine Orly",
+     "courses": 35
+    },
+    "C01184": {
+     "num": "162",
+     "mode": "BUS",
+     "reseau": "Seine Orly",
+     "operateur": "Keolis Grand Paris Seine Orly",
+     "courses": 28
+    },
+    "C01160": {
+     "num": "132",
+     "mode": "BUS",
+     "reseau": "Seine Orly",
+     "operateur": "Keolis Grand Paris Seine Orly",
+     "courses": 37
+    },
+    "C01288": {
+     "num": "325",
+     "mode": "BUS",
+     "reseau": "Seine Orly",
+     "operateur": "Keolis Grand Paris Seine Orly",
+     "courses": 35
+    },
+    "C01115": {
+     "num": "83",
+     "mode": "BUS",
+     "reseau": "Seine Orly",
+     "operateur": "Keolis Grand Paris Seine Orly",
+     "courses": 55
+    },
+    "C01088": {
+     "num": "47",
+     "mode": "BUS",
+     "reseau": "Seine Orly",
+     "operateur": "Keolis Grand Paris Seine Orly",
+     "courses": 55
+    },
+    "C01809": {
+     "num": "380",
+     "mode": "BUS",
+     "reseau": "Seine Orly",
+     "operateur": "Keolis Grand Paris Seine Orly",
+     "courses": 13
+    },
+    "C01193": {
+     "num": "172",
+     "mode": "BUS",
+     "reseau": "Seine Orly",
+     "operateur": "Keolis Grand Paris Seine Orly",
+     "courses": 37
+    },
+    "C02243": {
+     "num": "25",
+     "mode": "BUS",
+     "reseau": "Seine Orly",
+     "operateur": "Keolis Grand Paris Seine Orly",
+     "courses": 21
+    },
+    "C01203": {
+     "num": "182",
+     "mode": "BUS",
+     "reseau": "Seine Orly",
+     "operateur": "Keolis Grand Paris Seine Orly",
+     "courses": 39
+    }
+   },
+   "courses": 682
+  },
+  "SNCF_MAGENTA_PRD": {
+   "lignes": {
+    "C01852": {
+     "num": "Remplacement RER D",
+     "mode": "BUS",
+     "reseau": "RER",
+     "operateur": "SNCF",
+     "courses": 83
+    },
+    "C01853": {
+     "num": "Remplacement RER E",
+     "mode": "BUS",
+     "reseau": "RER",
+     "operateur": "SNCF",
+     "courses": 28
+    },
+    "C01730": {
+     "num": "P",
+     "mode": "RAIL",
+     "reseau": "Transilien",
+     "operateur": "SNCF",
+     "courses": 13
+    },
+    "C01849": {
+     "num": "Remplacement RER A",
+     "mode": "BUS",
+     "reseau": "RER",
+     "operateur": "SNCF",
+     "courses": 35
+    },
+    "C01740": {
+     "num": "L",
+     "mode": "RAIL",
+     "reseau": "Transilien",
+     "operateur": "SNCF",
+     "courses": 41
+    },
+    "C01737": {
+     "num": "H",
+     "mode": "RAIL",
+     "reseau": "Transilien",
+     "operateur": "SNCF",
+     "courses": 37
+    },
+    "C01851": {
+     "num": "Remplacement RER C",
+     "mode": "BUS",
+     "reseau": "RER",
+     "operateur": "SNCF",
+     "courses": 28
+    },
+    "C01743": {
+     "num": "B",
+     "mode": "RAIL",
+     "reseau": "RER",
+     "operateur": "SNCF",
+     "courses": 64
+    },
+    "C01848": {
+     "num": "Remplacement Transilien R",
+     "mode": "BUS",
+     "reseau": "Transilien",
+     "operateur": "SNCF",
+     "courses": 20
+    },
+    "C01742": {
+     "num": "A",
+     "mode": "RAIL",
+     "reseau": "RER",
+     "operateur": "SNCF",
+     "courses": 56
+    },
+    "C01841": {
+     "num": "Remplacement Transilien P",
+     "mode": "BUS",
+     "reseau": "Transilien",
+     "operateur": "SNCF",
+     "courses": 27
+    },
+    "C01736": {
+     "num": "N",
+     "mode": "RAIL",
+     "reseau": "Transilien",
+     "operateur": "SNCF",
+     "courses": 21
+    },
+    "C01850": {
+     "num": "Remplacement RER B",
+     "mode": "BUS",
+     "reseau": "RER",
+     "operateur": "SNCF",
+     "courses": 51
+    },
+    "C01727": {
+     "num": "C",
+     "mode": "RAIL",
+     "reseau": "RER",
+     "operateur": "SNCF",
+     "courses": 31
+    },
+    "C01744": {
+     "num": "TER Centre - Val de Loire",
+     "mode": "RAIL",
+     "reseau": "TER",
+     "operateur": "SNCF",
+     "courses": 5
+    },
+    "C01729": {
+     "num": "E",
+     "mode": "RAIL",
+     "reseau": "RER",
+     "operateur": "SNCF",
+     "courses": 28
+    },
+    "C01846": {
+     "num": "Remplacement Transilien J",
+     "mode": "BUS",
+     "reseau": "Transilien",
+     "operateur": "SNCF",
+     "courses": 25
+    },
+    "C01847": {
+     "num": "Remplacement Transilien L",
+     "mode": "BUS",
+     "reseau": "Transilien",
+     "operateur": "SNCF",
+     "courses": 47
+    },
+    "C01738": {
+     "num": "K",
+     "mode": "RAIL",
+     "reseau": "Transilien",
+     "operateur": "SNCF",
+     "courses": 2
+    },
+    "C01739": {
+     "num": "J",
+     "mode": "RAIL",
+     "reseau": "Transilien",
+     "operateur": "SNCF",
+     "courses": 48
+    },
+    "C01731": {
+     "num": "R",
+     "mode": "RAIL",
+     "reseau": "Transilien",
+     "operateur": "SNCF",
+     "courses": 11
+    },
+    "C02372": {
+     "num": "TER Hauts-de-France",
+     "mode": "RAIL",
+     "reseau": "TER",
+     "operateur": "SNCF",
+     "courses": 5
+    },
+    "C01728": {
+     "num": "D",
+     "mode": "RAIL",
+     "reseau": "RER",
+     "operateur": "SNCF",
+     "courses": 26
+    },
+    "C02370": {
+     "num": "TER Normandie",
+     "mode": "RAIL",
+     "reseau": "TER",
+     "operateur": "SNCF",
+     "courses": 1
+    },
+    "C01747": {
+     "num": "TER Grand-Est",
+     "mode": "RAIL",
+     "reseau": "TER",
+     "operateur": "SNCF",
+     "courses": 1
+    },
+    "C01745": {
+     "num": "TER Bourgogne - Franche-Comté",
+     "mode": "RAIL",
+     "reseau": "TER",
+     "operateur": "SNCF",
+     "courses": 4
+    },
+    "C02375": {
+     "num": "TER Normandie",
+     "mode": "RAIL",
+     "reseau": "TER",
+     "operateur": "SNCF",
+     "courses": 4
+    },
+    "C02711": {
+     "num": "V",
+     "mode": "RAIL",
+     "reseau": "Transilien",
+     "operateur": "SNCF",
+     "courses": 4
+    },
+    "C01746": {
+     "num": "TER Hauts-de-France",
+     "mode": "RAIL",
+     "reseau": "TER",
+     "operateur": "SNCF",
+     "courses": 2
+    },
+    "C01845": {
+     "num": "Remplacement Transilien N",
+     "mode": "BUS",
+     "reseau": "Transilien",
+     "operateur": "SNCF",
+     "courses": 4
+    },
+    "C01842": {
+     "num": "Remplacement Transilien H",
+     "mode": "BUS",
+     "reseau": "Transilien",
+     "operateur": "SNCF",
+     "courses": 4
+    },
+    "C01748": {
+     "num": "TER Normandie",
+     "mode": "RAIL",
+     "reseau": "TER",
+     "operateur": "SNCF",
+     "courses": 1
+    },
+    "C01840": {
+     "num": "Remplacement Transilien U",
+     "mode": "BUS",
+     "reseau": "Transilien",
+     "operateur": "SNCF",
+     "courses": 12
+    },
+    "C01863": {
+     "num": "TER Hauts-de-France",
+     "mode": "RAIL",
+     "reseau": "TER",
+     "operateur": "SNCF",
+     "courses": 2
+    }
+   },
+   "courses": 771
+  },
+  "RATP-SIV": {
+   "lignes": {
+    "C01379": {
+     "num": "9",
+     "mode": "METRO",
+     "reseau": "",
+     "operateur": "RATP",
+     "courses": 63
+    },
+    "C01378": {
+     "num": "8",
+     "mode": "METRO",
+     "reseau": "",
+     "operateur": "RATP",
+     "courses": 57
+    },
+    "C01386": {
+     "num": "3B",
+     "mode": "METRO",
+     "reseau": "",
+     "operateur": "RATP",
+     "courses": 16
+    },
+    "C01371": {
+     "num": "1",
+     "mode": "METRO",
+     "reseau": "",
+     "operateur": "RATP",
+     "courses": 46
+    },
+    "C01372": {
+     "num": "2",
+     "mode": "METRO",
+     "reseau": "",
+     "operateur": "RATP",
+     "courses": 54
+    },
+    "C01383": {
+     "num": "13",
+     "mode": "METRO",
+     "reseau": "",
+     "operateur": "RATP",
+     "courses": 71
+    },
+    "C01389": {
+     "num": "T1",
+     "mode": "TRAM",
+     "reseau": "",
+     "operateur": "RATP",
+     "courses": 40
+    },
+    "C01387": {
+     "num": "7B",
+     "mode": "METRO",
+     "reseau": "",
+     "operateur": "RATP",
+     "courses": 26
+    },
+    "C01384": {
+     "num": "14",
+     "mode": "METRO",
+     "reseau": "",
+     "operateur": "RATP",
+     "courses": 26
+    },
+    "C01373": {
+     "num": "3",
+     "mode": "METRO",
+     "reseau": "",
+     "operateur": "RATP",
+     "courses": 37
+    },
+    "C01374": {
+     "num": "4",
+     "mode": "METRO",
+     "reseau": "",
+     "operateur": "RATP",
+     "courses": 52
+    },
+    "C01377": {
+     "num": "7",
+     "mode": "METRO",
+     "reseau": "",
+     "operateur": "RATP",
+     "courses": 90
+    },
+    "C01376": {
+     "num": "6",
+     "mode": "METRO",
+     "reseau": "",
+     "operateur": "RATP",
+     "courses": 47
+    },
+    "C01794": {
+     "num": "T6",
+     "mode": "TRAM",
+     "reseau": "",
+     "operateur": "RATP",
+     "courses": 31
+    },
+    "C01390": {
+     "num": "T2",
+     "mode": "TRAM",
+     "reseau": "",
+     "operateur": "RATP",
+     "courses": 49
+    },
+    "C01380": {
+     "num": "10",
+     "mode": "METRO",
+     "reseau": "",
+     "operateur": "RATP",
+     "courses": 54
+    },
+    "C01382": {
+     "num": "12",
+     "mode": "METRO",
+     "reseau": "",
+     "operateur": "RATP",
+     "courses": 48
+    },
+    "C01375": {
+     "num": "5",
+     "mode": "METRO",
+     "reseau": "",
+     "operateur": "RATP",
+     "courses": 33
+    },
+    "C01381": {
+     "num": "11",
+     "mode": "METRO",
+     "reseau": "",
+     "operateur": "RATP",
+     "courses": 37
+    },
+    "C01795": {
+     "num": "T8",
+     "mode": "TRAM",
+     "reseau": "",
+     "operateur": "RATP",
+     "courses": 31
+    },
+    "C01391": {
+     "num": "T3a",
+     "mode": "TRAM",
+     "reseau": "",
+     "operateur": "RATP",
+     "courses": 40
+    },
+    "C01774": {
+     "num": "T7",
+     "mode": "TRAM",
+     "reseau": "",
+     "operateur": "RATP",
+     "courses": 17
+    },
+    "C01679": {
+     "num": "T3b",
+     "mode": "TRAM",
+     "reseau": "",
+     "operateur": "RATP",
+     "courses": 52
+    },
+    "C01684": {
+     "num": "T5",
+     "mode": "TRAM",
+     "reseau": "",
+     "operateur": "RATP",
+     "courses": 24
+    }
+   },
+   "courses": 1041
+  },
+  "1042-T11-SAE": {
+   "lignes": {
+    "C01999": {
+     "num": "T11",
+     "mode": "TRAM",
+     "reseau": "",
+     "operateur": "STRETTO",
+     "courses": 24
+    },
+    "C02732": {
+     "num": "T14",
+     "mode": "TRAM",
+     "reseau": "",
+     "operateur": "STRETTO",
+     "courses": 3
+    }
+   },
+   "courses": 27
+  },
+  "BDM": {
+   "lignes": {
+    "C01063": {
+     "num": "7717",
+     "mode": "BUS",
+     "reseau": "Brie et 2 Morin",
+     "operateur": "Transdev Brie et 2 Morin",
+     "courses": 7
+    },
+    "C01062": {
+     "num": "7701",
+     "mode": "BUS",
+     "reseau": "Brie et 2 Morin",
+     "operateur": "Transdev Brie et 2 Morin",
+     "courses": 3
+    },
+    "C00947": {
+     "num": "7712",
+     "mode": "BUS",
+     "reseau": "Brie et 2 Morin",
+     "operateur": "Transdev Brie et 2 Morin",
+     "courses": 4
+    },
+    "C00944": {
+     "num": "2407",
+     "mode": "BUS",
+     "reseau": "Brie et 2 Morin",
+     "operateur": "Transdev Brie et 2 Morin",
+     "courses": 5
+    }
+   },
+   "courses": 19
+  },
+  "MeC_Bus_PC · Transdev Ourcq": {
+   "lignes": {
+    "C01272": {
+     "num": "301",
+     "mode": "BUS",
+     "reseau": "Ourcq",
+     "operateur": "Transdev Ourcq",
+     "courses": 28
+    },
+    "C01241": {
+     "num": "249",
+     "mode": "BUS",
+     "reseau": "Ourcq",
+     "operateur": "Transdev Ourcq",
+     "courses": 41
+    },
+    "C01168": {
+     "num": "143",
+     "mode": "BUS",
+     "reseau": "Ourcq",
+     "operateur": "Transdev Ourcq",
+     "courses": 42
+    },
+    "C01176": {
+     "num": "152",
+     "mode": "BUS",
+     "reseau": "Ourcq",
+     "operateur": "Transdev Ourcq",
+     "courses": 37
+    },
+    "C01234": {
+     "num": "234",
+     "mode": "BUS",
+     "reseau": "Ourcq",
+     "operateur": "Transdev Ourcq",
+     "courses": 68
+    },
+    "C01134": {
+     "num": "105",
+     "mode": "BUS",
+     "reseau": "Ourcq",
+     "operateur": "Transdev Ourcq",
+     "courses": 34
+    },
+    "C01171": {
+     "num": "146",
+     "mode": "BUS",
+     "reseau": "Ourcq",
+     "operateur": "Transdev Ourcq",
+     "courses": 41
+    },
+    "C01295": {
+     "num": "346",
+     "mode": "BUS",
+     "reseau": "Ourcq",
+     "operateur": "Transdev Ourcq",
+     "courses": 30
+    },
+    "C01110": {
+     "num": "75",
+     "mode": "BUS",
+     "reseau": "Ourcq",
+     "operateur": "Transdev Ourcq",
+     "courses": 56
+    },
+    "C01170": {
+     "num": "145",
+     "mode": "BUS",
+     "reseau": "Ourcq",
+     "operateur": "Transdev Ourcq",
+     "courses": 42
+    },
+    "C01173": {
+     "num": "148",
+     "mode": "BUS",
+     "reseau": "Ourcq",
+     "operateur": "Transdev Ourcq",
+     "courses": 48
+    },
+    "C01175": {
+     "num": "151",
+     "mode": "BUS",
+     "reseau": "Ourcq",
+     "operateur": "Transdev Ourcq",
+     "courses": 26
+    },
+    "C01243": {
+     "num": "251",
+     "mode": "BUS",
+     "reseau": "Ourcq",
+     "operateur": "Transdev Ourcq",
+     "courses": 19
+    },
+    "C01172": {
+     "num": "147",
+     "mode": "BUS",
+     "reseau": "Ourcq",
+     "operateur": "Transdev Ourcq",
+     "courses": 48
+    },
+    "C01161": {
+     "num": "133",
+     "mode": "BUS",
+     "reseau": "Ourcq",
+     "operateur": "Transdev Ourcq",
+     "courses": 42
+    },
+    "C02246": {
+     "num": "71",
+     "mode": "BUS",
+     "reseau": "Ourcq",
+     "operateur": "Transdev Ourcq",
+     "courses": 35
+    },
+    "C01097": {
+     "num": "61",
+     "mode": "BUS",
+     "reseau": "Ourcq",
+     "operateur": "Transdev Ourcq",
+     "courses": 54
+    }
+   },
+   "courses": 691
+  },
+  "MeC_Bus_PC · RATP Cap Défense Seine Ouest": {
+   "lignes": {
+    "C01254": {
+     "num": "272",
+     "mode": "BUS",
+     "reseau": "La Défense - Saint Cloud",
+     "operateur": "RATP Cap Défense Seine Ouest",
+     "courses": 56
+    },
+    "C02000": {
+     "num": "259",
+     "mode": "BUS",
+     "reseau": "La Défense - Saint Cloud",
+     "operateur": "RATP Cap Défense Seine Ouest",
+     "courses": 41
+    },
+    "C01085": {
+     "num": "42",
+     "mode": "BUS",
+     "reseau": "La Défense - Saint Cloud",
+     "operateur": "RATP Cap Défense Seine Ouest",
+     "courses": 46
+    },
+    "C01082": {
+     "num": "32",
+     "mode": "BUS",
+     "reseau": "La Défense - Saint Cloud",
+     "operateur": "RATP Cap Défense Seine Ouest",
+     "courses": 31
+    },
+    "C01107": {
+     "num": "72",
+     "mode": "BUS",
+     "reseau": "La Défense - Saint Cloud",
+     "operateur": "RATP Cap Défense Seine Ouest",
+     "courses": 57
+    },
+    "C01248": {
+     "num": "258",
+     "mode": "BUS",
+     "reseau": "La Défense - Saint Cloud",
+     "operateur": "RATP Cap Défense Seine Ouest",
+     "courses": 40
+    },
+    "C01090": {
+     "num": "52",
+     "mode": "BUS",
+     "reseau": "La Défense - Saint Cloud",
+     "operateur": "RATP Cap Défense Seine Ouest",
+     "courses": 26
+    },
+    "C02744": {
+     "num": "277",
+     "mode": "BUS",
+     "reseau": "La Défense - Saint Cloud",
+     "operateur": "RATP Cap Défense Seine Ouest",
+     "courses": 30
+    },
+    "C01275": {
+     "num": "304",
+     "mode": "BUS",
+     "reseau": "La Défense - Saint Cloud",
+     "operateur": "RATP Cap Défense Seine Ouest",
+     "courses": 46
+    },
+    "C01169": {
+     "num": "144",
+     "mode": "BUS",
+     "reseau": "La Défense - Saint Cloud",
+     "operateur": "RATP Cap Défense Seine Ouest",
+     "courses": 51
+    },
+    "C01182": {
+     "num": "159",
+     "mode": "BUS",
+     "reseau": "La Défense - Saint Cloud",
+     "operateur": "RATP Cap Défense Seine Ouest",
+     "courses": 30
+    },
+    "C01197": {
+     "num": "176",
+     "mode": "BUS",
+     "reseau": "La Défense - Saint Cloud",
+     "operateur": "RATP Cap Défense Seine Ouest",
+     "courses": 25
+    },
+    "C01311": {
+     "num": "378",
+     "mode": "BUS",
+     "reseau": "La Défense - Saint Cloud",
+     "operateur": "RATP Cap Défense Seine Ouest",
+     "courses": 46
+    },
+    "C01074": {
+     "num": "22",
+     "mode": "BUS",
+     "reseau": "La Défense - Saint Cloud",
+     "operateur": "RATP Cap Défense Seine Ouest",
+     "courses": 18
+    },
+    "C01256": {
+     "num": "275",
+     "mode": "BUS",
+     "reseau": "La Défense - Saint Cloud",
+     "operateur": "RATP Cap Défense Seine Ouest",
+     "courses": 24
+    },
+    "C01183": {
+     "num": "160",
+     "mode": "BUS",
+     "reseau": "La Défense - Saint Cloud",
+     "operateur": "RATP Cap Défense Seine Ouest",
+     "courses": 25
+    },
+    "C01307": {
+     "num": "367",
+     "mode": "BUS",
+     "reseau": "La Défense - Saint Cloud",
+     "operateur": "RATP Cap Défense Seine Ouest",
+     "courses": 12
+    },
+    "C01167": {
+     "num": "141",
+     "mode": "BUS",
+     "reseau": "La Défense - Saint Cloud",
+     "operateur": "RATP Cap Défense Seine Ouest",
+     "courses": 33
+    },
+    "C01185": {
+     "num": "163",
+     "mode": "BUS",
+     "reseau": "La Défense - Saint Cloud",
+     "operateur": "RATP Cap Défense Seine Ouest",
+     "courses": 37
+    },
+    "C01181": {
+     "num": "158",
+     "mode": "BUS",
+     "reseau": "La Défense - Saint Cloud",
+     "operateur": "RATP Cap Défense Seine Ouest",
+     "courses": 4
+    },
+    "C01124": {
+     "num": "93",
+     "mode": "BUS",
+     "reseau": "La Défense - Saint Cloud",
+     "operateur": "RATP Cap Défense Seine Ouest",
+     "courses": 45
+    },
+    "C01186": {
+     "num": "164",
+     "mode": "BUS",
+     "reseau": "La Défense - Saint Cloud",
+     "operateur": "RATP Cap Défense Seine Ouest",
+     "courses": 33
+    },
+    "C01108": {
+     "num": "73",
+     "mode": "BUS",
+     "reseau": "La Défense - Saint Cloud",
+     "operateur": "RATP Cap Défense Seine Ouest",
+     "courses": 30
+    },
+    "C01257": {
+     "num": "276",
+     "mode": "BUS",
+     "reseau": "La Défense - Saint Cloud",
+     "operateur": "RATP Cap Défense Seine Ouest",
+     "courses": 23
+    },
+    "C01086": {
+     "num": "43",
+     "mode": "BUS",
+     "reseau": "La Défense - Saint Cloud",
+     "operateur": "RATP Cap Défense Seine Ouest",
+     "courses": 46
+    },
+    "C01187": {
+     "num": "165",
+     "mode": "BUS",
+     "reseau": "La Défense - Saint Cloud",
+     "operateur": "RATP Cap Défense Seine Ouest",
+     "courses": 27
+    },
+    "C01240": {
+     "num": "244",
+     "mode": "BUS",
+     "reseau": "La Défense - Saint Cloud",
+     "operateur": "RATP Cap Défense Seine Ouest",
+     "courses": 19
+    },
+    "C01180": {
+     "num": "157",
+     "mode": "BUS",
+     "reseau": "La Défense - Saint Cloud",
+     "operateur": "RATP Cap Défense Seine Ouest",
+     "courses": 6
+    },
+    "C01239": {
+     "num": "241",
+     "mode": "BUS",
+     "reseau": "La Défense - Saint Cloud",
+     "operateur": "RATP Cap Défense Seine Ouest",
+     "courses": 4
+    },
+    "C01304": {
+     "num": "360",
+     "mode": "BUS",
+     "reseau": "La Défense - Saint Cloud",
+     "operateur": "RATP Cap Défense Seine Ouest",
+     "courses": 16
+    }
+   },
+   "courses": 927
+  },
+  "515FPM": {
+   "lignes": {
+    "C01435": {
+     "num": "3301",
+     "mode": "BUS",
+     "reseau": "Pays de Montereau",
+     "operateur": "Francilité Pays de Montereau",
+     "courses": 3
+    },
+    "C00798": {
+     "num": "7706",
+     "mode": "BUS",
+     "reseau": "Pays de Montereau",
+     "operateur": "Francilité Pays de Montereau",
+     "courses": 2
+    },
+    "C02580": {
+     "num": "Soir Montereau Sud",
+     "mode": "BUS",
+     "reseau": "Pays de Montereau",
+     "operateur": "Francilité Pays de Montereau",
+     "courses": 3
+    }
+   },
+   "courses": 8
+  },
+  "MeC_Bus_PC · ATM Croix du Sud": {
+   "lignes": {
+    "C01211": {
+     "num": "190",
+     "mode": "BUS",
+     "reseau": "Croix du Sud",
+     "operateur": "ATM Croix du Sud",
+     "courses": 26
+    },
+    "C01316": {
+     "num": "390",
+     "mode": "BUS",
+     "reseau": "Croix du Sud",
+     "operateur": "ATM Croix du Sud",
+     "courses": 23
+    },
+    "C01319": {
+     "num": "394",
+     "mode": "BUS",
+     "reseau": "Croix du Sud",
+     "operateur": "ATM Croix du Sud",
+     "courses": 22
+    },
+    "C01214": {
+     "num": "194",
+     "mode": "BUS",
+     "reseau": "Croix du Sud",
+     "operateur": "ATM Croix du Sud",
+     "courses": 49
+    },
+    "C01317": {
+     "num": "391",
+     "mode": "BUS",
+     "reseau": "Croix du Sud",
+     "operateur": "ATM Croix du Sud",
+     "courses": 15
+    },
+    "C01264": {
+     "num": "289",
+     "mode": "BUS",
+     "reseau": "Croix du Sud",
+     "operateur": "ATM Croix du Sud",
+     "courses": 37
+    },
+    "C01210": {
+     "num": "189",
+     "mode": "BUS",
+     "reseau": "Croix du Sud",
+     "operateur": "ATM Croix du Sud",
+     "courses": 44
+    },
+    "C01200": {
+     "num": "179",
+     "mode": "BUS",
+     "reseau": "Croix du Sud",
+     "operateur": "ATM Croix du Sud",
+     "courses": 37
+    },
+    "C01265": {
+     "num": "290",
+     "mode": "BUS",
+     "reseau": "Croix du Sud",
+     "operateur": "ATM Croix du Sud",
+     "courses": 12
+    },
+    "C01315": {
+     "num": "389",
+     "mode": "BUS",
+     "reseau": "Croix du Sud",
+     "operateur": "ATM Croix du Sud",
+     "courses": 8
+    },
+    "C01215": {
+     "num": "195",
+     "mode": "BUS",
+     "reseau": "Croix du Sud",
+     "operateur": "ATM Croix du Sud",
+     "courses": 19
+    },
+    "C01212": {
+     "num": "191",
+     "mode": "BUS",
+     "reseau": "Croix du Sud",
+     "operateur": "ATM Croix du Sud",
+     "courses": 33
+    }
+   },
+   "courses": 325
+  },
+  "527_KVVB": {
+   "lignes": {
+    "C02513": {
+     "num": "Soir Versailles-Chantiers",
+     "mode": "BUS",
+     "reseau": "Vélizy Vallées",
+     "operateur": "Keolis Vélizy Vallée de la Bièvre",
+     "courses": 4
+    },
+    "C00050": {
+     "num": "6123",
+     "mode": "BUS",
+     "reseau": "Vélizy Vallées",
+     "operateur": "Keolis Vélizy Vallée de la Bièvre",
+     "courses": 7
+    },
+    "C01805": {
+     "num": "6134",
+     "mode": "BUS",
+     "reseau": "Vélizy Vallées",
+     "operateur": "Keolis Vélizy Vallée de la Bièvre",
+     "courses": 7
+    },
+    "C01700": {
+     "num": "6164",
+     "mode": "BUS",
+     "reseau": "Vélizy Vallées",
+     "operateur": "Keolis Vélizy Vallée de la Bièvre",
+     "courses": 1
+    },
+    "C00038": {
+     "num": "6132",
+     "mode": "BUS",
+     "reseau": "Vélizy Vallées",
+     "operateur": "Keolis Vélizy Vallée de la Bièvre",
+     "courses": 2
+    },
+    "C01702": {
+     "num": "6162",
+     "mode": "BUS",
+     "reseau": "Vélizy Vallées",
+     "operateur": "Keolis Vélizy Vallée de la Bièvre",
+     "courses": 9
+    },
+    "C00048": {
+     "num": "6140",
+     "mode": "BUS",
+     "reseau": "Vélizy Vallées",
+     "operateur": "Keolis Vélizy Vallée de la Bièvre",
+     "courses": 5
+    },
+    "C01701": {
+     "num": "6161",
+     "mode": "BUS",
+     "reseau": "Vélizy Vallées",
+     "operateur": "Keolis Vélizy Vallée de la Bièvre",
+     "courses": 1
+    }
+   },
+   "courses": 36
+  },
+  "MeC_Bus_PC · RATP Cap Boucle Nord de Seine": {
+   "lignes": {
+    "C01236": {
+     "num": "237",
+     "mode": "BUS",
+     "reseau": "Boucles Nord de Seine",
+     "operateur": "RATP Cap Boucle Nord de Seine",
+     "courses": 29
+    },
+    "C01164": {
+     "num": "138",
+     "mode": "BUS",
+     "reseau": "Boucles Nord de Seine",
+     "operateur": "RATP Cap Boucle Nord de Seine",
+     "courses": 24
+    },
+    "C01117": {
+     "num": "85",
+     "mode": "BUS",
+     "reseau": "Boucles Nord de Seine",
+     "operateur": "RATP Cap Boucle Nord de Seine",
+     "courses": 38
+    },
+    "C01102": {
+     "num": "66",
+     "mode": "BUS",
+     "reseau": "Boucles Nord de Seine",
+     "operateur": "RATP Cap Boucle Nord de Seine",
+     "courses": 49
+    },
+    "C01166": {
+     "num": "140",
+     "mode": "BUS",
+     "reseau": "Boucles Nord de Seine",
+     "operateur": "RATP Cap Boucle Nord de Seine",
+     "courses": 31
+    },
+    "C01163": {
+     "num": "137",
+     "mode": "BUS",
+     "reseau": "Boucles Nord de Seine",
+     "operateur": "RATP Cap Boucle Nord de Seine",
+     "courses": 38
+    },
+    "C01199": {
+     "num": "178",
+     "mode": "BUS",
+     "reseau": "Boucles Nord de Seine",
+     "operateur": "RATP Cap Boucle Nord de Seine",
+     "courses": 32
+    },
+    "C01235": {
+     "num": "235",
+     "mode": "BUS",
+     "reseau": "Boucles Nord de Seine",
+     "operateur": "RATP Cap Boucle Nord de Seine",
+     "courses": 30
+    },
+    "C01255": {
+     "num": "274",
+     "mode": "BUS",
+     "reseau": "Boucles Nord de Seine",
+     "operateur": "RATP Cap Boucle Nord de Seine",
+     "courses": 43
+    },
+    "C01198": {
+     "num": "177",
+     "mode": "BUS",
+     "reseau": "Boucles Nord de Seine",
+     "operateur": "RATP Cap Boucle Nord de Seine",
+     "courses": 42
+    },
+    "C01188": {
+     "num": "166",
+     "mode": "BUS",
+     "reseau": "Boucles Nord de Seine",
+     "operateur": "RATP Cap Boucle Nord de Seine",
+     "courses": 35
+    },
+    "C01195": {
+     "num": "174",
+     "mode": "BUS",
+     "reseau": "Boucles Nord de Seine",
+     "operateur": "RATP Cap Boucle Nord de Seine",
+     "courses": 32
+    },
+    "C01109": {
+     "num": "74",
+     "mode": "BUS",
+     "reseau": "Boucles Nord de Seine",
+     "operateur": "RATP Cap Boucle Nord de Seine",
+     "courses": 45
+    }
+   },
+   "courses": 468
+  },
+  "MeC_Bus_PC · RATP Cap Rive Droite": {
+   "lignes": {
+    "C01286": {
+     "num": "322",
+     "mode": "BUS",
+     "reseau": "Rive Droite",
+     "operateur": "RATP Cap Rive Droite",
+     "courses": 16
+    },
+    "C01096": {
+     "num": "60",
+     "mode": "BUS",
+     "reseau": "Rive Droite",
+     "operateur": "RATP Cap Rive Droite",
+     "courses": 71
+    },
+    "C02713": {
+     "num": "245",
+     "mode": "BUS",
+     "reseau": "Rive Droite",
+     "operateur": "RATP Cap Rive Droite",
+     "courses": 34
+    },
+    "C01087": {
+     "num": "46",
+     "mode": "BUS",
+     "reseau": "Rive Droite",
+     "operateur": "RATP Cap Rive Droite",
+     "courses": 36
+    },
+    "C01084": {
+     "num": "39",
+     "mode": "BUS",
+     "reseau": "Rive Droite",
+     "operateur": "RATP Cap Rive Droite",
+     "courses": 33
+    },
+    "C01281": {
+     "num": "318",
+     "mode": "BUS",
+     "reseau": "Rive Droite",
+     "operateur": "RATP Cap Rive Droite",
+     "courses": 35
+    },
+    "C02714": {
+     "num": "202",
+     "mode": "BUS",
+     "reseau": "Rive Droite",
+     "operateur": "RATP Cap Rive Droite",
+     "courses": 20
+    },
+    "C01111": {
+     "num": "76",
+     "mode": "BUS",
+     "reseau": "Rive Droite",
+     "operateur": "RATP Cap Rive Droite",
+     "courses": 60
+    },
+    "C01076": {
+     "num": "26",
+     "mode": "BUS",
+     "reseau": "Rive Droite",
+     "operateur": "RATP Cap Rive Droite",
+     "courses": 49
+    },
+    "C01151": {
+     "num": "122",
+     "mode": "BUS",
+     "reseau": "Rive Droite",
+     "operateur": "RATP Cap Rive Droite",
+     "courses": 64
+    },
+    "C01158": {
+     "num": "129",
+     "mode": "BUS",
+     "reseau": "Rive Droite",
+     "operateur": "RATP Cap Rive Droite",
+     "courses": 33
+    },
+    "C01112": {
+     "num": "80",
+     "mode": "BUS",
+     "reseau": "Rive Droite",
+     "operateur": "RATP Cap Rive Droite",
+     "courses": 42
+    },
+    "C01083": {
+     "num": "38",
+     "mode": "BUS",
+     "reseau": "Rive Droite",
+     "operateur": "RATP Cap Rive Droite",
+     "courses": 62
+    },
+    "C01229": {
+     "num": "215",
+     "mode": "BUS",
+     "reseau": "Rive Droite",
+     "operateur": "RATP Cap Rive Droite",
+     "courses": 31
+    },
+    "C01119": {
+     "num": "87",
+     "mode": "BUS",
+     "reseau": "Rive Droite",
+     "operateur": "RATP Cap Rive Droite",
+     "courses": 45
+    },
+    "C01079": {
+     "num": "29",
+     "mode": "BUS",
+     "reseau": "Rive Droite",
+     "operateur": "RATP Cap Rive Droite",
+     "courses": 37
+    },
+    "C01144": {
+     "num": "115",
+     "mode": "BUS",
+     "reseau": "Rive Droite",
+     "operateur": "RATP Cap Rive Droite",
+     "courses": 38
+    },
+    "C01089": {
+     "num": "48",
+     "mode": "BUS",
+     "reseau": "Rive Droite",
+     "operateur": "RATP Cap Rive Droite",
+     "courses": 34
+    },
+    "C01093": {
+     "num": "56",
+     "mode": "BUS",
+     "reseau": "Rive Droite",
+     "operateur": "RATP Cap Rive Droite",
+     "courses": 38
+    },
+    "C01118": {
+     "num": "86",
+     "mode": "BUS",
+     "reseau": "Rive Droite",
+     "operateur": "RATP Cap Rive Droite",
+     "courses": 59
+    },
+    "C01127": {
+     "num": "96",
+     "mode": "BUS",
+     "reseau": "Rive Droite",
+     "operateur": "RATP Cap Rive Droite",
+     "courses": 57
+    },
+    "C01072": {
+     "num": "20",
+     "mode": "BUS",
+     "reseau": "Rive Droite",
+     "operateur": "RATP Cap Rive Droite",
+     "courses": 53
+    },
+    "C01094": {
+     "num": "57",
+     "mode": "BUS",
+     "reseau": "Rive Droite",
+     "operateur": "RATP Cap Rive Droite",
+     "courses": 35
+    },
+    "C02251": {
+     "num": "77",
+     "mode": "BUS",
+     "reseau": "Rive Droite",
+     "operateur": "RATP Cap Rive Droite",
+     "courses": 18
+    },
+    "C01131": {
+     "num": "102",
+     "mode": "BUS",
+     "reseau": "Rive Droite",
+     "operateur": "RATP Cap Rive Droite",
+     "courses": 33
+    },
+    "C01150": {
+     "num": "121",
+     "mode": "BUS",
+     "reseau": "Rive Droite",
+     "operateur": "RATP Cap Rive Droite",
+     "courses": 27
+    },
+    "C02254": {
+     "num": "40",
+     "mode": "BUS",
+     "reseau": "Rive Droite",
+     "operateur": "RATP Cap Rive Droite",
+     "courses": 22
+    },
+    "C01294": {
+     "num": "341",
+     "mode": "BUS",
+     "reseau": "Rive Droite",
+     "operateur": "RATP Cap Rive Droite",
+     "courses": 30
+    },
+    "C01105": {
+     "num": "69",
+     "mode": "BUS",
+     "reseau": "Rive Droite",
+     "operateur": "RATP Cap Rive Droite",
+     "courses": 42
+    }
+   },
+   "courses": 1154
+  },
+  "509_KGPVM": {
+   "lignes": {
+    "C01423": {
+     "num": "701",
+     "mode": "BUS",
+     "reseau": "Marne et Brie",
+     "operateur": "Keolis Grand Paris Vallée de la Marne",
+     "courses": 12
+    },
+    "C00031": {
+     "num": "730",
+     "mode": "BUS",
+     "reseau": "Marne et Brie",
+     "operateur": "Keolis Grand Paris Vallée de la Marne",
+     "courses": 9
+    },
+    "C02062": {
+     "num": "700",
+     "mode": "BUS",
+     "reseau": "Marne et Brie",
+     "operateur": "Keolis Grand Paris Vallée de la Marne",
+     "courses": 9
+    },
+    "C01581": {
+     "num": "613",
+     "mode": "BUS",
+     "reseau": "Marne et Brie",
+     "operateur": "Keolis Grand Paris Vallée de la Marne",
+     "courses": 20
+    },
+    "C01576": {
+     "num": "604",
+     "mode": "BUS",
+     "reseau": "Marne et Brie",
+     "operateur": "Keolis Grand Paris Vallée de la Marne",
+     "courses": 8
+    },
+    "C00639": {
+     "num": "7719",
+     "mode": "BUS",
+     "reseau": "Marne et Brie",
+     "operateur": "Keolis Grand Paris Vallée de la Marne",
+     "courses": 4
+    },
+    "C01577": {
+     "num": "605",
+     "mode": "BUS",
+     "reseau": "Marne et Brie",
+     "operateur": "Keolis Grand Paris Vallée de la Marne",
+     "courses": 9
+    },
+    "C01285": {
+     "num": "321",
+     "mode": "BUS",
+     "reseau": "Marne et Brie",
+     "operateur": "Keolis Grand Paris Vallée de la Marne",
+     "courses": 3
+    },
+    "C01323": {
+     "num": "421",
+     "mode": "BUS",
+     "reseau": "Marne et Brie",
+     "operateur": "Keolis Grand Paris Vallée de la Marne",
+     "courses": 6
+    },
+    "C01574": {
+     "num": "602",
+     "mode": "BUS",
+     "reseau": "Marne et Brie",
+     "operateur": "Keolis Grand Paris Vallée de la Marne",
+     "courses": 19
+    },
+    "C02092": {
+     "num": "643",
+     "mode": "BUS",
+     "reseau": "Marne et Brie",
+     "operateur": "Keolis Grand Paris Vallée de la Marne",
+     "courses": 9
+    },
+    "C02876": {
+     "num": "Soirée Pontault-Combault Roissy-en-Brie",
+     "mode": "BUS",
+     "reseau": "Marne et Brie",
+     "operateur": "Keolis Grand Paris Vallée de la Marne",
+     "courses": 4
+    },
+    "C01426": {
+     "num": "702",
+     "mode": "BUS",
+     "reseau": "Marne et Brie",
+     "operateur": "Keolis Grand Paris Vallée de la Marne",
+     "courses": 2
+    },
+    "C01575": {
+     "num": "603",
+     "mode": "BUS",
+     "reseau": "Marne et Brie",
+     "operateur": "Keolis Grand Paris Vallée de la Marne",
+     "courses": 16
+    },
+    "C01589": {
+     "num": "623",
+     "mode": "BUS",
+     "reseau": "Marne et Brie",
+     "operateur": "Keolis Grand Paris Vallée de la Marne",
+     "courses": 8
+    },
+    "C01890": {
+     "num": "TàD Bassin Chellois",
+     "mode": "BUS",
+     "reseau": "Marne et Brie",
+     "operateur": "Keolis Grand Paris Vallée de la Marne",
+     "courses": 2
+    }
+   },
+   "courses": 140
+  },
+  "MELUN": {
+   "lignes": {
+    "C00879": {
+     "num": "3602",
+     "mode": "BUS",
+     "reseau": "Grand Melun",
+     "operateur": "Transdev Melun",
+     "courses": 4
+    },
+    "C00877": {
+     "num": "3607",
+     "mode": "BUS",
+     "reseau": "Grand Melun",
+     "operateur": "Transdev Melun",
+     "courses": 6
+    },
+    "C00881": {
+     "num": "3601",
+     "mode": "BUS",
+     "reseau": "Grand Melun",
+     "operateur": "Transdev Melun",
+     "courses": 8
+    },
+    "C00891": {
+     "num": "3611",
+     "mode": "BUS",
+     "reseau": "Grand Melun",
+     "operateur": "Transdev Melun",
+     "courses": 1
+    },
+    "C00875": {
+     "num": "3604",
+     "mode": "BUS",
+     "reseau": "Grand Melun",
+     "operateur": "Transdev Melun",
+     "courses": 7
+    },
+    "C00882": {
+     "num": "3605",
+     "mode": "BUS",
+     "reseau": "Grand Melun",
+     "operateur": "Transdev Melun",
+     "courses": 7
+    },
+    "C00880": {
+     "num": "3603",
+     "mode": "BUS",
+     "reseau": "Grand Melun",
+     "operateur": "Transdev Melun",
+     "courses": 3
+    },
+    "C00876": {
+     "num": "3609",
+     "mode": "BUS",
+     "reseau": "Grand Melun",
+     "operateur": "Transdev Melun",
+     "courses": 2
+    }
+   },
+   "courses": 38
+  },
+  "52FSO": {
+   "lignes": {
+    "C00763": {
+     "num": "1203",
+     "mode": "BUS",
+     "reseau": "Cergy-Pontoise Confluence",
+     "operateur": "Francilité Seine et Oise",
+     "courses": 5
+    },
+    "C01685": {
+     "num": "1221",
+     "mode": "BUS",
+     "reseau": "Cergy-Pontoise Confluence",
+     "operateur": "Francilité Seine et Oise",
+     "courses": 3
+    },
+    "C00767": {
+     "num": "1239",
+     "mode": "BUS",
+     "reseau": "Cergy-Pontoise Confluence",
+     "operateur": "Francilité Seine et Oise",
+     "courses": 3
+    },
+    "C00768": {
+     "num": "1240",
+     "mode": "BUS",
+     "reseau": "Cergy-Pontoise Confluence",
+     "operateur": "Francilité Seine et Oise",
+     "courses": 4
+    },
+    "C00764": {
+     "num": "1206",
+     "mode": "BUS",
+     "reseau": "Cergy-Pontoise Confluence",
+     "operateur": "Francilité Seine et Oise",
+     "courses": 9
+    },
+    "C00772": {
+     "num": "1201",
+     "mode": "BUS",
+     "reseau": "Cergy-Pontoise Confluence",
+     "operateur": "Francilité Seine et Oise",
+     "courses": 10
+    },
+    "C00769": {
+     "num": "1202",
+     "mode": "BUS",
+     "reseau": "Cergy-Pontoise Confluence",
+     "operateur": "Francilité Seine et Oise",
+     "courses": 4
+    },
+    "C02625": {
+     "num": "1235",
+     "mode": "BUS",
+     "reseau": "Cergy-Pontoise Confluence",
+     "operateur": "Francilité Seine et Oise",
+     "courses": 4
+    },
+    "C02085": {
+     "num": "1233",
+     "mode": "BUS",
+     "reseau": "Cergy-Pontoise Confluence",
+     "operateur": "Francilité Seine et Oise",
+     "courses": 5
+    },
+    "C00782": {
+     "num": "1232",
+     "mode": "BUS",
+     "reseau": "Cergy-Pontoise Confluence",
+     "operateur": "Francilité Seine et Oise",
+     "courses": 4
+    },
+    "C00781": {
+     "num": "1226",
+     "mode": "BUS",
+     "reseau": "Cergy-Pontoise Confluence",
+     "operateur": "Francilité Seine et Oise",
+     "courses": 1
+    },
+    "C02226": {
+     "num": "1204",
+     "mode": "BUS",
+     "reseau": "Cergy-Pontoise Confluence",
+     "operateur": "Francilité Seine et Oise",
+     "courses": 4
+    },
+    "C00774": {
+     "num": "1207",
+     "mode": "BUS",
+     "reseau": "Cergy-Pontoise Confluence",
+     "operateur": "Francilité Seine et Oise",
+     "courses": 3
+    },
+    "C02855": {
+     "num": "1247",
+     "mode": "BUS",
+     "reseau": "Cergy-Pontoise Confluence",
+     "operateur": "Francilité Seine et Oise",
+     "courses": 2
+    },
+    "C01475": {
+     "num": "1205",
+     "mode": "BUS",
+     "reseau": "Cergy-Pontoise Confluence",
+     "operateur": "Francilité Seine et Oise",
+     "courses": 4
+    },
+    "C00778": {
+     "num": "1208",
+     "mode": "BUS",
+     "reseau": "Cergy-Pontoise Confluence",
+     "operateur": "Francilité Seine et Oise",
+     "courses": 1
+    },
+    "C01480": {
+     "num": "1227",
+     "mode": "BUS",
+     "reseau": "Cergy-Pontoise Confluence",
+     "operateur": "Francilité Seine et Oise",
+     "courses": 3
+    },
+    "C00762": {
+     "num": "1230",
+     "mode": "BUS",
+     "reseau": "Cergy-Pontoise Confluence",
+     "operateur": "Francilité Seine et Oise",
+     "courses": 1
+    }
+   },
+   "courses": 70
+  },
+  "COESS": {
+   "lignes": {
+    "C01495": {
+     "num": "4531",
+     "mode": "BUS",
+     "reseau": "Cœur d’Essonne",
+     "operateur": "Transdev Cœur Essonne",
+     "courses": 10
+    },
+    "C02461": {
+     "num": "4524",
+     "mode": "BUS",
+     "reseau": "Cœur d’Essonne",
+     "operateur": "Transdev Cœur Essonne",
+     "courses": 7
+    },
+    "C00689": {
+     "num": "EXPRESS 9115",
+     "mode": "BUS",
+     "reseau": "Cœur d’Essonne",
+     "operateur": "Transdev Cœur Essonne",
+     "courses": 6
+    },
+    "C00684": {
+     "num": "4522",
+     "mode": "BUS",
+     "reseau": "Cœur d’Essonne",
+     "operateur": "Transdev Cœur Essonne",
+     "courses": 11
+    },
+    "C00662": {
+     "num": "4540",
+     "mode": "BUS",
+     "reseau": "Cœur d’Essonne",
+     "operateur": "Transdev Cœur Essonne",
+     "courses": 7
+    },
+    "C00663": {
+     "num": "4541",
+     "mode": "BUS",
+     "reseau": "Cœur d’Essonne",
+     "operateur": "Transdev Cœur Essonne",
+     "courses": 3
+    },
+    "C00086": {
+     "num": "4511",
+     "mode": "BUS",
+     "reseau": "Cœur d’Essonne",
+     "operateur": "Transdev Cœur Essonne",
+     "courses": 16
+    },
+    "C00666": {
+     "num": "4505",
+     "mode": "BUS",
+     "reseau": "Cœur d’Essonne",
+     "operateur": "Transdev Cœur Essonne",
+     "courses": 7
+    },
+    "C01565": {
+     "num": "4504",
+     "mode": "BUS",
+     "reseau": "Cœur d’Essonne",
+     "operateur": "Transdev Cœur Essonne",
+     "courses": 5
+    },
+    "C02661": {
+     "num": "Soir Brétigny",
+     "mode": "BUS",
+     "reseau": "Cœur d’Essonne",
+     "operateur": "Transdev Cœur Essonne",
+     "courses": 2
+    },
+    "C00090": {
+     "num": "4501",
+     "mode": "BUS",
+     "reseau": "Cœur d’Essonne",
+     "operateur": "Transdev Cœur Essonne",
+     "courses": 11
+    },
+    "C00664": {
+     "num": "4523",
+     "mode": "BUS",
+     "reseau": "Cœur d’Essonne",
+     "operateur": "Transdev Cœur Essonne",
+     "courses": 6
+    },
+    "C00691": {
+     "num": "4503",
+     "mode": "BUS",
+     "reseau": "Cœur d’Essonne",
+     "operateur": "Transdev Cœur Essonne",
+     "courses": 5
+    },
+    "C00087": {
+     "num": "4512",
+     "mode": "BUS",
+     "reseau": "Cœur d’Essonne",
+     "operateur": "Transdev Cœur Essonne",
+     "courses": 7
+    },
+    "C00683": {
+     "num": "4521",
+     "mode": "BUS",
+     "reseau": "Cœur d’Essonne",
+     "operateur": "Transdev Cœur Essonne",
+     "courses": 6
+    },
+    "C00094": {
+     "num": "4515",
+     "mode": "BUS",
+     "reseau": "Cœur d’Essonne",
+     "operateur": "Transdev Cœur Essonne",
+     "courses": 1
+    },
+    "C00677": {
+     "num": "4543",
+     "mode": "BUS",
+     "reseau": "Cœur d’Essonne",
+     "operateur": "Transdev Cœur Essonne",
+     "courses": 1
+    },
+    "C00089": {
+     "num": "4514",
+     "mode": "BUS",
+     "reseau": "Cœur d’Essonne",
+     "operateur": "Transdev Cœur Essonne",
+     "courses": 1
+    }
+   },
+   "courses": 112
+  },
+  "MeC_Bus_PC · RATP Cap Massy-Juvisy": {
+   "lignes": {
+    "C01148": {
+     "num": "119",
+     "mode": "BUS",
+     "reseau": "Massy-Juvisy",
+     "operateur": "RATP Cap Massy-Juvisy",
+     "courses": 21
+    },
+    "C01270": {
+     "num": "297",
+     "mode": "BUS",
+     "reseau": "Massy-Juvisy",
+     "operateur": "RATP Cap Massy-Juvisy",
+     "courses": 24
+    },
+    "C01218": {
+     "num": "199",
+     "mode": "BUS",
+     "reseau": "Massy-Juvisy",
+     "operateur": "RATP Cap Massy-Juvisy",
+     "courses": 34
+    },
+    "C01271": {
+     "num": "299",
+     "mode": "BUS",
+     "reseau": "Massy-Juvisy",
+     "operateur": "RATP Cap Massy-Juvisy",
+     "courses": 19
+    },
+    "C01217": {
+     "num": "197",
+     "mode": "BUS",
+     "reseau": "Massy-Juvisy",
+     "operateur": "RATP Cap Massy-Juvisy",
+     "courses": 26
+    },
+    "C01313": {
+     "num": "385",
+     "mode": "BUS",
+     "reseau": "Massy-Juvisy",
+     "operateur": "RATP Cap Massy-Juvisy",
+     "courses": 18
+    },
+    "C01322": {
+     "num": "399",
+     "mode": "BUS",
+     "reseau": "Massy-Juvisy",
+     "operateur": "RATP Cap Massy-Juvisy",
+     "courses": 41
+    },
+    "C01216": {
+     "num": "196",
+     "mode": "BUS",
+     "reseau": "Massy-Juvisy",
+     "operateur": "RATP Cap Massy-Juvisy",
+     "courses": 23
+    },
+    "C01267": {
+     "num": "292",
+     "mode": "BUS",
+     "reseau": "Massy-Juvisy",
+     "operateur": "RATP Cap Massy-Juvisy",
+     "courses": 25
+    },
+    "C02887": {
+     "num": "219",
+     "mode": "BUS",
+     "reseau": "Massy-Juvisy",
+     "operateur": "RATP Cap Massy-Juvisy",
+     "courses": 1
+    },
+    "C01268": {
+     "num": "294",
+     "mode": "BUS",
+     "reseau": "Massy-Juvisy",
+     "operateur": "RATP Cap Massy-Juvisy",
+     "courses": 27
+    },
+    "C01262": {
+     "num": "285",
+     "mode": "BUS",
+     "reseau": "Massy-Juvisy",
+     "operateur": "RATP Cap Massy-Juvisy",
+     "courses": 14
+    },
+    "C01320": {
+     "num": "395",
+     "mode": "BUS",
+     "reseau": "Massy-Juvisy",
+     "operateur": "RATP Cap Massy-Juvisy",
+     "courses": 1
+    }
+   },
+   "courses": 274
+  },
+  "506KRPFO": {
+   "lignes": {
+    "C00191": {
+     "num": "1611",
+     "mode": "BUS",
+     "reseau": "Roissy Ouest",
+     "operateur": "Keolis Roissy Pays de France Ouest",
+     "courses": 17
+    },
+    "C00610": {
+     "num": "1623",
+     "mode": "BUS",
+     "reseau": "Roissy Ouest",
+     "operateur": "Keolis Roissy Pays de France Ouest",
+     "courses": 9
+    },
+    "C01867": {
+     "num": "1620",
+     "mode": "BUS",
+     "reseau": "Roissy Ouest",
+     "operateur": "Keolis Roissy Pays de France Ouest",
+     "courses": 12
+    },
+    "C00612": {
+     "num": "1624",
+     "mode": "BUS",
+     "reseau": "Roissy Ouest",
+     "operateur": "Keolis Roissy Pays de France Ouest",
+     "courses": 4
+    },
+    "C00208": {
+     "num": "1631",
+     "mode": "BUS",
+     "reseau": "Roissy Ouest",
+     "operateur": "Keolis Roissy Pays de France Ouest",
+     "courses": 8
+    },
+    "C00265": {
+     "num": "1602",
+     "mode": "BUS",
+     "reseau": "Roissy Ouest",
+     "operateur": "Keolis Roissy Pays de France Ouest",
+     "courses": 3
+    },
+    "C01638": {
+     "num": "N140",
+     "mode": "BUS",
+     "reseau": "Roissy Ouest",
+     "operateur": "Keolis Roissy Pays de France Ouest",
+     "courses": 3
+    },
+    "C00228": {
+     "num": "1610",
+     "mode": "BUS",
+     "reseau": "Roissy Ouest",
+     "operateur": "Keolis Roissy Pays de France Ouest",
+     "courses": 4
+    },
+    "C01644": {
+     "num": "N143",
+     "mode": "BUS",
+     "reseau": "Roissy Ouest",
+     "operateur": "Keolis Roissy Pays de France Ouest",
+     "courses": 5
+    },
+    "C02600": {
+     "num": "N146",
+     "mode": "BUS",
+     "reseau": "Roissy Ouest",
+     "operateur": "Keolis Roissy Pays de France Ouest",
+     "courses": 2
+    },
+    "C02059": {
+     "num": "1627",
+     "mode": "BUS",
+     "reseau": "Roissy Ouest",
+     "operateur": "Keolis Roissy Pays de France Ouest",
+     "courses": 1
+    },
+    "C00264": {
+     "num": "1601",
+     "mode": "BUS",
+     "reseau": "Roissy Ouest",
+     "operateur": "Keolis Roissy Pays de France Ouest",
+     "courses": 1
+    }
+   },
+   "courses": 69
+  },
+  "022_KIDF": {
+   "lignes": {
+    "C02317": {
+     "num": "T9",
+     "mode": "BUS",
+     "reseau": "Seine Orly",
+     "operateur": "Keolis Grand Paris Seine Orly",
+     "courses": 33
+    }
+   },
+   "courses": 33
+  },
+  "520_KVYVS": {
+   "lignes": {
+    "C02774": {
+     "num": "Soir Yerres Sud",
+     "mode": "BUS",
+     "reseau": "Val d'Yerres Val de Seine",
+     "operateur": "Keolis Val d'Yerres Val de Seine",
+     "courses": 5
+    },
+    "C00576": {
+     "num": "4115",
+     "mode": "BUS",
+     "reseau": "Val d'Yerres Val de Seine",
+     "operateur": "Keolis Val d'Yerres Val de Seine",
+     "courses": 3
+    },
+    "C00358": {
+     "num": "4114",
+     "mode": "BUS",
+     "reseau": "Val d'Yerres Val de Seine",
+     "operateur": "Keolis Val d'Yerres Val de Seine",
+     "courses": 2
+    },
+    "C02260": {
+     "num": "Soir Draveil",
+     "mode": "BUS",
+     "reseau": "Val d'Yerres Val de Seine",
+     "operateur": "Keolis Val d'Yerres Val de Seine",
+     "courses": 5
+    },
+    "C02508": {
+     "num": "Soir Boussy-Saint-Antoine",
+     "mode": "BUS",
+     "reseau": "Val d'Yerres Val de Seine",
+     "operateur": "Keolis Val d'Yerres Val de Seine",
+     "courses": 4
+    },
+    "C00376": {
+     "num": "4116",
+     "mode": "BUS",
+     "reseau": "Val d'Yerres Val de Seine",
+     "operateur": "Keolis Val d'Yerres Val de Seine",
+     "courses": 4
+    },
+    "C02773": {
+     "num": "Soir Yerres Nord",
+     "mode": "BUS",
+     "reseau": "Val d'Yerres Val de Seine",
+     "operateur": "Keolis Val d'Yerres Val de Seine",
+     "courses": 6
+    },
+    "C02772": {
+     "num": "Soir Quincy-sous-Sénart",
+     "mode": "BUS",
+     "reseau": "Val d'Yerres Val de Seine",
+     "operateur": "Keolis Val d'Yerres Val de Seine",
+     "courses": 5
+    },
+    "C01570": {
+     "num": "4122",
+     "mode": "BUS",
+     "reseau": "Val d'Yerres Val de Seine",
+     "operateur": "Keolis Val d'Yerres Val de Seine",
+     "courses": 4
+    },
+    "C00582": {
+     "num": "4111",
+     "mode": "BUS",
+     "reseau": "Val d'Yerres Val de Seine",
+     "operateur": "Keolis Val d'Yerres Val de Seine",
+     "courses": 17
+    },
+    "C02768": {
+     "num": "Soir Montgeron",
+     "mode": "BUS",
+     "reseau": "Val d'Yerres Val de Seine",
+     "operateur": "Keolis Val d'Yerres Val de Seine",
+     "courses": 4
+    },
+    "C00379": {
+     "num": "4121",
+     "mode": "BUS",
+     "reseau": "Val d'Yerres Val de Seine",
+     "operateur": "Keolis Val d'Yerres Val de Seine",
+     "courses": 7
+    },
+    "C02771": {
+     "num": "Soir Crosne",
+     "mode": "BUS",
+     "reseau": "Val d'Yerres Val de Seine",
+     "operateur": "Keolis Val d'Yerres Val de Seine",
+     "courses": 6
+    },
+    "C00592": {
+     "num": "4110",
+     "mode": "BUS",
+     "reseau": "Val d'Yerres Val de Seine",
+     "operateur": "Keolis Val d'Yerres Val de Seine",
+     "courses": 1
+    },
+    "C02770": {
+     "num": "Soir Brunoy Sud",
+     "mode": "BUS",
+     "reseau": "Val d'Yerres Val de Seine",
+     "operateur": "Keolis Val d'Yerres Val de Seine",
+     "courses": 5
+    },
+    "C02769": {
+     "num": "Soir Vigneux-sur-Seine",
+     "mode": "BUS",
+     "reseau": "Val d'Yerres Val de Seine",
+     "operateur": "Keolis Val d'Yerres Val de Seine",
+     "courses": 5
+    },
+    "C00602": {
+     "num": "4120",
+     "mode": "BUS",
+     "reseau": "Val d'Yerres Val de Seine",
+     "operateur": "Keolis Val d'Yerres Val de Seine",
+     "courses": 2
+    },
+    "C00355": {
+     "num": "4113",
+     "mode": "BUS",
+     "reseau": "Val d'Yerres Val de Seine",
+     "operateur": "Keolis Val d'Yerres Val de Seine",
+     "courses": 1
+    },
+    "C01886": {
+     "num": "4112",
+     "mode": "BUS",
+     "reseau": "Val d'Yerres Val de Seine",
+     "operateur": "Keolis Val d'Yerres Val de Seine",
+     "courses": 2
+    },
+    "C01648": {
+     "num": "N133",
+     "mode": "BUS",
+     "reseau": "Val d'Yerres Val de Seine",
+     "operateur": "Keolis Val d'Yerres Val de Seine",
+     "courses": 1
+    },
+    "C00580": {
+     "num": "4134",
+     "mode": "BUS",
+     "reseau": "Val d'Yerres Val de Seine",
+     "operateur": "Keolis Val d'Yerres Val de Seine",
+     "courses": 1
+    },
+    "C02775": {
+     "num": "Soir Villecresnes",
+     "mode": "BUS",
+     "reseau": "Val d'Yerres Val de Seine",
+     "operateur": "Keolis Val d'Yerres Val de Seine",
+     "courses": 4
+    },
+    "C00356": {
+     "num": "4118",
+     "mode": "BUS",
+     "reseau": "Val d'Yerres Val de Seine",
+     "operateur": "Keolis Val d'Yerres Val de Seine",
+     "courses": 2
+    },
+    "C01642": {
+     "num": "N134",
+     "mode": "BUS",
+     "reseau": "Val d'Yerres Val de Seine",
+     "operateur": "Keolis Val d'Yerres Val de Seine",
+     "courses": 1
+    },
+    "C00378": {
+     "num": "4117",
+     "mode": "BUS",
+     "reseau": "Val d'Yerres Val de Seine",
+     "operateur": "Keolis Val d'Yerres Val de Seine",
+     "courses": 1
+    }
+   },
+   "courses": 98
+  },
+  "033_KABS": {
+   "lignes": {
+    "C00312": {
+     "num": "6402",
+     "mode": "BUS",
+     "reseau": "Argenteuil - Boucles de Seine",
+     "operateur": "Keolis Argenteuil Boucles de Seine",
+     "courses": 14
+    },
+    "C00298": {
+     "num": "6401",
+     "mode": "BUS",
+     "reseau": "Argenteuil - Boucles de Seine",
+     "operateur": "Keolis Argenteuil Boucles de Seine",
+     "courses": 16
+    },
+    "C01250": {
+     "num": "6419",
+     "mode": "BUS",
+     "reseau": "Argenteuil - Boucles de Seine",
+     "operateur": "Keolis Argenteuil Boucles de Seine",
+     "courses": 1
+    },
+    "C01755": {
+     "num": "6421",
+     "mode": "BUS",
+     "reseau": "Argenteuil - Boucles de Seine",
+     "operateur": "Keolis Argenteuil Boucles de Seine",
+     "courses": 10
+    },
+    "C01473": {
+     "num": "6412",
+     "mode": "BUS",
+     "reseau": "Argenteuil - Boucles de Seine",
+     "operateur": "Keolis Argenteuil Boucles de Seine",
+     "courses": 4
+    },
+    "C00295": {
+     "num": "6414",
+     "mode": "BUS",
+     "reseau": "Argenteuil - Boucles de Seine",
+     "operateur": "Keolis Argenteuil Boucles de Seine",
+     "courses": 6
+    },
+    "C02149": {
+     "num": "6417",
+     "mode": "BUS",
+     "reseau": "Argenteuil - Boucles de Seine",
+     "operateur": "Keolis Argenteuil Boucles de Seine",
+     "courses": 2
+    },
+    "C00335": {
+     "num": "6405",
+     "mode": "BUS",
+     "reseau": "Argenteuil - Boucles de Seine",
+     "operateur": "Keolis Argenteuil Boucles de Seine",
+     "courses": 12
+    },
+    "C00330": {
+     "num": "6404",
+     "mode": "BUS",
+     "reseau": "Argenteuil - Boucles de Seine",
+     "operateur": "Keolis Argenteuil Boucles de Seine",
+     "courses": 14
+    },
+    "C02150": {
+     "num": "6415",
+     "mode": "BUS",
+     "reseau": "Argenteuil - Boucles de Seine",
+     "operateur": "Keolis Argenteuil Boucles de Seine",
+     "courses": 1
+    },
+    "C02144": {
+     "num": "6427",
+     "mode": "BUS",
+     "reseau": "Argenteuil - Boucles de Seine",
+     "operateur": "Keolis Argenteuil Boucles de Seine",
+     "courses": 3
+    },
+    "C01681": {
+     "num": "6413",
+     "mode": "BUS",
+     "reseau": "Argenteuil - Boucles de Seine",
+     "operateur": "Keolis Argenteuil Boucles de Seine",
+     "courses": 9
+    },
+    "C00297": {
+     "num": "6403",
+     "mode": "BUS",
+     "reseau": "Argenteuil - Boucles de Seine",
+     "operateur": "Keolis Argenteuil Boucles de Seine",
+     "courses": 25
+    },
+    "C00292": {
+     "num": "6411",
+     "mode": "BUS",
+     "reseau": "Argenteuil - Boucles de Seine",
+     "operateur": "Keolis Argenteuil Boucles de Seine",
+     "courses": 7
+    },
+    "C00308": {
+     "num": "6416",
+     "mode": "BUS",
+     "reseau": "Argenteuil - Boucles de Seine",
+     "operateur": "Keolis Argenteuil Boucles de Seine",
+     "courses": 2
+    },
+    "C00317": {
+     "num": "6423",
+     "mode": "BUS",
+     "reseau": "Argenteuil - Boucles de Seine",
+     "operateur": "Keolis Argenteuil Boucles de Seine",
+     "courses": 2
+    },
+    "C00306": {
+     "num": "6424",
+     "mode": "BUS",
+     "reseau": "Argenteuil - Boucles de Seine",
+     "operateur": "Keolis Argenteuil Boucles de Seine",
+     "courses": 3
+    },
+    "C02730": {
+     "num": "6426",
+     "mode": "BUS",
+     "reseau": "Argenteuil - Boucles de Seine",
+     "operateur": "Keolis Argenteuil Boucles de Seine",
+     "courses": 1
+    },
+    "C00316": {
+     "num": "6433",
+     "mode": "BUS",
+     "reseau": "Argenteuil - Boucles de Seine",
+     "operateur": "Keolis Argenteuil Boucles de Seine",
+     "courses": 2
+    },
+    "C00337": {
+     "num": "6429",
+     "mode": "BUS",
+     "reseau": "Argenteuil - Boucles de Seine",
+     "operateur": "Keolis Argenteuil Boucles de Seine",
+     "courses": 3
+    },
+    "C02731": {
+     "num": "6425",
+     "mode": "BUS",
+     "reseau": "Argenteuil - Boucles de Seine",
+     "operateur": "Keolis Argenteuil Boucles de Seine",
+     "courses": 1
+    },
+    "C00332": {
+     "num": "6430",
+     "mode": "BUS",
+     "reseau": "Argenteuil - Boucles de Seine",
+     "operateur": "Keolis Argenteuil Boucles de Seine",
+     "courses": 1
+    }
+   },
+   "courses": 139
+  },
+  "BCLYS": {
+   "lignes": {
+    "C00158": {
+     "num": "6302",
+     "mode": "BUS",
+     "reseau": "Saint Germain Boucles de Seine",
+     "operateur": "Transdev Boucle des Lys",
+     "courses": 4
+    },
+    "C02491": {
+     "num": "Soir Saint-Germain-en-Laye",
+     "mode": "BUS",
+     "reseau": "Saint Germain Boucles de Seine",
+     "operateur": "Transdev Boucle des Lys",
+     "courses": 3
+    },
+    "C00149": {
+     "num": "6304",
+     "mode": "BUS",
+     "reseau": "Saint Germain Boucles de Seine",
+     "operateur": "Transdev Boucle des Lys",
+     "courses": 6
+    },
+    "C00160": {
+     "num": "6301",
+     "mode": "BUS",
+     "reseau": "Saint Germain Boucles de Seine",
+     "operateur": "Transdev Boucle des Lys",
+     "courses": 3
+    },
+    "C00143": {
+     "num": "7826",
+     "mode": "BUS",
+     "reseau": "Saint Germain Boucles de Seine",
+     "operateur": "Transdev Boucle des Lys",
+     "courses": 1
+    }
+   },
+   "courses": 17
+  },
+  "506KRPFOV4": {
+   "lignes": {
+    "C00208": {
+     "num": "1631",
+     "mode": "BUS",
+     "reseau": "Roissy Ouest",
+     "operateur": "Keolis Roissy Pays de France Ouest",
+     "courses": 9
+    },
+    "C01867": {
+     "num": "1620",
+     "mode": "BUS",
+     "reseau": "Roissy Ouest",
+     "operateur": "Keolis Roissy Pays de France Ouest",
+     "courses": 10
+    },
+    "C00612": {
+     "num": "1624",
+     "mode": "BUS",
+     "reseau": "Roissy Ouest",
+     "operateur": "Keolis Roissy Pays de France Ouest",
+     "courses": 4
+    },
+    "C00265": {
+     "num": "1602",
+     "mode": "BUS",
+     "reseau": "Roissy Ouest",
+     "operateur": "Keolis Roissy Pays de France Ouest",
+     "courses": 3
+    },
+    "C00610": {
+     "num": "1623",
+     "mode": "BUS",
+     "reseau": "Roissy Ouest",
+     "operateur": "Keolis Roissy Pays de France Ouest",
+     "courses": 9
+    },
+    "C00191": {
+     "num": "1611",
+     "mode": "BUS",
+     "reseau": "Roissy Ouest",
+     "operateur": "Keolis Roissy Pays de France Ouest",
+     "courses": 15
+    },
+    "C00228": {
+     "num": "1610",
+     "mode": "BUS",
+     "reseau": "Roissy Ouest",
+     "operateur": "Keolis Roissy Pays de France Ouest",
+     "courses": 4
+    },
+    "C00264": {
+     "num": "1601",
+     "mode": "BUS",
+     "reseau": "Roissy Ouest",
+     "operateur": "Keolis Roissy Pays de France Ouest",
+     "courses": 1
+    },
+    "C01644": {
+     "num": "N143",
+     "mode": "BUS",
+     "reseau": "Roissy Ouest",
+     "operateur": "Keolis Roissy Pays de France Ouest",
+     "courses": 1
+    },
+    "C02059": {
+     "num": "1627",
+     "mode": "BUS",
+     "reseau": "Roissy Ouest",
+     "operateur": "Keolis Roissy Pays de France Ouest",
+     "courses": 1
+    }
+   },
+   "courses": 57
+  },
+  "547_KGPSO": {
+   "lignes": {
+    "C00004": {
+     "num": "483",
+     "mode": "BUS",
+     "reseau": "Seine Orly",
+     "operateur": "Keolis Grand Paris Seine Orly",
+     "courses": 8
+    },
+    "C00006": {
+     "num": "480",
+     "mode": "BUS",
+     "reseau": "Seine Orly",
+     "operateur": "Keolis Grand Paris Seine Orly",
+     "courses": 6
+    },
+    "C00001": {
+     "num": "482",
+     "mode": "BUS",
+     "reseau": "Seine Orly",
+     "operateur": "Keolis Grand Paris Seine Orly",
+     "courses": 4
+    }
+   },
+   "courses": 18
+  },
+  "COTMA": {
+   "lignes": {
+    "C00085": {
+     "num": "438",
+     "mode": "BUS",
+     "reseau": "Marne et Seine",
+     "operateur": "Transdev Côteaux de la Marne",
+     "courses": 6
+    },
+    "C00084": {
+     "num": "437",
+     "mode": "BUS",
+     "reseau": "Marne et Seine",
+     "operateur": "Transdev Côteaux de la Marne",
+     "courses": 12
+    },
+    "C00553": {
+     "num": "432",
+     "mode": "BUS",
+     "reseau": "Marne et Seine",
+     "operateur": "Transdev Côteaux de la Marne",
+     "courses": 7
+    },
+    "C00557": {
+     "num": "436",
+     "mode": "BUS",
+     "reseau": "Marne et Seine",
+     "operateur": "Transdev Côteaux de la Marne",
+     "courses": 3
+    },
+    "C00574": {
+     "num": "427",
+     "mode": "BUS",
+     "reseau": "Marne et Seine",
+     "operateur": "Transdev Côteaux de la Marne",
+     "courses": 9
+    },
+    "C00556": {
+     "num": "435",
+     "mode": "BUS",
+     "reseau": "Marne et Seine",
+     "operateur": "Transdev Côteaux de la Marne",
+     "courses": 5
+    },
+    "C00548": {
+     "num": "451",
+     "mode": "BUS",
+     "reseau": "Marne et Seine",
+     "operateur": "Transdev Côteaux de la Marne",
+     "courses": 3
+    },
+    "C00581": {
+     "num": "450",
+     "mode": "BUS",
+     "reseau": "Marne et Seine",
+     "operateur": "Transdev Côteaux de la Marne",
+     "courses": 11
+    },
+    "C00552": {
+     "num": "431",
+     "mode": "BUS",
+     "reseau": "Marne et Seine",
+     "operateur": "Transdev Côteaux de la Marne",
+     "courses": 4
+    },
+    "C00594": {
+     "num": "429",
+     "mode": "BUS",
+     "reseau": "Marne et Seine",
+     "operateur": "Transdev Côteaux de la Marne",
+     "courses": 7
+    },
+    "C00573": {
+     "num": "428",
+     "mode": "BUS",
+     "reseau": "Marne et Seine",
+     "operateur": "Transdev Côteaux de la Marne",
+     "courses": 14
+    },
+    "C00554": {
+     "num": "433",
+     "mode": "BUS",
+     "reseau": "Marne et Seine",
+     "operateur": "Transdev Côteaux de la Marne",
+     "courses": 3
+    },
+    "C00547": {
+     "num": "440",
+     "mode": "BUS",
+     "reseau": "Marne et Seine",
+     "operateur": "Transdev Côteaux de la Marne",
+     "courses": 6
+    },
+    "C01751": {
+     "num": "430",
+     "mode": "BUS",
+     "reseau": "Marne et Seine",
+     "operateur": "Transdev Côteaux de la Marne",
+     "courses": 9
+    },
+    "C00555": {
+     "num": "434",
+     "mode": "BUS",
+     "reseau": "Marne et Seine",
+     "operateur": "Transdev Côteaux de la Marne",
+     "courses": 3
+    }
+   },
+   "courses": 102
+  },
+  "MeC_Bus_PC · Keolis Grand Paris Vallée de la Marne": {
+   "lignes": {
+    "C02437": {
+     "num": "209",
+     "mode": "BUS",
+     "reseau": "Marne et Brie",
+     "operateur": "Keolis Grand Paris Vallée de la Marne",
+     "courses": 11
+    },
+    "C01225": {
+     "num": "211",
+     "mode": "BUS",
+     "reseau": "Marne et Brie",
+     "operateur": "Keolis Grand Paris Vallée de la Marne",
+     "courses": 21
+    },
+    "C02872": {
+     "num": "313",
+     "mode": "BUS",
+     "reseau": "Marne et Brie",
+     "operateur": "Keolis Grand Paris Vallée de la Marne",
+     "courses": 13
+    },
+    "C01232": {
+     "num": "220",
+     "mode": "BUS",
+     "reseau": "Marne et Brie",
+     "operateur": "Keolis Grand Paris Vallée de la Marne",
+     "courses": 38
+    },
+    "C01227": {
+     "num": "213",
+     "mode": "BUS",
+     "reseau": "Marne et Brie",
+     "operateur": "Keolis Grand Paris Vallée de la Marne",
+     "courses": 25
+    },
+    "C01279": {
+     "num": "312",
+     "mode": "BUS",
+     "reseau": "Marne et Brie",
+     "operateur": "Keolis Grand Paris Vallée de la Marne",
+     "courses": 11
+    },
+    "C01221": {
+     "num": "206",
+     "mode": "BUS",
+     "reseau": "Marne et Brie",
+     "operateur": "Keolis Grand Paris Vallée de la Marne",
+     "courses": 23
+    },
+    "C01222": {
+     "num": "207",
+     "mode": "BUS",
+     "reseau": "Marne et Brie",
+     "operateur": "Keolis Grand Paris Vallée de la Marne",
+     "courses": 28
+    },
+    "C01283": {
+     "num": "320",
+     "mode": "BUS",
+     "reseau": "Marne et Brie",
+     "operateur": "Keolis Grand Paris Vallée de la Marne",
+     "courses": 16
+    },
+    "C01278": {
+     "num": "310",
+     "mode": "BUS",
+     "reseau": "Marne et Brie",
+     "operateur": "Keolis Grand Paris Vallée de la Marne",
+     "courses": 13
+    }
+   },
+   "courses": 199
+  },
+  "MeC_Bus_PC · RATP Cap Boucles de Marne": {
+   "lignes": {
+    "C01156": {
+     "num": "127",
+     "mode": "BUS",
+     "reseau": "Bord de Marne",
+     "operateur": "RATP Cap Boucles de Marne",
+     "courses": 37
+    },
+    "C01274": {
+     "num": "303",
+     "mode": "BUS",
+     "reseau": "Bord de Marne",
+     "operateur": "RATP Cap Boucles de Marne",
+     "courses": 43
+    },
+    "C01143": {
+     "num": "114",
+     "mode": "BUS",
+     "reseau": "Bord de Marne",
+     "operateur": "RATP Cap Boucles de Marne",
+     "courses": 68
+    },
+    "C01137": {
+     "num": "108",
+     "mode": "BUS",
+     "reseau": "Bord de Marne",
+     "operateur": "RATP Cap Boucles de Marne",
+     "courses": 20
+    },
+    "C01145": {
+     "num": "116",
+     "mode": "BUS",
+     "reseau": "Bord de Marne",
+     "operateur": "RATP Cap Boucles de Marne",
+     "courses": 26
+    },
+    "C01142": {
+     "num": "113",
+     "mode": "BUS",
+     "reseau": "Bord de Marne",
+     "operateur": "RATP Cap Boucles de Marne",
+     "courses": 69
+    },
+    "C01140": {
+     "num": "111",
+     "mode": "BUS",
+     "reseau": "Bord de Marne",
+     "operateur": "RATP Cap Boucles de Marne",
+     "courses": 39
+    },
+    "C01135": {
+     "num": "106",
+     "mode": "BUS",
+     "reseau": "Bord de Marne",
+     "operateur": "RATP Cap Boucles de Marne",
+     "courses": 31
+    },
+    "C01141": {
+     "num": "112",
+     "mode": "BUS",
+     "reseau": "Bord de Marne",
+     "operateur": "RATP Cap Boucles de Marne",
+     "courses": 31
+    },
+    "C01219": {
+     "num": "201",
+     "mode": "BUS",
+     "reseau": "Bord de Marne",
+     "operateur": "RATP Cap Boucles de Marne",
+     "courses": 19
+    },
+    "C01233": {
+     "num": "221",
+     "mode": "BUS",
+     "reseau": "Bord de Marne",
+     "operateur": "RATP Cap Boucles de Marne",
+     "courses": 13
+    },
+    "C01220": {
+     "num": "203",
+     "mode": "BUS",
+     "reseau": "Bord de Marne",
+     "operateur": "RATP Cap Boucles de Marne",
+     "courses": 23
+    },
+    "C01136": {
+     "num": "107",
+     "mode": "BUS",
+     "reseau": "Bord de Marne",
+     "operateur": "RATP Cap Boucles de Marne",
+     "courses": 9
+    },
+    "C01139": {
+     "num": "110",
+     "mode": "BUS",
+     "reseau": "Bord de Marne",
+     "operateur": "RATP Cap Boucles de Marne",
+     "courses": 14
+    },
+    "C01149": {
+     "num": "120",
+     "mode": "BUS",
+     "reseau": "Bord de Marne",
+     "operateur": "RATP Cap Boucles de Marne",
+     "courses": 33
+    },
+    "C01153": {
+     "num": "124",
+     "mode": "BUS",
+     "reseau": "Bord de Marne",
+     "operateur": "RATP Cap Boucles de Marne",
+     "courses": 28
+    },
+    "C01224": {
+     "num": "210",
+     "mode": "BUS",
+     "reseau": "Bord de Marne",
+     "operateur": "RATP Cap Boucles de Marne",
+     "courses": 16
+    },
+    "C01147": {
+     "num": "118",
+     "mode": "BUS",
+     "reseau": "Bord de Marne",
+     "operateur": "RATP Cap Boucles de Marne",
+     "courses": 33
+    },
+    "C01228": {
+     "num": "214",
+     "mode": "BUS",
+     "reseau": "Bord de Marne",
+     "operateur": "RATP Cap Boucles de Marne",
+     "courses": 12
+    },
+    "C01276": {
+     "num": "306",
+     "mode": "BUS",
+     "reseau": "Bord de Marne",
+     "operateur": "RATP Cap Boucles de Marne",
+     "courses": 31
+    },
+    "C01130": {
+     "num": "101",
+     "mode": "BUS",
+     "reseau": "Bord de Marne",
+     "operateur": "RATP Cap Boucles de Marne",
+     "courses": 6
+    }
+   },
+   "courses": 601
+  },
+  "529FSQY": {
+   "lignes": {
+    "C01539": {
+     "num": "5103",
+     "mode": "BUS",
+     "reseau": "Saint-Quentin-en-Yvelines",
+     "operateur": "Francilité Saint-Quentin-en-Yvelines",
+     "courses": 9
+    },
+    "C01531": {
+     "num": "5106",
+     "mode": "BUS",
+     "reseau": "Saint-Quentin-en-Yvelines",
+     "operateur": "Francilité Saint-Quentin-en-Yvelines",
+     "courses": 10
+    },
+    "C01528": {
+     "num": "5105",
+     "mode": "BUS",
+     "reseau": "Saint-Quentin-en-Yvelines",
+     "operateur": "Francilité Saint-Quentin-en-Yvelines",
+     "courses": 11
+    },
+    "C01530": {
+     "num": "5107",
+     "mode": "BUS",
+     "reseau": "Saint-Quentin-en-Yvelines",
+     "operateur": "Francilité Saint-Quentin-en-Yvelines",
+     "courses": 9
+    },
+    "C02644": {
+     "num": "Soir Plaisir-Grignon",
+     "mode": "BUS",
+     "reseau": "Saint-Quentin-en-Yvelines",
+     "operateur": "Francilité Saint-Quentin-en-Yvelines",
+     "courses": 5
+    },
+    "C01537": {
+     "num": "5133",
+     "mode": "BUS",
+     "reseau": "Saint-Quentin-en-Yvelines",
+     "operateur": "Francilité Saint-Quentin-en-Yvelines",
+     "courses": 4
+    },
+    "C01532": {
+     "num": "5143",
+     "mode": "BUS",
+     "reseau": "Saint-Quentin-en-Yvelines",
+     "operateur": "Francilité Saint-Quentin-en-Yvelines",
+     "courses": 5
+    },
+    "C01541": {
+     "num": "5150",
+     "mode": "BUS",
+     "reseau": "Saint-Quentin-en-Yvelines",
+     "operateur": "Francilité Saint-Quentin-en-Yvelines",
+     "courses": 4
+    },
+    "C02217": {
+     "num": "5124",
+     "mode": "BUS",
+     "reseau": "Saint-Quentin-en-Yvelines",
+     "operateur": "Francilité Saint-Quentin-en-Yvelines",
+     "courses": 2
+    },
+    "C01524": {
+     "num": "5120",
+     "mode": "BUS",
+     "reseau": "Saint-Quentin-en-Yvelines",
+     "operateur": "Francilité Saint-Quentin-en-Yvelines",
+     "courses": 5
+    },
+    "C01527": {
+     "num": "5104",
+     "mode": "BUS",
+     "reseau": "Saint-Quentin-en-Yvelines",
+     "operateur": "Francilité Saint-Quentin-en-Yvelines",
+     "courses": 10
+    },
+    "C01869": {
+     "num": "5102",
+     "mode": "BUS",
+     "reseau": "Saint-Quentin-en-Yvelines",
+     "operateur": "Francilité Saint-Quentin-en-Yvelines",
+     "courses": 12
+    },
+    "C01542": {
+     "num": "5151",
+     "mode": "BUS",
+     "reseau": "Saint-Quentin-en-Yvelines",
+     "operateur": "Francilité Saint-Quentin-en-Yvelines",
+     "courses": 4
+    },
+    "C01538": {
+     "num": "5145",
+     "mode": "BUS",
+     "reseau": "Saint-Quentin-en-Yvelines",
+     "operateur": "Francilité Saint-Quentin-en-Yvelines",
+     "courses": 4
+    },
+    "C01521": {
+     "num": "5134",
+     "mode": "BUS",
+     "reseau": "Saint-Quentin-en-Yvelines",
+     "operateur": "Francilité Saint-Quentin-en-Yvelines",
+     "courses": 3
+    },
+    "C01676": {
+     "num": "5131",
+     "mode": "BUS",
+     "reseau": "Saint-Quentin-en-Yvelines",
+     "operateur": "Francilité Saint-Quentin-en-Yvelines",
+     "courses": 1
+    },
+    "C01526": {
+     "num": "5122",
+     "mode": "BUS",
+     "reseau": "Saint-Quentin-en-Yvelines",
+     "operateur": "Francilité Saint-Quentin-en-Yvelines",
+     "courses": 2
+    },
+    "C02216": {
+     "num": "5123",
+     "mode": "BUS",
+     "reseau": "Saint-Quentin-en-Yvelines",
+     "operateur": "Francilité Saint-Quentin-en-Yvelines",
+     "courses": 1
+    },
+    "C01535": {
+     "num": "5142",
+     "mode": "BUS",
+     "reseau": "Saint-Quentin-en-Yvelines",
+     "operateur": "Francilité Saint-Quentin-en-Yvelines",
+     "courses": 1
+    }
+   },
+   "courses": 102
+  },
+  "VEXIN": {
+   "lignes": {
+    "C02831": {
+     "num": "9513",
+     "mode": "BUS",
+     "reseau": "Vexin",
+     "operateur": "Transdev Vexin",
+     "courses": 7
+    },
+    "C00393": {
+     "num": "1101",
+     "mode": "BUS",
+     "reseau": "Vexin",
+     "operateur": "Transdev Vexin",
+     "courses": 1
+    },
+    "C01552": {
+     "num": "9504",
+     "mode": "BUS",
+     "reseau": "Vexin",
+     "operateur": "Transdev Vexin",
+     "courses": 3
+    },
+    "C00394": {
+     "num": "1102",
+     "mode": "BUS",
+     "reseau": "Vexin",
+     "operateur": "Transdev Vexin",
+     "courses": 6
+    },
+    "C00395": {
+     "num": "1103",
+     "mode": "BUS",
+     "reseau": "Vexin",
+     "operateur": "Transdev Vexin",
+     "courses": 2
+    },
+    "C01785": {
+     "num": "1110",
+     "mode": "BUS",
+     "reseau": "Vexin",
+     "operateur": "Transdev Vexin",
+     "courses": 1
+    }
+   },
+   "courses": 20
+  },
+  "TICE": {
+   "lignes": {
+    "C01622": {
+     "num": "4202",
+     "mode": "BUS",
+     "reseau": "Evry Centre Essonne",
+     "operateur": "TISSE",
+     "courses": 17
+    },
+    "C02632": {
+     "num": "4251",
+     "mode": "BUS",
+     "reseau": "Evry Centre Essonne",
+     "operateur": "TISSE",
+     "courses": 6
+    },
+    "C01620": {
+     "num": "4241",
+     "mode": "BUS",
+     "reseau": "Evry Centre Essonne",
+     "operateur": "TISSE",
+     "courses": 5
+    },
+    "C00665": {
+     "num": "4205",
+     "mode": "BUS",
+     "reseau": "Evry Centre Essonne",
+     "operateur": "TISSE",
+     "courses": 12
+    },
+    "C00685": {
+     "num": "4223",
+     "mode": "BUS",
+     "reseau": "Evry Centre Essonne",
+     "operateur": "TISSE",
+     "courses": 5
+    },
+    "C01956": {
+     "num": "4220",
+     "mode": "BUS",
+     "reseau": "Evry Centre Essonne",
+     "operateur": "TISSE",
+     "courses": 8
+    },
+    "C01628": {
+     "num": "4245",
+     "mode": "BUS",
+     "reseau": "Evry Centre Essonne",
+     "operateur": "TISSE",
+     "courses": 5
+    },
+    "C02724": {
+     "num": "4242",
+     "mode": "BUS",
+     "reseau": "Evry Centre Essonne",
+     "operateur": "TISSE",
+     "courses": 7
+    },
+    "C00392": {
+     "num": "4233",
+     "mode": "BUS",
+     "reseau": "Evry Centre Essonne",
+     "operateur": "TISSE",
+     "courses": 3
+    },
+    "C01616": {
+     "num": "4201",
+     "mode": "BUS",
+     "reseau": "Evry Centre Essonne",
+     "operateur": "TISSE",
+     "courses": 17
+    },
+    "C02725": {
+     "num": "9112",
+     "mode": "BUS",
+     "reseau": "Evry Centre Essonne",
+     "operateur": "TISSE",
+     "courses": 8
+    },
+    "C02631": {
+     "num": "4250",
+     "mode": "BUS",
+     "reseau": "Evry Centre Essonne",
+     "operateur": "TISSE",
+     "courses": 7
+    },
+    "C01619": {
+     "num": "4204",
+     "mode": "BUS",
+     "reseau": "Evry Centre Essonne",
+     "operateur": "TISSE",
+     "courses": 4
+    },
+    "C00388": {
+     "num": "4243",
+     "mode": "BUS",
+     "reseau": "Evry Centre Essonne",
+     "operateur": "TISSE",
+     "courses": 10
+    },
+    "C00385": {
+     "num": "4203",
+     "mode": "BUS",
+     "reseau": "Evry Centre Essonne",
+     "operateur": "TISSE",
+     "courses": 12
+    },
+    "C01618": {
+     "num": "4212",
+     "mode": "BUS",
+     "reseau": "Evry Centre Essonne",
+     "operateur": "TISSE",
+     "courses": 7
+    },
+    "C01629": {
+     "num": "4218",
+     "mode": "BUS",
+     "reseau": "Evry Centre Essonne",
+     "operateur": "TISSE",
+     "courses": 2
+    },
+    "C01645": {
+     "num": "N139",
+     "mode": "BUS",
+     "reseau": "Evry Centre Essonne",
+     "operateur": "TISSE",
+     "courses": 2
+    },
+    "C01714": {
+     "num": "4240",
+     "mode": "BUS",
+     "reseau": "Evry Centre Essonne",
+     "operateur": "TISSE",
+     "courses": 1
+    },
+    "C01623": {
+     "num": "4217",
+     "mode": "BUS",
+     "reseau": "Evry Centre Essonne",
+     "operateur": "TISSE",
+     "courses": 1
+    },
+    "C01615": {
+     "num": "4221",
+     "mode": "BUS",
+     "reseau": "Evry Centre Essonne",
+     "operateur": "TISSE",
+     "courses": 1
+    }
+   },
+   "courses": 140
+  },
+  "531_KVEDV": {
+   "lignes": {
+    "C02486": {
+     "num": "Soir Bouray",
+     "mode": "BUS",
+     "reseau": "Essonne Sud Est",
+     "operateur": "Keolis Val d'Essonne Deux Vallées",
+     "courses": 3
+    },
+    "C02220": {
+     "num": "Soir Mennecy",
+     "mode": "BUS",
+     "reseau": "Essonne Sud Est",
+     "operateur": "Keolis Val d'Essonne Deux Vallées",
+     "courses": 3
+    }
+   },
+   "courses": 6
+  },
+  "508KRPFEV4": {
+   "lignes": {
+    "C00245": {
+     "num": "2101",
+     "mode": "BUS",
+     "reseau": "Roissy Est",
+     "operateur": "Keolis Roissy Pays de France Est",
+     "courses": 8
+    },
+    "C00659": {
+     "num": "2120",
+     "mode": "BUS",
+     "reseau": "Roissy Est",
+     "operateur": "Keolis Roissy Pays de France Est",
+     "courses": 3
+    },
+    "C00246": {
+     "num": "2102",
+     "mode": "BUS",
+     "reseau": "Roissy Est",
+     "operateur": "Keolis Roissy Pays de France Est",
+     "courses": 6
+    },
+    "C02591": {
+     "num": "Soir Mitry-le-Neuf",
+     "mode": "BUS",
+     "reseau": "Roissy Est",
+     "operateur": "Keolis Roissy Pays de France Est",
+     "courses": 3
+    },
+    "C00198": {
+     "num": "2116",
+     "mode": "BUS",
+     "reseau": "Roissy Est",
+     "operateur": "Keolis Roissy Pays de France Est",
+     "courses": 3
+    },
+    "C02476": {
+     "num": "Soir Villeparisis",
+     "mode": "BUS",
+     "reseau": "Roissy Est",
+     "operateur": "Keolis Roissy Pays de France Est",
+     "courses": 3
+    },
+    "C00202": {
+     "num": "2121",
+     "mode": "BUS",
+     "reseau": "Roissy Est",
+     "operateur": "Keolis Roissy Pays de France Est",
+     "courses": 3
+    },
+    "C00199": {
+     "num": "2117",
+     "mode": "BUS",
+     "reseau": "Roissy Est",
+     "operateur": "Keolis Roissy Pays de France Est",
+     "courses": 1
+    }
+   },
+   "courses": 30
+  },
+  "SUDYV": {
+   "lignes": {
+    "C00183": {
+     "num": "5302",
+     "mode": "BUS",
+     "reseau": "Centre et Sud Yvelines",
+     "operateur": "Transdev Sud Yvelines",
+     "courses": 3
+    },
+    "C00182": {
+     "num": "5301",
+     "mode": "BUS",
+     "reseau": "Centre et Sud Yvelines",
+     "operateur": "Transdev Sud Yvelines",
+     "courses": 2
+    },
+    "C00171": {
+     "num": "7811",
+     "mode": "BUS",
+     "reseau": "Centre et Sud Yvelines",
+     "operateur": "Transdev Sud Yvelines",
+     "courses": 1
+    },
+    "C01721": {
+     "num": "5307",
+     "mode": "BUS",
+     "reseau": "Centre et Sud Yvelines",
+     "operateur": "Transdev Sud Yvelines",
+     "courses": 1
+    }
+   },
+   "courses": 7
+  },
+  "SENART": {
+   "lignes": {
+    "C01669": {
+     "num": "3705",
+     "mode": "BUS",
+     "reseau": "Sénart",
+     "operateur": "Transdev Senart",
+     "courses": 4
+    },
+    "C00859": {
+     "num": "Tzen1",
+     "mode": "BUS",
+     "reseau": "Sénart",
+     "operateur": "Transdev Senart",
+     "courses": 16
+    },
+    "C00862": {
+     "num": "3704",
+     "mode": "BUS",
+     "reseau": "Sénart",
+     "operateur": "Transdev Senart",
+     "courses": 5
+    },
+    "C00864": {
+     "num": "3725",
+     "mode": "BUS",
+     "reseau": "Sénart",
+     "operateur": "Transdev Senart",
+     "courses": 1
+    },
+    "C00850": {
+     "num": "3734",
+     "mode": "BUS",
+     "reseau": "Sénart",
+     "operateur": "Transdev Senart",
+     "courses": 3
+    },
+    "C00843": {
+     "num": "3703",
+     "mode": "BUS",
+     "reseau": "Sénart",
+     "operateur": "Transdev Senart",
+     "courses": 6
+    },
+    "C02681": {
+     "num": "3752",
+     "mode": "BUS",
+     "reseau": "Sénart",
+     "operateur": "Transdev Senart",
+     "courses": 4
+    },
+    "C00837": {
+     "num": "3751",
+     "mode": "BUS",
+     "reseau": "Sénart",
+     "operateur": "Transdev Senart",
+     "courses": 3
+    },
+    "C00836": {
+     "num": "7715",
+     "mode": "BUS",
+     "reseau": "Sénart",
+     "operateur": "Transdev Senart",
+     "courses": 5
+    },
+    "C01806": {
+     "num": "3702",
+     "mode": "BUS",
+     "reseau": "Sénart",
+     "operateur": "Transdev Senart",
+     "courses": 2
+    },
+    "C00854": {
+     "num": "3742",
+     "mode": "BUS",
+     "reseau": "Sénart",
+     "operateur": "Transdev Senart",
+     "courses": 1
+    },
+    "C00868": {
+     "num": "3732",
+     "mode": "BUS",
+     "reseau": "Sénart",
+     "operateur": "Transdev Senart",
+     "courses": 1
+    },
+    "C00869": {
+     "num": "3735",
+     "mode": "BUS",
+     "reseau": "Sénart",
+     "operateur": "Transdev Senart",
+     "courses": 1
+    },
+    "C00851": {
+     "num": "3736",
+     "mode": "BUS",
+     "reseau": "Sénart",
+     "operateur": "Transdev Senart",
+     "courses": 2
+    },
+    "C00871": {
+     "num": "3733",
+     "mode": "BUS",
+     "reseau": "Sénart",
+     "operateur": "Transdev Senart",
+     "courses": 3
+    },
+    "C00847": {
+     "num": "3713",
+     "mode": "BUS",
+     "reseau": "Sénart",
+     "operateur": "Transdev Senart",
+     "courses": 1
+    },
+    "C00863": {
+     "num": "3722",
+     "mode": "BUS",
+     "reseau": "Sénart",
+     "operateur": "Transdev Senart",
+     "courses": 1
+    },
+    "C00867": {
+     "num": "3723",
+     "mode": "BUS",
+     "reseau": "Sénart",
+     "operateur": "Transdev Senart",
+     "courses": 1
+    },
+    "C00845": {
+     "num": "3711",
+     "mode": "BUS",
+     "reseau": "Sénart",
+     "operateur": "Transdev Senart",
+     "courses": 2
+    },
+    "C00865": {
+     "num": "3724",
+     "mode": "BUS",
+     "reseau": "Sénart",
+     "operateur": "Transdev Senart",
+     "courses": 1
+    }
+   },
+   "courses": 63
+  },
+  "RDMANTOIS": {
+   "lignes": {
+    "C00757": {
+     "num": "5448",
+     "mode": "BUS",
+     "reseau": "Mantois",
+     "operateur": "RD Mantois",
+     "courses": 1
+    },
+    "C01949": {
+     "num": "5401",
+     "mode": "BUS",
+     "reseau": "Mantois",
+     "operateur": "RD Mantois",
+     "courses": 7
+    },
+    "C00755": {
+     "num": "5438",
+     "mode": "BUS",
+     "reseau": "Mantois",
+     "operateur": "RD Mantois",
+     "courses": 1
+    },
+    "C02479": {
+     "num": "5441",
+     "mode": "BUS",
+     "reseau": "Mantois",
+     "operateur": "RD Mantois",
+     "courses": 7
+    },
+    "C01606": {
+     "num": "5407",
+     "mode": "BUS",
+     "reseau": "Mantois",
+     "operateur": "RD Mantois",
+     "courses": 5
+    },
+    "C02249": {
+     "num": "7820",
+     "mode": "BUS",
+     "reseau": "Mantois",
+     "operateur": "RD Mantois",
+     "courses": 9
+    },
+    "C01600": {
+     "num": "5402",
+     "mode": "BUS",
+     "reseau": "Mantois",
+     "operateur": "RD Mantois",
+     "courses": 10
+    },
+    "C00288": {
+     "num": "5437",
+     "mode": "BUS",
+     "reseau": "Mantois",
+     "operateur": "RD Mantois",
+     "courses": 2
+    },
+    "C01635": {
+     "num": "N151",
+     "mode": "BUS",
+     "reseau": "Mantois",
+     "operateur": "RD Mantois",
+     "courses": 2
+    },
+    "C01601": {
+     "num": "5403",
+     "mode": "BUS",
+     "reseau": "Mantois",
+     "operateur": "RD Mantois",
+     "courses": 2
+    },
+    "C00731": {
+     "num": "5409",
+     "mode": "BUS",
+     "reseau": "Mantois",
+     "operateur": "RD Mantois",
+     "courses": 2
+    }
+   },
+   "courses": 48
+  },
+  "537RDBIEVRE": {
+   "lignes": {
+    "C02528": {
+     "num": "T10",
+     "mode": "TRAM",
+     "reseau": "Bièvre",
+     "operateur": "RD Bièvre",
+     "courses": 29
+    }
+   },
+   "courses": 29
+  },
+  "TMO": {
+   "lignes": {
+    "C00914": {
+     "num": "2319",
+     "mode": "BUS",
+     "reseau": "Meaux et Ourcq",
+     "operateur": "Transdev Marne-et-Ourcq",
+     "courses": 9
+    },
+    "C01820": {
+     "num": "7702",
+     "mode": "BUS",
+     "reseau": "Meaux et Ourcq",
+     "operateur": "Transdev Marne-et-Ourcq",
+     "courses": 2
+    },
+    "C00961": {
+     "num": "7709",
+     "mode": "BUS",
+     "reseau": "Meaux et Ourcq",
+     "operateur": "Transdev Marne-et-Ourcq",
+     "courses": 7
+    },
+    "C00954": {
+     "num": "2301",
+     "mode": "BUS",
+     "reseau": "Meaux et Ourcq",
+     "operateur": "Transdev Marne-et-Ourcq",
+     "courses": 11
+    },
+    "C00661": {
+     "num": "7720",
+     "mode": "BUS",
+     "reseau": "Meaux et Ourcq",
+     "operateur": "Transdev Marne-et-Ourcq",
+     "courses": 8
+    },
+    "C02489": {
+     "num": "Soir Meaux Nord",
+     "mode": "BUS",
+     "reseau": "Meaux et Ourcq",
+     "operateur": "Transdev Marne-et-Ourcq",
+     "courses": 2
+    },
+    "C00637": {
+     "num": "7718",
+     "mode": "BUS",
+     "reseau": "Meaux et Ourcq",
+     "operateur": "Transdev Marne-et-Ourcq",
+     "courses": 13
+    },
+    "C00955": {
+     "num": "2308",
+     "mode": "BUS",
+     "reseau": "Meaux et Ourcq",
+     "operateur": "Transdev Marne-et-Ourcq",
+     "courses": 2
+    },
+    "C02490": {
+     "num": "Soir Meaux Sud",
+     "mode": "BUS",
+     "reseau": "Meaux et Ourcq",
+     "operateur": "Transdev Marne-et-Ourcq",
+     "courses": 2
+    },
+    "C00958": {
+     "num": "2304",
+     "mode": "BUS",
+     "reseau": "Meaux et Ourcq",
+     "operateur": "Transdev Marne-et-Ourcq",
+     "courses": 2
+    },
+    "C00953": {
+     "num": "2302",
+     "mode": "BUS",
+     "reseau": "Meaux et Ourcq",
+     "operateur": "Transdev Marne-et-Ourcq",
+     "courses": 3
+    },
+    "C00948": {
+     "num": "2317",
+     "mode": "BUS",
+     "reseau": "Meaux et Ourcq",
+     "operateur": "Transdev Marne-et-Ourcq",
+     "courses": 1
+    },
+    "C00949": {
+     "num": "2311",
+     "mode": "BUS",
+     "reseau": "Meaux et Ourcq",
+     "operateur": "Transdev Marne-et-Ourcq",
+     "courses": 1
+    }
+   },
+   "courses": 63
+  },
+  "536DSP36": {
+   "lignes": {
+    "C01710": {
+     "num": "487",
+     "mode": "BUS",
+     "reseau": "Massy-Juvisy",
+     "operateur": "RATP Cap Massy-Juvisy",
+     "courses": 14
+    },
+    "C01821": {
+     "num": "486",
+     "mode": "BUS",
+     "reseau": "Massy-Juvisy",
+     "operateur": "RATP Cap Massy-Juvisy",
+     "courses": 15
+    },
+    "C01328": {
+     "num": "492",
+     "mode": "BUS",
+     "reseau": "Massy-Juvisy",
+     "operateur": "RATP Cap Massy-Juvisy",
+     "courses": 1
+    }
+   },
+   "courses": 30
+  },
+  "526RDSACLAY": {
+   "lignes": {
+    "C01567": {
+     "num": "4606",
+     "mode": "BUS",
+     "reseau": "Paris Saclay",
+     "operateur": "RD Saclay",
+     "courses": 10
+    },
+    "C00070": {
+     "num": "4605",
+     "mode": "BUS",
+     "reseau": "Paris Saclay",
+     "operateur": "RD Saclay",
+     "courses": 1
+    },
+    "C00068": {
+     "num": "4603",
+     "mode": "BUS",
+     "reseau": "Paris Saclay",
+     "operateur": "RD Saclay",
+     "courses": 15
+    },
+    "C00495": {
+     "num": "4611",
+     "mode": "BUS",
+     "reseau": "Paris Saclay",
+     "operateur": "RD Saclay",
+     "courses": 6
+    },
+    "C01698": {
+     "num": "4621",
+     "mode": "BUS",
+     "reseau": "Paris Saclay",
+     "operateur": "RD Saclay",
+     "courses": 5
+    },
+    "C01697": {
+     "num": "4602",
+     "mode": "BUS",
+     "reseau": "Paris Saclay",
+     "operateur": "RD Saclay",
+     "courses": 20
+    },
+    "C01561": {
+     "num": "4609",
+     "mode": "BUS",
+     "reseau": "Paris Saclay",
+     "operateur": "RD Saclay",
+     "courses": 4
+    },
+    "C01566": {
+     "num": "9105",
+     "mode": "BUS",
+     "reseau": "Paris Saclay",
+     "operateur": "RD Saclay",
+     "courses": 1
+    },
+    "C01569": {
+     "num": "9108",
+     "mode": "BUS",
+     "reseau": "Paris Saclay",
+     "operateur": "RD Saclay",
+     "courses": 2
+    },
+    "C02809": {
+     "num": "4627",
+     "mode": "BUS",
+     "reseau": "Paris Saclay",
+     "operateur": "RD Saclay",
+     "courses": 2
+    }
+   },
+   "courses": 66
+  },
+  "VALM": {
+   "lignes": {
+    "C01802": {
+     "num": "1516",
+     "mode": "BUS",
+     "reseau": "Vallée de Montmorency",
+     "operateur": "Transdev Valmy",
+     "courses": 8
+    },
+    "C00304": {
+     "num": "1511",
+     "mode": "BUS",
+     "reseau": "Vallée de Montmorency",
+     "operateur": "Transdev Valmy",
+     "courses": 4
+    },
+    "C00315": {
+     "num": "1514",
+     "mode": "BUS",
+     "reseau": "Vallée de Montmorency",
+     "operateur": "Transdev Valmy",
+     "courses": 14
+    },
+    "C02465": {
+     "num": "Soir Écouen Ézanville",
+     "mode": "BUS",
+     "reseau": "Vallée de Montmorency",
+     "operateur": "Transdev Valmy",
+     "courses": 3
+    },
+    "C01804": {
+     "num": "1515",
+     "mode": "BUS",
+     "reseau": "Vallée de Montmorency",
+     "operateur": "Transdev Valmy",
+     "courses": 11
+    },
+    "C00307": {
+     "num": "1537",
+     "mode": "BUS",
+     "reseau": "Vallée de Montmorency",
+     "operateur": "Transdev Valmy",
+     "courses": 7
+    },
+    "C02463": {
+     "num": "1527",
+     "mode": "BUS",
+     "reseau": "Vallée de Montmorency",
+     "operateur": "Transdev Valmy",
+     "courses": 8
+    },
+    "C02464": {
+     "num": "Soir Domont",
+     "mode": "BUS",
+     "reseau": "Vallée de Montmorency",
+     "operateur": "Transdev Valmy",
+     "courses": 4
+    },
+    "C00302": {
+     "num": "1513",
+     "mode": "BUS",
+     "reseau": "Vallée de Montmorency",
+     "operateur": "Transdev Valmy",
+     "courses": 2
+    },
+    "C00465": {
+     "num": "1519",
+     "mode": "BUS",
+     "reseau": "Vallée de Montmorency",
+     "operateur": "Transdev Valmy",
+     "courses": 1
+    }
+   },
+   "courses": 62
+  },
+  "538FEO": {
+   "lignes": {
+    "C00652": {
+     "num": "7808",
+     "mode": "BUS",
+     "reseau": "Lignes Île-de-France Ouest",
+     "operateur": "Francilité Express Ouest",
+     "courses": 4
+    },
+    "C01571": {
+     "num": "5154",
+     "mode": "BUS",
+     "reseau": "Lignes Île-de-France Ouest",
+     "operateur": "Francilité Express Ouest",
+     "courses": 6
+    },
+    "C00426": {
+     "num": "7818",
+     "mode": "BUS",
+     "reseau": "Lignes Île-de-France Ouest",
+     "operateur": "Francilité Express Ouest",
+     "courses": 2
+    },
+    "C00287": {
+     "num": "7804",
+     "mode": "BUS",
+     "reseau": "Lignes Île-de-France Ouest",
+     "operateur": "Francilité Express Ouest",
+     "courses": 2
+    },
+    "C02201": {
+     "num": "9111",
+     "mode": "BUS",
+     "reseau": "Lignes Île-de-France Ouest",
+     "operateur": "Francilité Express Ouest",
+     "courses": 3
+    }
+   },
+   "courses": 17
+  },
+  "MLV": {
+   "lignes": {
+    "C00629": {
+     "num": "2226",
+     "mode": "BUS",
+     "reseau": "Marne-la-Vallée",
+     "operateur": "Transdev Marne-la-Vallée",
+     "courses": 7
+    },
+    "C00943": {
+     "num": "2261",
+     "mode": "BUS",
+     "reseau": "Marne-la-Vallée",
+     "operateur": "Transdev Marne-la-Vallée",
+     "courses": 3
+    },
+    "C00632": {
+     "num": "2234",
+     "mode": "BUS",
+     "reseau": "Marne-la-Vallée",
+     "operateur": "Transdev Marne-la-Vallée",
+     "courses": 11
+    },
+    "C00634": {
+     "num": "2220",
+     "mode": "BUS",
+     "reseau": "Marne-la-Vallée",
+     "operateur": "Transdev Marne-la-Vallée",
+     "courses": 10
+    },
+    "C00626": {
+     "num": "2222",
+     "mode": "BUS",
+     "reseau": "Marne-la-Vallée",
+     "operateur": "Transdev Marne-la-Vallée",
+     "courses": 8
+    },
+    "C01713": {
+     "num": "2228",
+     "mode": "BUS",
+     "reseau": "Marne-la-Vallée",
+     "operateur": "Transdev Marne-la-Vallée",
+     "courses": 2
+    },
+    "C02016": {
+     "num": "2231",
+     "mode": "BUS",
+     "reseau": "Marne-la-Vallée",
+     "operateur": "Transdev Marne-la-Vallée",
+     "courses": 5
+    },
+    "C00630": {
+     "num": "2229",
+     "mode": "BUS",
+     "reseau": "Marne-la-Vallée",
+     "operateur": "Transdev Marne-la-Vallée",
+     "courses": 1
+    },
+    "C00628": {
+     "num": "2225",
+     "mode": "BUS",
+     "reseau": "Marne-la-Vallée",
+     "operateur": "Transdev Marne-la-Vallée",
+     "courses": 4
+    },
+    "C00635": {
+     "num": "2233",
+     "mode": "BUS",
+     "reseau": "Marne-la-Vallée",
+     "operateur": "Transdev Marne-la-Vallée",
+     "courses": 6
+    },
+    "C00636": {
+     "num": "2244",
+     "mode": "BUS",
+     "reseau": "Marne-la-Vallée",
+     "operateur": "Transdev Marne-la-Vallée",
+     "courses": 2
+    },
+    "C00627": {
+     "num": "2223",
+     "mode": "BUS",
+     "reseau": "Marne-la-Vallée",
+     "operateur": "Transdev Marne-la-Vallée",
+     "courses": 1
+    },
+    "C02298": {
+     "num": "2245",
+     "mode": "BUS",
+     "reseau": "Marne-la-Vallée",
+     "operateur": "Transdev Marne-la-Vallée",
+     "courses": 1
+    },
+    "C00903": {
+     "num": "2262",
+     "mode": "BUS",
+     "reseau": "Marne-la-Vallée",
+     "operateur": "Transdev Marne-la-Vallée",
+     "courses": 1
+    },
+    "C00619": {
+     "num": "2252",
+     "mode": "BUS",
+     "reseau": "Marne-la-Vallée",
+     "operateur": "Transdev Marne-la-Vallée",
+     "courses": 1
+    }
+   },
+   "courses": 63
+  },
+  "EXROI": {
+   "lignes": {
+    "C02832": {
+     "num": "9509",
+     "mode": "BUS",
+     "reseau": "Express Roissy",
+     "operateur": "Transdev Express Roissy",
+     "courses": 4
+    },
+    "C02835": {
+     "num": "9517",
+     "mode": "BUS",
+     "reseau": "Express Roissy",
+     "operateur": "Transdev Express Roissy",
+     "courses": 15
+    },
+    "C01298": {
+     "num": "350",
+     "mode": "BUS",
+     "reseau": "Express Roissy",
+     "operateur": "Transdev Express Roissy",
+     "courses": 4
+    },
+    "C01299": {
+     "num": "351",
+     "mode": "BUS",
+     "reseau": "Express Roissy",
+     "operateur": "Transdev Express Roissy",
+     "courses": 3
+    }
+   },
+   "courses": 26
+  },
+  "034_KSOE": {
+   "lignes": {
+    "C00281": {
+     "num": "6503",
+     "mode": "BUS",
+     "reseau": "Poissy - Les Mureaux",
+     "operateur": "Keolis Seine et Oise Est",
+     "courses": 10
+    },
+    "C02565": {
+     "num": "6501",
+     "mode": "BUS",
+     "reseau": "Poissy - Les Mureaux",
+     "operateur": "Keolis Seine et Oise Est",
+     "courses": 17
+    },
+    "C02566": {
+     "num": "6502",
+     "mode": "BUS",
+     "reseau": "Poissy - Les Mureaux",
+     "operateur": "Keolis Seine et Oise Est",
+     "courses": 10
+    },
+    "C02626": {
+     "num": "Soir Vernouillet - Verneuil",
+     "mode": "BUS",
+     "reseau": "Poissy - Les Mureaux",
+     "operateur": "Keolis Seine et Oise Est",
+     "courses": 2
+    },
+    "C02627": {
+     "num": "Soir Les Mureaux",
+     "mode": "BUS",
+     "reseau": "Poissy - Les Mureaux",
+     "operateur": "Keolis Seine et Oise Est",
+     "courses": 5
+    },
+    "C02567": {
+     "num": "6505",
+     "mode": "BUS",
+     "reseau": "Poissy - Les Mureaux",
+     "operateur": "Keolis Seine et Oise Est",
+     "courses": 2
+    },
+    "C02800": {
+     "num": "6577",
+     "mode": "BUS",
+     "reseau": "Poissy - Les Mureaux",
+     "operateur": "Keolis Seine et Oise Est",
+     "courses": 1
+    },
+    "C02526": {
+     "num": "N155",
+     "mode": "BUS",
+     "reseau": "Poissy - Les Mureaux",
+     "operateur": "Keolis Seine et Oise Est",
+     "courses": 1
+    },
+    "C00644": {
+     "num": "6543",
+     "mode": "BUS",
+     "reseau": "Poissy - Les Mureaux",
+     "operateur": "Keolis Seine et Oise Est",
+     "courses": 1
+    }
+   },
+   "courses": 49
+  },
+  "503KNVO": {
+   "lignes": {
+    "C01472": {
+     "num": "9518",
+     "mode": "BUS",
+     "reseau": "Haut Val d'Oise",
+     "operateur": "Keolis Nord Val d’Oise",
+     "courses": 4
+    },
+    "C02624": {
+     "num": "N147",
+     "mode": "BUS",
+     "reseau": "Haut Val d'Oise",
+     "operateur": "Keolis Nord Val d’Oise",
+     "courses": 1
+    },
+    "C02675": {
+     "num": "Soir Persan - Beaumont",
+     "mode": "BUS",
+     "reseau": "Haut Val d'Oise",
+     "operateur": "Keolis Nord Val d’Oise",
+     "courses": 7
+    }
+   },
+   "courses": 12
+  },
+  "SUDOE": {
+   "lignes": {
+    "C00975": {
+     "num": "4401",
+     "mode": "BUS",
+     "reseau": "Essonne Sud Ouest",
+     "operateur": "Transdev Sud-Ouest Essonne",
+     "courses": 2
+    },
+    "C00976": {
+     "num": "4402",
+     "mode": "BUS",
+     "reseau": "Essonne Sud Ouest",
+     "operateur": "Transdev Sud-Ouest Essonne",
+     "courses": 2
+    },
+    "C01564": {
+     "num": "9103",
+     "mode": "BUS",
+     "reseau": "Essonne Sud Ouest",
+     "operateur": "Transdev Sud-Ouest Essonne",
+     "courses": 4
+    },
+    "C02474": {
+     "num": "Soir Etampes",
+     "mode": "BUS",
+     "reseau": "Essonne Sud Ouest",
+     "operateur": "Transdev Sud-Ouest Essonne",
+     "courses": 1
+    }
+   },
+   "courses": 9
+  },
+  "334AUTOCARSDOMINIQUE": {
+   "lignes": {
+    "C01837": {
+     "num": "J",
+     "mode": "BUS",
+     "reseau": "Paris-Saclay Mobilités",
+     "operateur": "Autocars Dominique",
+     "courses": 3
+    },
+    "C02497": {
+     "num": "E",
+     "mode": "BUS",
+     "reseau": "Paris-Saclay Mobilités",
+     "operateur": "Autocars Dominique",
+     "courses": 4
+    }
+   },
+   "courses": 7
+  },
+  "513KPVB": {
+   "lignes": {
+    "C01640": {
+     "num": "N142",
+     "mode": "BUS",
+     "reseau": "Pays Briard",
+     "operateur": "Keolis Portes et Val de Brie",
+     "courses": 2
+    },
+    "C00551": {
+     "num": "423",
+     "mode": "BUS",
+     "reseau": "Pays Briard",
+     "operateur": "Keolis Portes et Val de Brie",
+     "courses": 4
+    },
+    "C02522": {
+     "num": "Soir Gretz-Armainvilliers",
+     "mode": "BUS",
+     "reseau": "Pays Briard",
+     "operateur": "Keolis Portes et Val de Brie",
+     "courses": 1
+    },
+    "C00550": {
+     "num": "3121",
+     "mode": "BUS",
+     "reseau": "Pays Briard",
+     "operateur": "Keolis Portes et Val de Brie",
+     "courses": 2
+    }
+   },
+   "courses": 9
+  },
+  "PFONT": {
+   "lignes": {
+    "C02854": {
+     "num": "7711",
+     "mode": "BUS",
+     "reseau": "Fontainebleau - Moret",
+     "operateur": "Transdev Pays de Fontainebleau",
+     "courses": 4
+    },
+    "C02595": {
+     "num": "Soir Fontainebleau Avon",
+     "mode": "BUS",
+     "reseau": "Fontainebleau - Moret",
+     "operateur": "Transdev Pays de Fontainebleau",
+     "courses": 2
+    },
+    "C00793": {
+     "num": "3401",
+     "mode": "BUS",
+     "reseau": "Fontainebleau - Moret",
+     "operateur": "Transdev Pays de Fontainebleau",
+     "courses": 4
+    },
+    "C01947": {
+     "num": "3408",
+     "mode": "BUS",
+     "reseau": "Fontainebleau - Moret",
+     "operateur": "Transdev Pays de Fontainebleau",
+     "courses": 3
+    }
+   },
+   "courses": 13
+  },
+  "TZEN4": {
+   "lignes": {
+    "C02636": {
+     "num": "Tzen4",
+     "mode": "BUS",
+     "reseau": "Evry Centre Essonne",
+     "operateur": "TISSE",
+     "courses": 3
+    }
+   },
+   "courses": 3
+  },
+  "RCASO_T12": {
+   "lignes": {
+    "C02529": {
+     "num": "T12",
+     "mode": "RAIL",
+     "reseau": "",
+     "operateur": "RATP Cap Arc Sud et Ouest",
+     "courses": 15
+    }
+   },
+   "courses": 15
+  },
+  "VLOIN": {
+   "lignes": {
+    "C00815": {
+     "num": "34",
+     "mode": "BUS",
+     "reseau": "Vallée du Loing - Nemours",
+     "operateur": "Transdev Vallée du Loing",
+     "courses": 4
+    }
+   },
+   "courses": 4
+  },
+  "RCASO_T13": {
+   "lignes": {
+    "C02344": {
+     "num": "T13",
+     "mode": "RAIL",
+     "reseau": "",
+     "operateur": "RATP Cap Arc Sud et Ouest",
+     "courses": 4
+    }
+   },
+   "courses": 4
+  },
+  "514FGP": {
+   "lignes": {
+    "C01510": {
+     "num": "3214",
+     "mode": "BUS",
+     "reseau": "Provinois - Brie et Seine",
+     "operateur": "Francilité Grand Provinois",
+     "courses": 1
+    }
+   },
+   "courses": 1
+  },
+  "RATPCapIDF": {
+   "lignes": {
+    "C01365": {
+     "num": "TUVIM Centre-Ville",
+     "mode": "BUS",
+     "reseau": "Grand Paris Seine Ouest",
+     "operateur": "Origami / Mobicité",
+     "courses": 1
+    }
+   },
+   "courses": 1
+  }
+ }
+}

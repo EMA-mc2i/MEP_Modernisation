@@ -273,6 +273,9 @@ details.niv-detail .corps .niv-ligne { background:transparent; }
 .onglets button.actif { color:var(--focus); border-bottom-color:var(--idf-blue); }
 .onglet-corps { display:none; padding-top:18px; }
 .onglet-corps.actif { display:block; }
+.bandeau-test { background:#FFF4E5; border:2px solid var(--red); border-radius:8px; padding:12px 16px; margin:0 0 16px 0; font-size:13px; color:#8A5A10; }
+.bandeau-test b { color:var(--red); font-size:13.5px; }
+.bandeau-test code { font-size:11.5px; }
 .a-faire { background:var(--bg-light); border:1px dashed var(--border); border-radius:8px; padding:18px; color:var(--text-muted); font-size:13.5px; }
 .a-faire b { color:var(--anthracite); }
 .qualite-bloc { margin:6px 0 14px 0; font-size:13px; }
@@ -419,6 +422,32 @@ def html_partenaires(partenaires_maintenant, partenaires_legacy, mode_mep):
     return entete() + f'<div class="niv-liste">{"".join(blocs)}</div>'
 
 
+MODE_TEST = HERE / "MODE_TEST.txt"  # présence = affichage de simulation, pas une vraie bascule MEP
+CAPTURES_QUALI = HERE / "captures"
+
+
+def bandeau_test():
+    """Affiché tout en haut, avant les onglets, tant que MODE_TEST.txt existe : rappelle que la
+    comparaison affichée est une simulation (dates précises des 2 côtés), pas la vraie MEP du
+    01/12 — demandé par Erwan le 26/11/2026 avant de publier un état de test."""
+    if not MODE_TEST.exists():
+        return ""
+    legacy_q = json.loads(LEGACY_FIGE.read_text(encoding="utf-8"))["timestamp"] if LEGACY_FIGE.exists() else "—"
+    ng_q = dernier_releve()
+    ng_q = ng_q["timestamp"] if ng_q else "—"
+    avant_f = CAPTURES_QUALI / "avant" / "_horodatage.txt"
+    apres_f = CAPTURES_QUALI / "apres" / "_horodatage.txt"
+    avant_ql = avant_f.read_text(encoding="utf-8").strip() if avant_f.exists() else "—"
+    apres_ql = apres_f.read_text(encoding="utf-8").strip() if apres_f.exists() else "—"
+    return (
+        '<div class="bandeau-test">'
+        '<b>⚠ AFFICHAGE DE TEST — simulation, pas la vraie MEP du 01/12.</b>'
+        f'<div>Quantitatif : Legacy = relevé du <code>{esc(legacy_q)}</code> · NG = relevé du <code>{esc(ng_q)}</code></div>'
+        f'<div>Qualitatif : Legacy = capture du <code>{esc(avant_ql)}</code> · NG = capture du <code>{esc(apres_ql)}</code></div>'
+        '</div>'
+    )
+
+
 def build_html(maintenant, legacy, alertes, mode_mep, out):
     if not mode_mep:
         bandeau = ('<div class="carte premier"><h3>NG pas encore marqué</h3>'
@@ -468,6 +497,7 @@ def build_html(maintenant, legacy, alertes, mode_mep, out):
     <h1>Vérification des critères fonctionnels de rollback</h1></div>
   </header>
   <div class="panel-body">
+    {bandeau_test()}
     <div class="onglets">
       <button class="actif" onclick="ongletAfficher('quanti', this)">Quantitatif</button>
       <button onclick="ongletAfficher('quali', this)">Qualitatif</button>

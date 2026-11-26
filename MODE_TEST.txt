@@ -1,0 +1,4 @@
+Présence de ce fichier = le dashboard affiche une comparaison de TEST (simulation du 26/11/2026
+pour vérifier que le moteur Legacy/NG fonctionne), pas la vraie bascule MEP du 01/12/2026.
+
+Supprimer ce fichier (et releves/_legacy_fige.json, captures/apres/) avant la vraie MEP.

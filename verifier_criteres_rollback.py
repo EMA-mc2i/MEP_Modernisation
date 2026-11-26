@@ -265,6 +265,14 @@ details.niv-detail[open] > summary.niv-ligne .nom::before { content:"▾ "; }
 details.niv-detail .corps { padding:4px 0 4px 20px; background:var(--bg-light); border-top:1px solid var(--border); }
 details.niv-detail .corps .niv-liste { border:none; border-radius:0; }
 details.niv-detail .corps .niv-ligne { background:transparent; }
+
+.onglets { display:flex; gap:4px; border-bottom:2px solid var(--border); margin:18px 0 0 0; }
+.onglets button { font-family:inherit; font-size:13.5px; font-weight:600; color:var(--text-muted); background:none; border:none; padding:10px 18px; cursor:pointer; border-bottom:2px solid transparent; margin-bottom:-2px; }
+.onglets button.actif { color:var(--focus); border-bottom-color:var(--idf-blue); }
+.onglet-corps { display:none; padding-top:18px; }
+.onglet-corps.actif { display:block; }
+.a-faire { background:var(--bg-light); border:1px dashed var(--border); border-radius:8px; padding:18px; color:var(--text-muted); font-size:13.5px; }
+.a-faire b { color:var(--anthracite); }
 """
 
 # Une seule grille pour les 3 niveaux (partenaire, réseau, ligne) : l'en-tête n'est dessinée
@@ -377,6 +385,17 @@ def build_html(maintenant, legacy, alertes, mode_mep, out):
     reference_txt = (f"référence Legacy figée le {esc(legacy['timestamp'])}" if mode_mep
                       else "lui-même (NG pas encore marqué, voir ci-dessous)")
 
+    onglet_quanti = f"""
+    <p>Relevé du <b>{esc(maintenant["timestamp"])}</b> (UTC), comparé au {reference_txt}.
+    3 des 8 critères du Go/No-Go MES, observables via l'open data PRIM (les 5 autres demandent Kibana ou un accès interne au Relais, hors périmètre de ce script).</p>
+    <div class="note"><b>Première validation macro seulement.</b> Une alerte ici signale qu'il faut vérifier à la main (Kibana, contact partenaire) avant toute décision de rollback ; ce n'est pas la décision elle-même. Le regroupement réseau -> partenaire vient de l'opérateur dominant du référentiel open data IDFM, pas d'une source officielle de correspondance producteur PRIM -> partenaire : à valider à la main.</div>
+    {stats}
+    {bandeau}
+    <h2 class="sec">Détail par partenaire · réseau · ligne — Legacy / NG</h2>
+    <p style="font-size:13px;color:var(--text-muted);margin:0 0 8px 0;">{"Rouge = avait des courses en Legacy et n'en a plus en NG. Gris = aucune course aux deux relevés." if mode_mep else "La colonne Legacy montre le relevé courant (mis à jour toutes les 2h) ; NG reste vide (—) jusqu'au déclenchement du jour de la MEP."}</p>
+    {html_partenaires(partenaires_maintenant, partenaires_legacy, mode_mep)}
+    """
+
     page = f"""<!DOCTYPE html>
 <html lang="fr"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Vérification des critères de rollback</title>
@@ -389,19 +408,39 @@ def build_html(maintenant, legacy, alertes, mode_mep, out):
     <h1>Vérification des critères fonctionnels de rollback</h1></div>
   </header>
   <div class="panel-body">
-    <p>Relevé du <b>{esc(maintenant["timestamp"])}</b> (UTC), comparé au {reference_txt}.
-    3 des 8 critères du Go/No-Go MES, observables via l'open data PRIM (les 5 autres demandent Kibana ou un accès interne au Relais, hors périmètre de ce script).</p>
-    <div class="note"><b>Première validation macro seulement.</b> Une alerte ici signale qu'il faut vérifier à la main (Kibana, contact partenaire) avant toute décision de rollback ; ce n'est pas la décision elle-même. Le regroupement réseau -> partenaire vient de l'opérateur dominant du référentiel open data IDFM, pas d'une source officielle de correspondance producteur PRIM -> partenaire : à valider à la main.</div>
-    {stats}
-    {bandeau}
-    <h2 class="sec">Détail par partenaire · réseau · ligne — Legacy / NG</h2>
-    <p style="font-size:13px;color:var(--text-muted);margin:0 0 8px 0;">{"Rouge = avait des courses en Legacy et n'en a plus en NG. Gris = aucune course aux deux relevés." if mode_mep else "La colonne Legacy montre le relevé courant (mis à jour toutes les 2h) ; NG reste vide (—) jusqu'au déclenchement du jour de la MEP."}</p>
-    {html_partenaires(partenaires_maintenant, partenaires_legacy, mode_mep)}
+    <div class="onglets">
+      <button class="actif" onclick="ongletAfficher('quanti', this)">Quantitatif</button>
+      <button onclick="ongletAfficher('quali', this)">Qualitatif</button>
+    </div>
+    <div id="onglet-quanti" class="onglet-corps actif">{onglet_quanti}</div>
+    <div id="onglet-quali" class="onglet-corps">{html_qualitatif()}</div>
   </div>
   <div class="sheet-footer"><span>Île-de-France Mobilités — Relais IVTR</span><span>Généré par verifier_criteres_rollback.py</span></div>
-</div></body></html>
+</div>
+<script>
+function ongletAfficher(nom, btn) {{
+  document.querySelectorAll('.onglet-corps').forEach(function(d) {{ d.classList.remove('actif'); }});
+  document.querySelectorAll('.onglets button').forEach(function(b) {{ b.classList.remove('actif'); }});
+  document.getElementById('onglet-' + nom).classList.add('actif');
+  btn.classList.add('actif');
+}}
+</script>
+</body></html>
 """
     out.write_text(page, encoding="utf-8")
+
+
+def html_qualitatif():
+    """Onglet « Qualitatif » : comparaison de structure et de valeurs des balises (OD / ALL / SM
+    arrêt) avant/après MEP, par réseau. En construction (26/11/2026) : la sélection des arrêts
+    s'appuiera sur l'offre théorique (Navitia route_schedules, data_freshness=base_schedule,
+    cf. 13_Dashboards_IA/Theorique/poc_offre_vs_circulation.py) pour choisir, par réseau, une
+    ligne/un arrêt desservi vers 22h le jour de la MEP — capture avant tout de suite possible,
+    capture après dès la MEP passée."""
+    return ('<div class="a-faire"><b>En construction.</b> Comparaison de structure et de valeurs des '
+            'balises (requêtes OD, ALL et SM arrêt) avant/après MEP, par réseau — sur le même principe '
+            'que <code>Difference_sortie_Legacy_vs_NG.md</code> (16_HET_OD_Balises), mais avec de vraies '
+            'références avant/après plutôt que des exports d\'environnements différents.</div>')
 
 
 def main():

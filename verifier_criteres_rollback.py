@@ -428,6 +428,7 @@ function ongletAfficher(nom, btn) {{
 </body></html>
 """
     out.write_text(page, encoding="utf-8")
+    (HERE / "index.html").write_text(page, encoding="utf-8")  # copie identique, pour GitHub Pages
 
 
 def html_qualitatif():

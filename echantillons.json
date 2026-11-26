@@ -14,7 +14,9 @@
    "heure_theorique": "22:00:00",
    "ecart_min": 0.0,
    "trip_id": "IDFM:KGPSO:50606933",
-   "monitoring_ref": "STIF:StopArea:SP:71039:"
+   "monitoring_ref": "STIF:StopArea:SP:71039:",
+   "partenaire": "KEOLIS",
+   "reseau_mode": "Seine Orly"
   },
   "MeC_Bus_PC · RATP Cap Boucles de Marne": {
    "code": "C01142",
@@ -28,7 +30,9 @@
    "heure_theorique": "22:00:00",
    "ecart_min": 0.0,
    "trip_id": "IDFM:RDBOUCLESDEMARNE:46934114",
-   "monitoring_ref": "STIF:StopArea:SP:71678:"
+   "monitoring_ref": "STIF:StopArea:SP:71678:",
+   "partenaire": "RATP CAP",
+   "reseau_mode": "Bord de Marne"
   },
   "509_KGPVM": {
    "code": "C01581",
@@ -42,7 +46,9 @@
    "heure_theorique": "22:00:00",
    "ecart_min": 0.0,
    "trip_id": "IDFM:KGPVM:4273910",
-   "monitoring_ref": "STIF:StopArea:SP:68527:"
+   "monitoring_ref": "STIF:StopArea:SP:68527:",
+   "partenaire": "KEOLIS",
+   "reseau_mode": "Marne et Brie"
   },
   "075GRISEL": {
    "code": "C01333",
@@ -56,7 +62,9 @@
    "heure_theorique": "21:18:00",
    "ecart_min": 42.0,
    "trip_id": "IDFM:TRAVERSES_PARIS:875-C01333-332-15048",
-   "monitoring_ref": "STIF:StopArea:SP:72434:"
+   "monitoring_ref": "STIF:StopArea:SP:72434:",
+   "partenaire": "GRISEL",
+   "reseau_mode": ""
   },
   "MeC_Bus_PC · RATP Cap Boucle Nord de Seine": {
    "code": "C01237",
@@ -70,7 +78,9 @@
    "heure_theorique": "21:03:00",
    "ecart_min": 57.0,
    "trip_id": "IDFM:RDBOUCLENORDDESEINE:47038313",
-   "monitoring_ref": "STIF:StopArea:SP:72337:"
+   "monitoring_ref": "STIF:StopArea:SP:72337:",
+   "partenaire": "RATP CAP",
+   "reseau_mode": "Boucles Nord de Seine"
   },
   "526RDSACLAY": {
    "code": "C01567",
@@ -84,7 +94,9 @@
    "heure_theorique": "22:00:00",
    "ecart_min": 0.0,
    "trip_id": "IDFM:RDSACLAY:12472125",
-   "monitoring_ref": "STIF:StopArea:SP:485517:"
+   "monitoring_ref": "STIF:StopArea:SP:485517:",
+   "partenaire": "RATP CAP",
+   "reseau_mode": "Paris Saclay"
   },
   "MeC_Bus_PC · RATP Cap Plaine Saint-Denis": {
    "code": "C01194",
@@ -98,7 +110,9 @@
    "heure_theorique": "22:00:00",
    "ecart_min": 0.0,
    "trip_id": "IDFM:RCPLAINESAINTDENIS:50034573",
-   "monitoring_ref": "STIF:StopArea:SP:72182:"
+   "monitoring_ref": "STIF:StopArea:SP:72182:",
+   "partenaire": "RATP CAP",
+   "reseau_mode": "Plaine Saint-Denis"
   },
   "RATP-SIV": {
    "code": "C01377",
@@ -112,7 +126,9 @@
    "heure_theorique": "22:00:01",
    "ecart_min": 0.0,
    "trip_id": "IDFM:RATP:COU_RATP_07JOCAILLE2_2026_LaCo12Ivry12-16",
-   "monitoring_ref": "STIF:StopArea:SP:71297:"
+   "monitoring_ref": "STIF:StopArea:SP:71297:",
+   "partenaire": "RATP",
+   "reseau_mode": ""
   },
   "NSSD": {
    "code": "C01583",
@@ -126,7 +142,9 @@
    "heure_theorique": "22:00:00",
    "ecart_min": 0.0,
    "trip_id": "IDFM:Transdev_Nord_Seine_Saint-Denis:21884218",
-   "monitoring_ref": "STIF:StopArea:SP:73547:"
+   "monitoring_ref": "STIF:StopArea:SP:73547:",
+   "partenaire": "TRANSDEV",
+   "reseau_mode": "Terres d'Envol"
   },
   "SUDYV": {
    "code": "C00182",
@@ -140,7 +158,9 @@
    "heure_theorique": "21:59:00",
    "ecart_min": 1.0,
    "trip_id": "IDFM:TRANSDEV_SUD_YVELINES:22292720",
-   "monitoring_ref": "STIF:StopArea:SP:60803:"
+   "monitoring_ref": "STIF:StopArea:SP:60803:",
+   "partenaire": "TRANSDEV",
+   "reseau_mode": "Centre et Sud Yvelines"
   },
   "MeC_Bus_PC · Transdev Ourcq": {
    "code": "C01161",
@@ -154,7 +174,9 @@
    "heure_theorique": "22:00:00",
    "ecart_min": 0.0,
    "trip_id": "IDFM:stif:local-253166-C01161-30018",
-   "monitoring_ref": "STIF:StopArea:SP:65505:"
+   "monitoring_ref": "STIF:StopArea:SP:65505:",
+   "partenaire": "TRANSDEV",
+   "reseau_mode": "Ourcq"
   },
   "506KRPFO": {
    "code": "C00610",
@@ -168,7 +190,9 @@
    "heure_theorique": "22:00:00",
    "ecart_min": 0.0,
    "trip_id": "IDFM:stif:local-273743-C00610-89435",
-   "monitoring_ref": "STIF:StopArea:SP:65758:"
+   "monitoring_ref": "STIF:StopArea:SP:65758:",
+   "partenaire": "KEOLIS",
+   "reseau_mode": "Roissy Ouest"
   },
   "MeC_Bus_PC · RATP Cap Rive Gauche": {
    "code": "C01123",
@@ -182,7 +206,9 @@
    "heure_theorique": "22:00:00",
    "ecart_min": 0.0,
    "trip_id": "IDFM:RCRIVEGAUCHE:52016175",
-   "monitoring_ref": "STIF:StopArea:SP:71290:"
+   "monitoring_ref": "STIF:StopArea:SP:71290:",
+   "partenaire": "RATP CAP",
+   "reseau_mode": "Rive Gauche"
   },
   "RCASO_T12": {
    "code": "C02529",
@@ -196,7 +222,9 @@
    "heure_theorique": "22:00:30",
    "ecart_min": 0.5,
    "trip_id": "IDFM:RCASO:01122026-375458",
-   "monitoring_ref": "STIF:StopArea:SP:63244:"
+   "monitoring_ref": "STIF:StopArea:SP:63244:",
+   "partenaire": "RATP CAP",
+   "reseau_mode": ""
   },
   "520_KVYVS": {
    "code": "C00582",
@@ -210,7 +238,9 @@
    "heure_theorique": "22:00:00",
    "ecart_min": 0.0,
    "trip_id": "IDFM:KVYVS:2653824",
-   "monitoring_ref": "STIF:StopArea:SP:72816:"
+   "monitoring_ref": "STIF:StopArea:SP:72816:",
+   "partenaire": "KEOLIS",
+   "reseau_mode": "Val d'Yerres Val de Seine"
   },
   "VEXIN": {
    "code": "C00394",
@@ -224,7 +254,9 @@
    "heure_theorique": "22:00:00",
    "ecart_min": 0.0,
    "trip_id": "IDFM:TRANSDEV_VEXIN:22128816",
-   "monitoring_ref": "STIF:StopArea:SP:493509:"
+   "monitoring_ref": "STIF:StopArea:SP:493509:",
+   "partenaire": "TRANSDEV",
+   "reseau_mode": "Vexin"
   },
   "MLV": {
    "code": "C00632",
@@ -238,7 +270,9 @@
    "heure_theorique": "22:00:00",
    "ecart_min": 0.0,
    "trip_id": "IDFM:TRANSDEV_MARNE_LA_VALLEE:22286284",
-   "monitoring_ref": "STIF:StopArea:SP:68339:"
+   "monitoring_ref": "STIF:StopArea:SP:68339:",
+   "partenaire": "TRANSDEV",
+   "reseau_mode": "Marne-la-Vallée"
   },
   "513KPVB": {
    "code": "C00551",
@@ -252,7 +286,9 @@
    "heure_theorique": "22:00:00",
    "ecart_min": 0.0,
    "trip_id": "IDFM:KPVB:1237718",
-   "monitoring_ref": "STIF:StopArea:SP:69884:"
+   "monitoring_ref": "STIF:StopArea:SP:69884:",
+   "partenaire": "KEOLIS",
+   "reseau_mode": "Pays Briard"
   },
   "030CARSLACROIX": {
    "code": "C00473",
@@ -266,7 +302,9 @@
    "heure_theorique": "22:00:00",
    "ecart_min": 0.0,
    "trip_id": "IDFM:FVP:504-C00473-2203-392741",
-   "monitoring_ref": "STIF:StopArea:SP:65715:"
+   "monitoring_ref": "STIF:StopArea:SP:65715:",
+   "partenaire": "FRANCILITÉ",
+   "reseau_mode": "Val Parisis"
   },
   "MeC_Bus_PC · RATP Cap Défense Seine Ouest": {
    "code": "C01107",
@@ -280,7 +318,9 @@
    "heure_theorique": "22:00:00",
    "ecart_min": 0.0,
    "trip_id": "IDFM:RCDEFENSESEINEOUEST:49840338",
-   "monitoring_ref": "STIF:StopArea:SP:70726:"
+   "monitoring_ref": "STIF:StopArea:SP:70726:",
+   "partenaire": "RATP CAP",
+   "reseau_mode": "La Défense - Saint Cloud"
   },
   "MeC_Bus_PC · ATM Croix du Sud": {
    "code": "C01200",
@@ -294,7 +334,9 @@
    "heure_theorique": "22:00:00",
    "ecart_min": 0.0,
    "trip_id": "IDFM:stif:local-253180-C01200-29343",
-   "monitoring_ref": "STIF:StopArea:SP:427230:"
+   "monitoring_ref": "STIF:StopArea:SP:427230:",
+   "partenaire": "MeC_Bus_PC",
+   "reseau_mode": "Croix du Sud"
   },
   "MeC_Bus_PC · RATP Cap Rive Droite": {
    "code": "C01096",
@@ -308,7 +350,9 @@
    "heure_theorique": "22:00:00",
    "ecart_min": 0.0,
    "trip_id": "IDFM:RCRIVEDROITE:266667-C01096-51801869",
-   "monitoring_ref": "STIF:StopArea:SP:71870:"
+   "monitoring_ref": "STIF:StopArea:SP:71870:",
+   "partenaire": "RATP CAP",
+   "reseau_mode": "Rive Droite"
   },
   "SNCF_MAGENTA_PRD": {
    "code": "C01742",
@@ -322,7 +366,9 @@
    "heure_theorique": "22:00:00",
    "ecart_min": 0.0,
    "trip_id": "IDFM:TN:SNCF:bfeaa886-14f2-4c32-b12a-a93ffc8344f4",
-   "monitoring_ref": "STIF:StopArea:SP:70945:"
+   "monitoring_ref": "STIF:StopArea:SP:70945:",
+   "partenaire": "SNCF",
+   "reseau_mode": "RER"
   },
   "TICE": {
    "code": "C01622",
@@ -336,7 +382,9 @@
    "heure_theorique": "22:00:00",
    "ecart_min": 0.0,
    "trip_id": "IDFM:TISSE:3245747",
-   "monitoring_ref": "STIF:StopArea:SP:60563:"
+   "monitoring_ref": "STIF:StopArea:SP:60563:",
+   "partenaire": "TISSE",
+   "reseau_mode": "Evry Centre Essonne"
   },
   "MeC_Bus_PC · RATP Cap Pompadour": {
    "code": "C01071",
@@ -350,14 +398,18 @@
    "heure_theorique": "22:00:00",
    "ecart_min": 0.0,
    "trip_id": "IDFM:RCPOMPADOUR:51099144",
-   "monitoring_ref": "STIF:StopArea:SP:70042:"
+   "monitoring_ref": "STIF:StopArea:SP:70042:",
+   "partenaire": "RATP CAP",
+   "reseau_mode": "Pompadour"
   },
   "RATPCapIDF": {
    "code": "C01353",
    "num": "SUBB Boucle Nord",
    "mode": "BUS",
    "courses": 11,
-   "trouve": false
+   "trouve": false,
+   "partenaire": "RATP CAP",
+   "reseau_mode": "Grand Paris Seine Ouest"
   },
   "547_KGPSO": {
    "code": "C00004",
@@ -371,7 +423,9 @@
    "heure_theorique": "22:00:00",
    "ecart_min": 0.0,
    "trip_id": "IDFM:KGPSO:1222055",
-   "monitoring_ref": "STIF:StopArea:SP:69639:"
+   "monitoring_ref": "STIF:StopArea:SP:69639:",
+   "partenaire": "KEOLIS",
+   "reseau_mode": "Seine Orly"
   },
   "SENART": {
    "code": "C00859",
@@ -385,7 +439,9 @@
    "heure_theorique": "21:59:00",
    "ecart_min": 1.0,
    "trip_id": "IDFM:TRANSDEV_SENART:22112911",
-   "monitoring_ref": "STIF:StopArea:SP:62340:"
+   "monitoring_ref": "STIF:StopArea:SP:62340:",
+   "partenaire": "TRANSDEV",
+   "reseau_mode": "Sénart"
   },
   "531_KVEDV": {
    "code": "C02020",
@@ -399,7 +455,9 @@
    "heure_theorique": "20:32:00",
    "ecart_min": 88.0,
    "trip_id": "IDFM:KVE2V:767309",
-   "monitoring_ref": "STIF:StopArea:SP:60450:"
+   "monitoring_ref": "STIF:StopArea:SP:60450:",
+   "partenaire": "KEOLIS",
+   "reseau_mode": "Essonne Sud Est"
   },
   "MeC_Bus_PC · RATP Cap Massy-Juvisy": {
    "code": "C01322",
@@ -413,7 +471,9 @@
    "heure_theorique": "22:00:00",
    "ecart_min": 0.0,
    "trip_id": "IDFM:stif:local-267943-C01322-55231",
-   "monitoring_ref": "STIF:StopArea:SP:63014:"
+   "monitoring_ref": "STIF:StopArea:SP:63014:",
+   "partenaire": "RATP CAP",
+   "reseau_mode": "Massy-Juvisy"
   },
   "VALM": {
    "code": "C00307",
@@ -427,7 +487,9 @@
    "heure_theorique": "22:00:00",
    "ecart_min": 0.0,
    "trip_id": "IDFM:TRANSDEV_VALMY:21997959",
-   "monitoring_ref": "STIF:StopArea:SP:65227:"
+   "monitoring_ref": "STIF:StopArea:SP:65227:",
+   "partenaire": "TRANSDEV",
+   "reseau_mode": "Vallée de Montmorency"
   },
   "COESS": {
    "code": "C01565",
@@ -441,7 +503,9 @@
    "heure_theorique": "22:00:00",
    "ecart_min": 0.0,
    "trip_id": "IDFM:TRANSDEV_COEUR_ESSONNE:22087161",
-   "monitoring_ref": "STIF:StopArea:SP:60450:"
+   "monitoring_ref": "STIF:StopArea:SP:60450:",
+   "partenaire": "TRANSDEV",
+   "reseau_mode": "Cœur d’Essonne"
   },
   "508KRPFEV4": {
    "code": "C00245",
@@ -455,7 +519,9 @@
    "heure_theorique": "22:00:00",
    "ecart_min": 0.0,
    "trip_id": "IDFM:stif:local-264733-C00245-73579",
-   "monitoring_ref": "STIF:StopArea:SP:73596:"
+   "monitoring_ref": "STIF:StopArea:SP:73596:",
+   "partenaire": "KEOLIS",
+   "reseau_mode": "Roissy Est"
   },
   "538FEO": {
    "code": "C00652",
@@ -469,7 +535,9 @@
    "heure_theorique": "22:00:00",
    "ecart_min": 0.0,
    "trip_id": "IDFM:FEO:538-C00652-1402-724367",
-   "monitoring_ref": "STIF:StopArea:SP:65931:"
+   "monitoring_ref": "STIF:StopArea:SP:65931:",
+   "partenaire": "FRANCILITÉ",
+   "reseau_mode": "Lignes Île-de-France Ouest"
   },
   "033_KABS": {
    "code": "C00312",
@@ -483,7 +551,9 @@
    "heure_theorique": "22:00:00",
    "ecart_min": 0.0,
    "trip_id": "IDFM:KABS:5978088",
-   "monitoring_ref": "STIF:StopArea:SP:483233:"
+   "monitoring_ref": "STIF:StopArea:SP:483233:",
+   "partenaire": "KEOLIS",
+   "reseau_mode": "Argenteuil - Boucles de Seine"
   },
   "529FSQY": {
    "code": "C01527",
@@ -497,7 +567,9 @@
    "heure_theorique": "22:00:00",
    "ecart_min": 0.0,
    "trip_id": "IDFM:FSQY:529-C01527-50365-8747542",
-   "monitoring_ref": "STIF:StopArea:SP:63549:"
+   "monitoring_ref": "STIF:StopArea:SP:63549:",
+   "partenaire": "FRANCILITÉ",
+   "reseau_mode": "Saint-Quentin-en-Yvelines"
   },
   "503KNVO": {
    "code": "C01472",
@@ -511,7 +583,9 @@
    "heure_theorique": "22:00:00",
    "ecart_min": 0.0,
    "trip_id": "IDFM:KNVO:585531",
-   "monitoring_ref": "STIF:StopArea:SP:73596:"
+   "monitoring_ref": "STIF:StopArea:SP:73596:",
+   "partenaire": "KEOLIS",
+   "reseau_mode": "Haut Val d'Oise"
   },
   "BDM": {
    "code": "C01062",
@@ -525,7 +599,9 @@
    "heure_theorique": "22:00:00",
    "ecart_min": 0.0,
    "trip_id": "IDFM:BRIE_ET_2_MORIN:22283473",
-   "monitoring_ref": "STIF:StopArea:SP:477962:"
+   "monitoring_ref": "STIF:StopArea:SP:477962:",
+   "partenaire": "TRANSDEV",
+   "reseau_mode": "Brie et 2 Morin"
   },
   "BCLYS": {
    "code": "C00149",
@@ -539,7 +615,9 @@
    "heure_theorique": "22:00:00",
    "ecart_min": 0.0,
    "trip_id": "IDFM:BOUCLE_DE_LYS:22260779",
-   "monitoring_ref": "STIF:StopArea:SP:64475:"
+   "monitoring_ref": "STIF:StopArea:SP:64475:",
+   "partenaire": "TRANSDEV",
+   "reseau_mode": "Saint Germain Boucles de Seine"
   },
   "COTMA": {
    "code": "C00574",
@@ -553,7 +631,9 @@
    "heure_theorique": "22:00:00",
    "ecart_min": 0.0,
    "trip_id": "IDFM:TRANSDEV_COTEAUX_DE_LA_MARNE:22133890",
-   "monitoring_ref": "STIF:StopArea:SP:69560:"
+   "monitoring_ref": "STIF:StopArea:SP:69560:",
+   "partenaire": "TRANSDEV",
+   "reseau_mode": "Marne et Seine"
   },
   "RDMANTOIS": {
    "code": "C01949",
@@ -567,7 +647,9 @@
    "heure_theorique": "22:00:00",
    "ecart_min": 0.0,
    "trip_id": "IDFM:RDMANTOIS:7350356",
-   "monitoring_ref": "STIF:StopArea:SP:65906:"
+   "monitoring_ref": "STIF:StopArea:SP:65906:",
+   "partenaire": "RATP CAP",
+   "reseau_mode": "Mantois"
   },
   "034_KSOE": {
    "code": "C02566",
@@ -581,7 +663,9 @@
    "heure_theorique": "22:00:00",
    "ecart_min": 0.0,
    "trip_id": "IDFM:stif:local-273741-C02566-72968",
-   "monitoring_ref": "STIF:StopArea:SP:65459:"
+   "monitoring_ref": "STIF:StopArea:SP:65459:",
+   "partenaire": "KEOLIS",
+   "reseau_mode": "Poissy - Les Mureaux"
   },
   "506KRPFOV4": {
    "code": "C00610",
@@ -595,7 +679,9 @@
    "heure_theorique": "22:00:00",
    "ecart_min": 0.0,
    "trip_id": "IDFM:stif:local-273743-C00610-89435",
-   "monitoring_ref": "STIF:StopArea:SP:65758:"
+   "monitoring_ref": "STIF:StopArea:SP:65758:",
+   "partenaire": "KEOLIS",
+   "reseau_mode": "Roissy Ouest"
   },
   "527_KVVB": {
    "code": "C00048",
@@ -609,7 +695,9 @@
    "heure_theorique": "22:00:00",
    "ecart_min": 0.0,
    "trip_id": "IDFM:stif:local-272888-C00048-45325",
-   "monitoring_ref": "STIF:StopArea:SP:69474:"
+   "monitoring_ref": "STIF:StopArea:SP:69474:",
+   "partenaire": "KEOLIS",
+   "reseau_mode": "Vélizy Vallées"
   },
   "MELUN": {
    "code": "C00881",
@@ -623,7 +711,9 @@
    "heure_theorique": "22:00:00",
    "ecart_min": 0.0,
    "trip_id": "IDFM:TRANSDEV_MELUN:22312471",
-   "monitoring_ref": "STIF:StopArea:SP:61947:"
+   "monitoring_ref": "STIF:StopArea:SP:61947:",
+   "partenaire": "TRANSDEV",
+   "reseau_mode": "Grand Melun"
   },
   "TMO": {
    "code": "C00954",
@@ -637,7 +727,9 @@
    "heure_theorique": "22:00:00",
    "ecart_min": 0.0,
    "trip_id": "IDFM:MARNE_ET_OURCQ:22296162",
-   "monitoring_ref": "STIF:StopArea:SP:68913:"
+   "monitoring_ref": "STIF:StopArea:SP:68913:",
+   "partenaire": "TRANSDEV",
+   "reseau_mode": "Meaux et Ourcq"
   },
   "022_KIDF": {
    "code": "C02317",
@@ -651,7 +743,9 @@
    "heure_theorique": "22:00:05",
    "ecart_min": 0.1,
    "trip_id": "IDFM:KGPSO:1267135",
-   "monitoring_ref": "STIF:StopArea:SP:69846:"
+   "monitoring_ref": "STIF:StopArea:SP:69846:",
+   "partenaire": "KEOLIS",
+   "reseau_mode": "Seine Orly"
   },
   "VERSA": {
    "code": "C00692",
@@ -665,7 +759,9 @@
    "heure_theorique": "22:00:00",
    "ecart_min": 0.0,
    "trip_id": "IDFM:TRANSDEV_VERSAILLES:22329244",
-   "monitoring_ref": "STIF:StopArea:SP:491424:"
+   "monitoring_ref": "STIF:StopArea:SP:491424:",
+   "partenaire": "TRANSDEV",
+   "reseau_mode": "Grand Versailles"
   },
   "52FSO": {
    "code": "C00772",
@@ -679,7 +775,9 @@
    "heure_theorique": "22:00:00",
    "ecart_min": 0.0,
    "trip_id": "IDFM:stif:local-264585-C00772-51194",
-   "monitoring_ref": "STIF:StopArea:SP:66728:"
+   "monitoring_ref": "STIF:StopArea:SP:66728:",
+   "partenaire": "FRANCILITÉ",
+   "reseau_mode": "Cergy-Pontoise Confluence"
   },
   "EXROI": {
    "code": "C01298",
@@ -693,7 +791,9 @@
    "heure_theorique": "22:00:00",
    "ecart_min": 0.0,
    "trip_id": "IDFM:TRANSDEV_EXPRESS_ROISSY:21979900",
-   "monitoring_ref": "STIF:StopArea:SP:72747:"
+   "monitoring_ref": "STIF:StopArea:SP:72747:",
+   "partenaire": "TRANSDEV",
+   "reseau_mode": "Express Roissy"
   },
   "537RDBIEVRE": {
    "code": "C02528",
@@ -707,14 +807,18 @@
    "heure_theorique": "22:00:00",
    "ecart_min": 0.0,
    "trip_id": "IDFM:RDBIEVRE:33347",
-   "monitoring_ref": "STIF:StopArea:SP:69813:"
+   "monitoring_ref": "STIF:StopArea:SP:69813:",
+   "partenaire": "RATP CAP",
+   "reseau_mode": "Bièvre"
   },
   "514FGP": {
    "code": "C01512",
    "num": "3249",
    "mode": "BUS",
    "courses": 9,
-   "trouve": false
+   "trouve": false,
+   "partenaire": "FRANCILITÉ",
+   "reseau_mode": "Provinois - Brie et Seine"
   },
   "1042-T4-SAE": {
    "code": "C01843",
@@ -728,7 +832,9 @@
    "heure_theorique": "21:59:45",
    "ecart_min": 0.2,
    "trip_id": "IDFM:STRETTO:329893-258",
-   "monitoring_ref": "STIF:StopArea:SP:73360:"
+   "monitoring_ref": "STIF:StopArea:SP:73360:",
+   "partenaire": "STRETTO",
+   "reseau_mode": ""
   },
   "MeC_Bus_PC · Keolis Grand Paris Vallée de la Marne": {
    "code": "C01222",
@@ -742,7 +848,9 @@
    "heure_theorique": "22:00:00",
    "ecart_min": 0.0,
    "trip_id": "IDFM:KGPVM:46166830",
-   "monitoring_ref": "STIF:StopArea:SP:73074:"
+   "monitoring_ref": "STIF:StopArea:SP:73074:",
+   "partenaire": "KEOLIS",
+   "reseau_mode": "Marne et Brie"
   },
   "1042-T11-SAE": {
    "code": "C01999",
@@ -756,7 +864,9 @@
    "heure_theorique": "22:00:00",
    "ecart_min": 0.0,
    "trip_id": "IDFM:STRETTO:310772-287",
-   "monitoring_ref": "STIF:StopArea:SP:72641:"
+   "monitoring_ref": "STIF:StopArea:SP:72641:",
+   "partenaire": "STRETTO",
+   "reseau_mode": ""
   },
   "PFONT": {
    "code": "C00793",
@@ -770,7 +880,9 @@
    "heure_theorique": "22:00:00",
    "ecart_min": 0.0,
    "trip_id": "IDFM:TRANSDEV_PAYS_DE_FONTAINEBLEAU:22105616",
-   "monitoring_ref": "STIF:StopArea:SP:61579:"
+   "monitoring_ref": "STIF:StopArea:SP:61579:",
+   "partenaire": "TRANSDEV",
+   "reseau_mode": "Fontainebleau - Moret"
   },
   "536DSP36": {
    "code": "C01821",
@@ -784,7 +896,9 @@
    "heure_theorique": "21:59:00",
    "ecart_min": 1.0,
    "trip_id": "IDFM:RCMASSYJUVISY:48700915",
-   "monitoring_ref": "STIF:StopArea:SP:74009:"
+   "monitoring_ref": "STIF:StopArea:SP:74009:",
+   "partenaire": "RATP CAP",
+   "reseau_mode": "Massy-Juvisy"
   },
   "VLOIN": {
    "code": "C00815",
@@ -798,7 +912,9 @@
    "heure_theorique": "22:01:00",
    "ecart_min": 1.0,
    "trip_id": "IDFM:TRANSDEV_VALLEE_DU_LOING:22108936",
-   "monitoring_ref": "STIF:StopArea:SP:479388:"
+   "monitoring_ref": "STIF:StopArea:SP:479388:",
+   "partenaire": "TRANSDEV",
+   "reseau_mode": "Vallée du Loing - Nemours"
   },
   "515FPM": {
    "code": "C00798",
@@ -812,7 +928,9 @@
    "heure_theorique": "22:01:00",
    "ecart_min": 1.0,
    "trip_id": "IDFM:FPM:515-C00798-4301-413559",
-   "monitoring_ref": "STIF:StopArea:SP:486748:"
+   "monitoring_ref": "STIF:StopArea:SP:486748:",
+   "partenaire": "FRANCILITÉ",
+   "reseau_mode": "Pays de Montereau"
   },
   "334AUTOCARSDOMINIQUE": {
    "code": "C01837",
@@ -826,7 +944,9 @@
    "heure_theorique": "22:00:00",
    "ecart_min": 0.0,
    "trip_id": "IDFM:stif:local-69165-C01837-507",
-   "monitoring_ref": "STIF:StopArea:SP:63325:"
+   "monitoring_ref": "STIF:StopArea:SP:63325:",
+   "partenaire": "AUTOCARS DOMINIQUE",
+   "reseau_mode": "Paris-Saclay Mobilités"
   },
   "SUDOE": {
    "code": "C01564",
@@ -840,7 +960,9 @@
    "heure_theorique": "22:00:00",
    "ecart_min": 0.0,
    "trip_id": "IDFM:TRANSDEV_SUD_OUEST_ESSONNE:22295573",
-   "monitoring_ref": "STIF:StopArea:SP:63244:"
+   "monitoring_ref": "STIF:StopArea:SP:63244:",
+   "partenaire": "TRANSDEV",
+   "reseau_mode": "Essonne Sud Ouest"
   },
   "RCASO_T13": {
    "code": "C02344",
@@ -854,7 +976,9 @@
    "heure_theorique": "22:00:00",
    "ecart_min": 0.0,
    "trip_id": "IDFM:RCASO:01122026-2-T13-2-7-220000",
-   "monitoring_ref": "STIF:StopArea:SP:73731:"
+   "monitoring_ref": "STIF:StopArea:SP:73731:",
+   "partenaire": "RATP CAP",
+   "reseau_mode": ""
   },
   "TZEN4": {
    "code": "C02636",
@@ -868,7 +992,9 @@
    "heure_theorique": "22:00:00",
    "ecart_min": 0.0,
    "trip_id": "IDFM:TISSE:3240660",
-   "monitoring_ref": "STIF:StopArea:SP:426762:"
+   "monitoring_ref": "STIF:StopArea:SP:426762:",
+   "partenaire": "TISSE",
+   "reseau_mode": "Evry Centre Essonne"
   }
  }
 }

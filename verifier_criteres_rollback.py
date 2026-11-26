@@ -279,6 +279,21 @@ details.niv-detail .corps .niv-ligne { background:transparent; }
 .qualite-bloc h4 { margin:0 0 6px 0; font-size:12.5px; color:var(--anthracite); }
 .qualite-bloc code { font-size:11.5px; }
 .vide-req { color:var(--text-muted); font-size:12.5px; }
+
+.qual-partenaire { margin:20px 0; }
+.qual-partenaire > h3 { font-size:12.5px; color:var(--anthracite); margin:0 0 8px 0; text-transform:uppercase; letter-spacing:.04em; }
+.qual-grille { display:grid; grid-template-columns:repeat(auto-fill,minmax(190px,1fr)); gap:10px; align-items:start; }
+details.tuile { border:1px solid var(--border); border-left:4px solid var(--text-muted); border-radius:8px; background:#fff; overflow:hidden; }
+details.tuile[open] { grid-column:1/-1; }
+details.tuile.vert { border-left-color:var(--green); } details.tuile.orange { border-left-color:var(--orange); }
+details.tuile.rouge { border-left-color:var(--red); } details.tuile.gris { border-left-color:var(--text-muted); }
+details.tuile > summary { list-style:none; cursor:pointer; padding:10px 12px; display:flex; flex-direction:column; gap:1px; }
+details.tuile > summary::-webkit-details-marker { display:none; }
+details.tuile .reseau-nom { font-size:9.5px; color:var(--text-muted); text-transform:uppercase; letter-spacing:.03em; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+details.tuile .ligne-nom { font-size:14px; font-weight:700; color:var(--anthracite); margin:2px 0 1px 0; }
+details.tuile .arret-nom { font-size:11.5px; color:var(--text-muted); overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+details.tuile .heure { font-size:10.5px; color:var(--text-muted); margin-top:5px; }
+details.tuile .corps { padding:6px 14px 14px 14px; border-top:1px solid var(--border); background:var(--bg-light); }
 """
 
 # Une seule grille pour les 3 niveaux (partenaire, réseau, ligne) : l'en-tête n'est dessinée

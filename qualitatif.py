@@ -2,13 +2,21 @@
 """Moteur de l'onglet Qualitatif : structure et valeurs des balises (requêtes OD et SM arrêt),
 avant (Legacy) vs après (NG), par réseau échantillonné (voir qualitatif_echantillons.py et
 qualitatif_capture.py). Importé par verifier_criteres_rollback.py (fonction html_qualitatif()).
+
+Présentation en tuiles groupées par partenaire (inspirée de la slide 10 "Producteurs" du
+Go/No-Go), pas en longue liste : demandé par Erwan le 26/11/2026.
 """
 import html
 import json
 import pathlib
+import sys
 
 HERE = pathlib.Path(__file__).resolve().parent
+ROOT = HERE.parent
 CAPTURES = HERE / "captures"
+
+sys.path.insert(0, str(HERE))
+import verifier_criteres_rollback as sup  # noqa: E402
 
 
 def esc(s):
@@ -60,6 +68,15 @@ def type_court(v):
     return "texte"
 
 
+def etat_echantillon(od_avant, sm_avant, od_apres, sm_apres, apres_existe):
+    if not apres_existe:
+        return "gris", "pré-MEP"
+    if od_avant is None or sm_avant is None or od_apres is None or sm_apres is None:
+        return "rouge", "capture en erreur"
+    diff = bool(set(od_avant) ^ set(od_apres)) or bool(set(sm_avant) ^ set(sm_apres))
+    return ("orange", "structure modifiée") if diff else ("vert", "structure stable")
+
+
 def bloc_requete(label, avant, apres):
     if avant is None:
         return f'<p class="vide-req">{esc(label)} : pas de capture avant.</p>'
@@ -89,6 +106,27 @@ def bloc_requete(label, avant, apres):
     return f'<div class="qualite-bloc"><h4>{esc(label)} ({len(communs)} balises communes)</h4>{"".join(parties)}</div>'
 
 
+def tuile(clef, e, apres_existe):
+    base = nom_fichier(clef)
+    od_avant = charger("avant", base, "OD")
+    sm_avant = charger("avant", base, "SM")
+    od_apres = charger("apres", base, "OD") if apres_existe else None
+    sm_apres = charger("apres", base, "SM") if apres_existe else None
+    cls, statut = etat_echantillon(od_avant, sm_avant, od_apres, sm_apres, apres_existe)
+    ligne_nom = sup.nom_ligne({"mode": e["mode"], "num": e["num"], "reseau": e.get("reseau_mode", "")})
+    return (
+        f'<details class="tuile {cls}"><summary>'
+        f'<span class="reseau-nom">{esc(clef)}</span>'
+        f'<span class="ligne-nom">{esc(ligne_nom)}</span>'
+        f'<span class="arret-nom">{esc(e["stop_nom"])}</span>'
+        f'<span class="heure">Théorique {esc(e["heure_theorique"])} · {esc(statut)}</span>'
+        f'</summary><div class="corps">'
+        f'{bloc_requete("Requête OD (LineRef)", od_avant, od_apres)}'
+        f'{bloc_requete("Requête SM (arrêt)", sm_avant, sm_apres)}'
+        f'</div></details>'
+    )
+
+
 def build_html_qualitatif():
     ech_path = HERE / "echantillons.json"
     if not ech_path.exists():
@@ -99,32 +137,32 @@ def build_html_qualitatif():
 
     intro = (f'<p>Échantillons du {esc(echantillons["date"])}, cible {esc(echantillons["heure_cible"])} '
               '(sélectionnés via le GTFS open data pour être desservis à ce moment-là — voir '
-              '<code>qualitatif_echantillons.py</code>).</p>')
+              '<code>qualitatif_echantillons.py</code>). Regroupement par partenaire comme dans l\'onglet '
+              'Quantitatif ; cliquer une tuile pour voir le détail des balises OD/SM.</p>')
     if not apres_existe:
         intro += ('<div class="note"><b>Capture « après » pas encore faite.</b> Relancer '
-                   '<code>qualitatif_capture.py apres</code> une fois la MEP passée pour activer la comparaison. '
-                   'En dessous : la structure des balises capturées « avant » (Legacy), pour référence.</div>')
+                   '<code>qualitatif_capture.py apres</code> une fois la MEP passée pour activer la comparaison '
+                   '(les tuiles passeront de gris à vert/orange). En dessous : la structure des balises '
+                   'capturées « avant » (Legacy), pour référence.</div>')
 
-    blocs = []
-    non_trouves = [k for k, e in echantillons["reseaux"].items() if not e.get("trouve")]
-    for clef, e in sorted(echantillons["reseaux"].items(), key=lambda kv: kv[0]):
+    par_partenaire = {}
+    non_trouves = []
+    for clef, e in echantillons["reseaux"].items():
         if not e.get("trouve"):
+            non_trouves.append(clef)
             continue
-        base = nom_fichier(clef)
-        od_avant = charger("avant", base, "OD")
-        sm_avant = charger("avant", base, "SM")
-        od_apres = charger("apres", base, "OD") if apres_existe else None
-        sm_apres = charger("apres", base, "SM") if apres_existe else None
-        entete = (f'{esc(clef)} — {esc(e["num"])} ({esc(e["mode"])}) à {esc(e["stop_nom"])}, '
-                  f'théorique {esc(e["heure_theorique"])}')
-        blocs.append(
-            f'<details class="niv-detail"><summary class="niv-ligne" style="grid-template-columns:1fr;">'
-            f'<span class="nom">{entete}</span></summary>'
-            f'<div class="corps">{bloc_requete("Requête OD (LineRef)", od_avant, od_apres)}'
-            f'{bloc_requete("Requête SM (arrêt)", sm_avant, sm_apres)}</div></details>'
-        )
+        par_partenaire.setdefault(e.get("partenaire", "Autre"), []).append((clef, e))
+
+    sections = []
+    for partenaire in sorted(par_partenaire, key=lambda p: -len(par_partenaire[p])):
+        tuiles = "".join(tuile(clef, e, apres_existe)
+                          for clef, e in sorted(par_partenaire[partenaire], key=lambda kv: kv[0]))
+        sections.append(f'<div class="qual-partenaire"><h3>{esc(partenaire)} '
+                         f'<span style="font-weight:400;color:var(--text-muted);">'
+                         f'({len(par_partenaire[partenaire])})</span></h3>'
+                         f'<div class="qual-grille">{tuiles}</div></div>')
 
     manques = (f'<p style="font-size:12.5px;color:var(--text-muted);">Sans échantillon (pas de passage théorique '
-               f'trouvé près de l\'heure cible) : {", ".join(esc(k) for k in non_trouves)}</p>') if non_trouves else ""
+               f'trouvé près de l\'heure cible) : {", ".join(esc(k) for k in sorted(non_trouves))}</p>') if non_trouves else ""
 
-    return intro + manques + f'<div class="niv-liste" style="margin-top:10px;">{"".join(blocs)}</div>'
+    return intro + "".join(sections) + manques

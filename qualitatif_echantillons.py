@@ -62,7 +62,8 @@ def lignes_par_reseau():
         if not R["lignes"]:
             continue
         code, l = max(R["lignes"].items(), key=lambda kv: kv[1]["courses"])
-        choix[clef] = {"code": code, "num": l["num"], "mode": l["mode"], "courses": l["courses"]}
+        choix[clef] = {"code": code, "num": l["num"], "mode": l["mode"], "courses": l["courses"],
+                       "reseau_mode": l.get("reseau", ""), "partenaire": sup.partenaire_de(l.get("operateur", ""))}
     return choix
 
 

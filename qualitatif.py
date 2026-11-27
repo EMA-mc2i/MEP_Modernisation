@@ -94,20 +94,17 @@ def raccourcir(d, prefixe):
     return {(k[n:] or k): v for k, v in d.items()}
 
 
-# Balises dont la VALEUR varie à chaque appel, Legacy ou NG, sans rapport avec la bascule
-# (horodatage de réponse, identifiants uniques de message/course, heures qui dépendent de la
-# course en circulation au moment précis de l'appel) : à exclure du diff de valeur, trouvé en
-# simulant une comparaison le 26/11/2026 (tout ressortait "écart" sinon, à tort). On les garde
-# quand même affichées (transparence), juste pas comptées comme un écart.
+# Balises dont même la NOMENCLATURE peut légitimement changer d'une course à l'autre, au sein du
+# même système (pas seulement la valeur) : identifiants par course où plusieurs formats
+# coexistent normalement (ex. VehicleJourneyName vu en "EPAU81" ET en "97282062" dans le MÊME
+# relevé Legacy, selon le service). Même la comparaison par forme ne suffit pas à les disculper :
+# à exclure du diff de valeur (gardées affichées, juste pas comptées comme un écart).
 BALISES_VARIABLES = {
     "ResponseTimestamp", "ResponseMessageIdentifier", "RequestMessageRef",
     "RecordedAtTime", "AimedArrivalTime", "AimedDepartureTime",
     "ExpectedArrivalTime", "ExpectedDepartureTime", "ActualArrivalTime", "ActualDepartureTime",
     "DatedVehicleJourneyRef", "ItemIdentifier", "ValidUntilTime",
-    # Ajoutés après simulation le 26/11/2026 : identifiants par course (jamais les mêmes courses
-    # d'une capture à l'autre) ou balise à trop forte cardinalité (des centaines d'arrêts
-    # possibles par ligne, 6 exemples ne se recoupent presque jamais par hasard).
-    "JourneyNote", "TrainNumberRef", "VehicleJourneyName", "StopPointRef",
+    "JourneyNote", "TrainNumberRef", "VehicleJourneyName",
 }
 
 
@@ -115,16 +112,89 @@ def balise_stable(chemin):
     return chemin.rsplit(".", 1)[-1] not in BALISES_VARIABLES
 
 
+# Balises dont la simple PRÉSENCE (pas seulement la valeur) dépend du contexte précis d'un
+# appel/passage (véhicule proche ou non, quai affecté ou non, dernier service du jour...) :
+# absente d'un appel donné n'est pas absente du SYSTÈME, donc pas un signal fiable de balise
+# "apparue"/"disparue en NG" — juste du hasard sur les courses échantillonnées. On les garde
+# cela dit dans la comparaison de NOMENCLATURE (forme()) quand les deux côtés la portent, comme
+# ExpectedQuayRef : un format différent ("Voie 2" -> "V2") reste à signaler. (Trouvé le
+# 26/11/2026 : ArrivalPlatformName/ArrivalStatus/FirstOrLastJourney ressortaient en écart juste
+# parce qu'absents des quelques courses échantillonnées d'un côté.)
+BALISES_PRESENCE_CONDITIONNELLE = {
+    "ArrivalProximityText", "DepartureProximityText",
+    "ArrivalPlatformName", "DeparturePlatformName",
+    "ArrivalStatus", "DepartureStatus",
+    "FirstOrLastJourney",
+}
+
+
+def balise_presence_fiable(chemin):
+    """Pour le diagnostic structurel (apparue/disparue) seulement : une balise identifiante
+    (BALISES_VARIABLES) ou à présence conditionnelle (BALISES_PRESENCE_CONDITIONNELLE) n'est pas
+    un signal fiable d'apparition/disparition réelle en NG."""
+    nom = chemin.rsplit(".", 1)[-1]
+    return nom not in BALISES_VARIABLES and nom not in BALISES_PRESENCE_CONDITIONNELLE
+
+
+def a_des_courses(aplatis):
+    """Faux si le relevé n'a capturé AUCUNE course/passage en circulation à cet instant (juste
+    l'enveloppe SIRI : ResponseTimestamp, ProducerRef...) : dans ce cas, toutes les balises de
+    détail semblent "apparues/disparues" alors qu'il n'y a simplement rien à comparer ce soir-là
+    (ex. ligne qui ne circule pas à l'heure du relevé). Trouvé le 26/11/2026 sur une simulation
+    à 14h58 (hors créneau MEP)."""
+    return any(".EstimatedVehicleJourney." in k or k.endswith("EstimatedVehicleJourney")
+               or ".MonitoredVehicleJourney." in k or k.endswith("MonitoredVehicleJourney")
+               for k in aplatis)
+
+
+def forme(v):
+    """Signature de NOMENCLATURE, pas de structure exacte ni de casse brute : un mot unique tout
+    en minuscules ("delayed") ou tout en majuscules ("DELAYED") est AMBIGU — rien n'indique s'il
+    vient d'une convention SCREAMING_SNAKE ("ON_TIME") ou camelCase ("onTime"), vu qu'un enum à un
+    seul mot n'a pas de 2e mot à mettre en forme. Renvoie None (signal ambigu, ignoré) sauf si la
+    valeur porte un indice NON ambigu de convention : "_" + tout en majuscules -> SCREAMING_SNAKE,
+    "_" + tout en minuscules -> snake_case, une majuscule APRÈS la première lettre (sans "_") ->
+    camelCase. (Trouvé le 26/11/2026 : "onTime" vs "delayed" sont la MÊME convention camelCase
+    côté Legacy — un simple test de casse les classait à tort comme nomenclatures différentes.)"""
+    lettres = [c for c in str(v) if c.isalpha()]
+    if not lettres:
+        return None
+    if "_" in str(v):
+        if all(c.isupper() for c in lettres):
+            return "SCREAMING_SNAKE"
+        if all(c.islower() for c in lettres):
+            return "snake_case"
+        return None
+    if all(c.isupper() for c in lettres) or all(c.islower() for c in lettres):
+        return None  # un seul mot : ambigu, pas de 2e lettre pour révéler la convention
+    return "camelCase" if lettres[0].islower() else "PascalCase"
+
+
+def formes(valeurs):
+    return {f for v in valeurs if (f := forme(v)) is not None}
+
+
+def formes_divergent(avant_v, apres_v):
+    """Vrai seulement si les DEUX côtés ont au moins un signal de nomenclature non ambigu et
+    qu'ils ne se recoupent pas. Si un côté n'a que des valeurs ambiguës (formes() vide), on ne
+    peut rien conclure : pas un écart."""
+    fa, fb = formes(avant_v), formes(apres_v)
+    return bool(fa) and bool(fb) and not (fa & fb)
+
+
 def a_un_ecart(avant, apres):
-    """Structure différente (balise apparue/disparue) OU, sur une balise commune STABLE, AUCUN
-    recouvrement entre les exemples de valeurs vus avant et après (ex. "rail" vs "RAIL" : même
-    type, format différent, à repérer ; mais pas un horodatage qui change à chaque appel, voir
-    BALISES_VARIABLES, ni une direction/destination qui varie juste parce que la course
-    échantillonnée n'est pas la même d'une capture à l'autre — d'où la comparaison par ENSEMBLE
-    d'exemples plutôt qu'une valeur unique)."""
-    if set(avant) ^ set(apres):
+    """Structure différente sur une balise au signal fiable (balise apparue/disparue, hors
+    identifiants et balises à présence conditionnelle) OU, sur une balise commune STABLE, AUCUNE
+    forme/nomenclature commune entre les exemples vus avant et après (ex. "rail" vs "RAIL" : même
+    longueur de mot mais casse différente, à repérer ; mais pas une direction/destination/arrêt
+    qui varie juste parce que la course échantillonnée n'est pas la même d'une capture à l'autre,
+    du moment que la FORME reste la même — comparaison par ensemble d'exemples, voir aplatir()).
+    Si un des deux côtés n'a capturé aucune course en circulation, rien à comparer (pas un écart)."""
+    if not a_des_courses(avant) or not a_des_courses(apres):
+        return False
+    if any(balise_presence_fiable(k) for k in set(avant) ^ set(apres)):
         return True
-    return any(not (avant[k] & apres[k]) for k in avant if k in apres and balise_stable(k))
+    return any(formes_divergent(avant[k], apres[k]) for k in avant if k in apres and balise_stable(k))
 
 
 def etat_echantillon(od_avant, sm_avant, od_apres, sm_apres, apres_existe):
@@ -153,13 +223,19 @@ def bloc_requete(label, avant, apres):
                     f'{len(avant_c)-40 if len(avant_c)>40 else 0} non affichées)</summary>{note_prefixe}'
                     f'<div class="table-scroll"><table class="niv" style="font-size:11.5px;"><tbody>{lignes}</tbody></table></div>{suite}</details>')
         return html_out, []
-    seulement_avant = sorted(set(avant_c) - set(apres_c))
-    seulement_apres = sorted(set(apres_c) - set(avant_c))
+    if not a_des_courses(avant_c) or not a_des_courses(apres_c):
+        cote = "avant (Legacy)" if not a_des_courses(avant_c) else "après (NG)"
+        parties = [note_prefixe] if note_prefixe else []
+        parties.append(f'<p class="vide-req">Aucune course/passage en circulation sur le relevé {esc(cote)} '
+                        f'à cet instant : comparaison impossible (rien à voir avec une différence Legacy/NG).</p>')
+        return f'<div class="qualite-bloc"><h4>{esc(label)}</h4>{"".join(parties)}</div>', []
+    seulement_avant = sorted(k for k in (set(avant_c) - set(apres_c)) if balise_presence_fiable(k))
+    seulement_apres = sorted(k for k in (set(apres_c) - set(avant_c)) if balise_presence_fiable(k))
     communs = set(avant_c) & set(apres_c)
-    # Toutes les balises communes, avant ET après, ENSEMBLE d'exemples contre ensemble d'exemples
-    # (pas une valeur unique : voir aplatir()). "Différent" = aucun recouvrement entre les deux
-    # ensembles d'exemples, pour une balise stable (pas un horodatage/identifiant de course).
-    diff_val = sorted(k for k in communs if balise_stable(k) and not (avant_c[k] & apres_c[k]))
+    # Toutes les balises communes, avant ET après, comparées par FORME (nomenclature), pas par
+    # valeur exacte : "Différent" = aucune forme commune entre les deux ensembles d'exemples,
+    # pour une balise stable (pas un horodatage/identifiant de course). Voir forme() plus haut.
+    diff_val = sorted(k for k in communs if balise_stable(k) and formes_divergent(avant_c[k], apres_c[k]))
     pareil_val = sorted(communs - set(diff_val))
     noms_ecart = [k.rsplit(".", 1)[-1] for k in (seulement_avant + seulement_apres + diff_val)]
     parties = [note_prefixe] if note_prefixe else []
